@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FirebaseLogin</string>
+    <string name="textLoginUsername">Correo electrónico</string>
+    <string name="textLoginPassword">Contraseña</string>
+    <string name="btForgotPass">¿Olvidaste tu contraseña?</string>
+    <string name="btLogin">entrar</string>
+    <string name="tvCreateAccount">¿Aún no tienes una cuenta?</string>
+    <string name="btCreateAccount">Registrarse</string>
+    <string name="btLoginFacebook">Entrar con Facebook</string>
+</resources>

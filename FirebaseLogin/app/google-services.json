@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "848271510410",
+    "project_id": "fir-login-a8700",
+    "storage_bucket": "fir-login-a8700.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848271510410:android:53987aaacb821a9f279673",
+        "android_client_info": {
+          "package_name": "org.ivz.aurbano.firebaselogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848271510410-2fm9h4f23qp6o36kv82o5gvmsp6vbh4l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXHETRen2dZ_WW0HEqPIVR0y9oz5Ci3Us"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848271510410-2fm9h4f23qp6o36kv82o5gvmsp6vbh4l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
