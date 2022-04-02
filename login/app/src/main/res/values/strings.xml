@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">login</string>
+    <string name="logo">logo</string>
+    <string name="name">name</string>
+    <string name="pass">pass</string>
+    <string name="log_in">LOG IN</string>
+    <string name="register">Register</string>
+    <string name="confirm_pass">confirm pass</string>
+    <string name="mail">mail</string>
+</resources>
