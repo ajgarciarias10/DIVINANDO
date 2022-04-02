@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1068638417166",
+    "project_id": "loginandregister-86bb1",
+    "storage_bucket": "loginandregister-86bb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068638417166:android:66d7e218f83adefd20a75f",
+        "android_client_info": {
+          "package_name": "com.ieszv.deintyad.backendtoni"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1068638417166-qh26h75c9cr367svdkilbfgmpe5i7hq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2ufiAgTYE2tGVPicWAqAxkSl4zrhjKl0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068638417166-qh26h75c9cr367svdkilbfgmpe5i7hq4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
