@@ -4,56 +4,117 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#673AB7"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iGround"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/ground"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ground"
+        tools:ignore="ImageContrastCheck" />
 
     <ImageView
         android:id="@+id/iLogo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:contentDescription="@string/logo"
-        app:layout_constraintBottom_toTopOf="@+id/tvName"
+        app:layout_constraintBottom_toTopOf="@+id/iFacebook"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_max="420dp"
-        app:srcCompat="@android:drawable/btn_star_big_on"
+        app:srcCompat="@drawable/logo"
         tools:ignore="ImageContrastCheck" />
 
+    <ImageView
+        android:id="@+id/iFacebook"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#99FFFFFF"
+        android:contentDescription="facebook"
+        app:layout_constraintBottom_toTopOf="@+id/tvMailLog"
+        app:layout_constraintEnd_toStartOf="@+id/iGoogle"
+        app:layout_constraintStart_toStartOf="@+id/iLogo"
+        app:layout_constraintTop_toBottomOf="@+id/iLogo"
+        app:srcCompat="@drawable/facebook" />
+
+    <ImageView
+        android:id="@+id/iGoogle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#99FFFFFF"
+        android:contentDescription="google"
+        app:layout_constraintBottom_toBottomOf="@+id/iFacebook"
+        app:layout_constraintEnd_toEndOf="@+id/iLogo"
+        app:layout_constraintStart_toEndOf="@+id/iFacebook"
+        app:layout_constraintTop_toTopOf="@+id/iFacebook"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/google" />
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tvName"
-        android:layout_width="0dp"
+        android:id="@+id/tvMailLog"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="347dp"
         android:layout_height="wrap_content"
+        android:textColorHint="#000000"
+        app:boxBackgroundColor="#99FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeColor="#4CAF50"
+        app:boxStrokeWidth="2dp"
+        app:counterEnabled="false"
+        app:errorEnabled="false"
         app:layout_constraintBottom_toTopOf="@+id/tvPass"
         app:layout_constraintEnd_toEndOf="@+id/iLogo"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/iLogo"
-        app:layout_constraintTop_toBottomOf="@+id/iLogo">
+        app:layout_constraintTop_toBottomOf="@+id/iFacebook">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etName"
+            android:id="@+id/etMailLog"
+            style="@style/etField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/name"
-            android:inputType="textPersonName"
+            android:hint="@string/mail"
+            android:inputType="textEmailAddress"
             tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tvPass"
-        android:layout_width="0dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="347dp"
         android:layout_height="wrap_content"
+        android:textColorHint="#000000"
+        app:boxBackgroundColor="#99FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeColor="#4CAF50"
+        app:boxStrokeWidth="2dp"
         app:layout_constraintBottom_toTopOf="@+id/btLog"
         app:layout_constraintEnd_toEndOf="@+id/iLogo"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/iLogo"
-        app:layout_constraintTop_toBottomOf="@+id/tvName">
+        app:layout_constraintTop_toBottomOf="@+id/tvMailLog"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#4CAF50">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPass"
+            style="@style/etField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/pass"
@@ -62,22 +123,49 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btLog"
-        android:layout_width="wrap_content"
+        android:id="@+id/btForget"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/log_in"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/iLogo"
-        app:layout_constraintStart_toEndOf="@+id/btReg"
-        app:layout_constraintTop_toBottomOf="@+id/tvPass" />
-
-    <Button
-        android:id="@+id/btReg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/register"
+        android:fontFamily="@font/trade_winds"
+        android:text="Forgot password?"
+        android:textColor="#4CAF50"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="#99FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/btLog"
         app:layout_constraintEnd_toStartOf="@+id/btLog"
         app:layout_constraintStart_toStartOf="@+id/iLogo"
-        app:layout_constraintTop_toTopOf="@+id/btLog" />
+        app:layout_constraintTop_toTopOf="@+id/btLog"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trade_winds"
+        android:text="@string/log_in"
+        android:textSize="20sp"
+        app:backgroundTint="#4CAF50"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btReg"
+        app:layout_constraintEnd_toEndOf="@+id/iLogo"
+        app:layout_constraintStart_toEndOf="@+id/btForget"
+        app:layout_constraintTop_toBottomOf="@+id/tvPass"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btReg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trade_winds"
+        android:text="Don't have an account yet?, REGISTER"
+        android:textColor="#3F51B5"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:backgroundTint="#99FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/iLogo"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/iLogo"
+        app:layout_constraintTop_toBottomOf="@+id/btLog" />
 </androidx.constraintlayout.widget.ConstraintLayout>

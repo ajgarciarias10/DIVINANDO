@@ -7,8 +7,21 @@
     tools:context=".RegActivity">
 
     <ImageView
+        android:id="@+id/iGroundReg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/ground"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ground"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
         android:id="@+id/iLogoReg"
-        android:layout_width="347dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
@@ -18,13 +31,22 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground"
+        app:srcCompat="@drawable/logo"
         tools:ignore="ImageContrastCheck" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tvNameReg"
-        android:layout_width="347dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textColorHint="#000000"
+        app:boxBackgroundColor="#99FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeColor="#4CAF50"
+        app:boxStrokeWidth="2dp"
         app:layout_constraintBottom_toTopOf="@+id/tvPassReg"
         app:layout_constraintEnd_toEndOf="@+id/iLogoReg"
         app:layout_constraintHorizontal_bias="0.5"
@@ -33,6 +55,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etNameReg"
+            style="@style/etField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name"
@@ -42,16 +65,28 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tvPassReg"
-        android:layout_width="347dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textColorHint="#000000"
+        app:boxBackgroundColor="#99FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeColor="#4CAF50"
+        app:boxStrokeWidth="2dp"
         app:layout_constraintBottom_toTopOf="@+id/tvConfirmPass"
         app:layout_constraintEnd_toEndOf="@+id/iLogoReg"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/iLogoReg"
-        app:layout_constraintTop_toBottomOf="@+id/tvNameReg">
+        app:layout_constraintTop_toBottomOf="@+id/tvNameReg"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#4CAF50">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPassReg"
+            style="@style/etField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/pass"
@@ -64,14 +99,26 @@
         android:id="@+id/tvConfirmPass"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textColorHint="#000000"
+        app:boxBackgroundColor="#99FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeColor="#4CAF50"
+        app:boxStrokeWidth="2dp"
         app:layout_constraintBottom_toTopOf="@+id/tvMail"
         app:layout_constraintEnd_toEndOf="@+id/iLogoReg"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/iLogoReg"
-        app:layout_constraintTop_toBottomOf="@+id/tvPassReg">
+        app:layout_constraintTop_toBottomOf="@+id/tvPassReg"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#4CAF50">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etConfirmPass"
+            style="@style/etField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/confirm_pass"
@@ -83,6 +130,15 @@
         android:id="@+id/tvMail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textColorHint="#000000"
+        app:boxBackgroundColor="#99FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeColor="#4CAF50"
+        app:boxStrokeWidth="2dp"
         app:layout_constraintBottom_toTopOf="@+id/btRegAdd"
         app:layout_constraintEnd_toEndOf="@+id/iLogoReg"
         app:layout_constraintHorizontal_bias="0.5"
@@ -91,6 +147,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etMailReg"
+            style="@style/etField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/mail"
@@ -102,10 +159,15 @@
         android:id="@+id/btRegAdd"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/trade_winds"
         android:text="@string/register"
+        android:textSize="20sp"
+        app:backgroundTint="#4CAF50"
+        app:cornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/iLogoReg"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/iLogoReg"
-        app:layout_constraintTop_toBottomOf="@+id/tvMail" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMail"
+        tools:ignore="TextContrastCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

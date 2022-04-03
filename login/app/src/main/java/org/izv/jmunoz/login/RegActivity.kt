@@ -9,7 +9,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import com.chaquo.python.PyObject
+import com.chaquo.python.Python
+import com.chaquo.python.android.AndroidPlatform
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import java.util.regex.Pattern
 
 class RegActivity : AppCompatActivity() {
@@ -20,6 +26,10 @@ class RegActivity : AppCompatActivity() {
     lateinit var etPass: EditText
     lateinit var etConfirm: EditText
     lateinit var navigate: Intent
+    lateinit var firebase: FirebaseAuth
+    lateinit var py: Python
+    lateinit var pyObj: PyObject
+    lateinit var msg: String
     val EMAIL_ADDRESS_PATTERN = Pattern.compile(
         "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
                 "\\@" +
@@ -34,12 +44,7 @@ class RegActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reg)
 
-        btRegister = findViewById<Button>(R.id.btRegAdd)
-        navigate = Intent(this,MainActivity::class.java)
-        etName = findViewById(R.id.etNameReg)
-        etMail = findViewById(R.id.etMailReg)
-        etPass = findViewById(R.id.etPassReg)
-        etConfirm = findViewById(R.id.etConfirmPass)
+        init()
 
         btRegister.setOnClickListener{
             saveData(it)
@@ -47,41 +52,43 @@ class RegActivity : AppCompatActivity() {
 
     }
 
-    private fun saveData(view: View){
-        var msg = ""
+    private fun init(){
+        firebase = Firebase.auth
+        msg = ""
 
-        if(!validateText()){
-            msg = "Empty field(s), please check it"
+        btRegister = findViewById<Button>(R.id.btRegAdd)
+        navigate = Intent(this,MainActivity::class.java)
+        etName = findViewById(R.id.etNameReg)
+        etMail = findViewById(R.id.etMailReg)
+        etPass = findViewById(R.id.etPassReg)
+        etConfirm = findViewById(R.id.etConfirmPass)
+    }
+
+    private fun saveData(view: View){
+
+        /*======= START ====== PYTHON =============*/
+        if (! Python.isStarted()) {
+            Python.start( AndroidPlatform(this));
         }
-        else if(etName.text.length < 4){
-            msg = "Name 4 characters min, check it"
-        }
-        else if(!validateMail()){
+
+        py = Python.getInstance()
+        pyObj = py.getModule("validateReg") //give python script name
+        msg = pyObj.callAttr("main", etMail.text.toString(), etPass.text.toString(),
+            etConfirm.text.toString(), etName.text.toString() ).toString()// call function
+        /*======= END ====== PYTHON =============*/
+
+        if(!validateMail() && msg == ""){
             msg = "Wrong mail, please check it"
-        }
-        else if(etPass.text.length < 8 || etConfirm.text.length < 8){
-            msg = "Pass and confirm pass 8 characters min"
-        }
-        else if(!validatePass()){
-            msg = "Pass and confirm pass are diferent"
         }
 
         if(msg == ""){
-            startActivity(navigate)
+            register(view)
         }
         else{
             showSnackBar(view, msg)
+            msg = ""
         }
 
-    }
-
-    private fun validateText(): Boolean{
-        return etName.text.isNotEmpty()     && etPass.text.isNotEmpty() &&
-               etConfirm.text.isNotEmpty()  && etMail.text.isNotEmpty()
-    }
-
-    private fun validatePass(): Boolean{
-        return etPass.text.toString() == etConfirm.text.toString()
     }
 
     private fun validateMail(): Boolean{
@@ -89,7 +96,23 @@ class RegActivity : AppCompatActivity() {
     }
 
     private fun showSnackBar(view: View, msg: String) {
-        Snackbar.make(view, msg, Snackbar.LENGTH_INDEFINITE).setAction("hidden") {}.show()
+        Snackbar.make(view, msg, Snackbar.LENGTH_LONG).setAction("hidden") {}.show()
+    }
+
+    private fun register(view: View){
+
+        firebase.createUserWithEmailAndPassword(etMail.text.toString(), etPass.text.toString())
+            .addOnCompleteListener(this){ task ->
+                if(task.isSuccessful){
+                    startActivity(navigate)
+                    finish()
+                }
+                else{
+                    showSnackBar(view, "Register failed, please check it")
+                }
+
+            }
+
     }
 
 }
