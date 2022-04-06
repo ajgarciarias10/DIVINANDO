@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:hint="REPETIR CONTRASEÑA"
             android:inputType="textPassword"
-            android:visibility="invisible" />
+            android:visibility="visible" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
