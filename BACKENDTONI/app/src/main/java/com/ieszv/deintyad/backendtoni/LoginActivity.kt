@@ -2,19 +2,15 @@ package com.ieszv.deintyad.backendtoni
 
 import android.content.ContentValues
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.chaquo.python.PyObject
 import com.chaquo.python.Python
 import com.chaquo.python.android.AndroidPlatform
 import com.google.android.material.textfield.TextInputEditText
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
-import com.google.firebase.auth.FirebaseAuthUserCollisionException
-import com.google.firebase.auth.FirebaseAuthWeakPasswordException
+import com.google.firebase.auth.*
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -30,8 +26,12 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+
+
         initialize();
     }
+
+
 
 
     /**
@@ -51,7 +51,7 @@ class LoginActivity : AppCompatActivity() {
             val pyObj: PyObject = py.getModule("ValidatingEmailAndPassword")
         //endregion
         //region  CAMPOS DE TIPO BUTTON
-            var  loginButton : Button = findViewById(R.id.bt_login)
+            var  loginButton : Button = findViewById(R.id.btLogin)
                     loginButton.setOnClickListener {
                         // region FUNCION QUE CHECKEA LOS CAMPOS INPUTEDIT EN PYTHON
                             //region CAMPOS DE TIPO INPUT EDIT TEXT
@@ -87,13 +87,17 @@ class LoginActivity : AppCompatActivity() {
 
 
                     }
-            var  loginGoRegisterButton : Button = findViewById(R.id.bt_register)
+            var  loginGoRegisterButton : Button = findViewById(R.id.btCreateAccount)
                     loginGoRegisterButton.setOnClickListener {
                         startActivity(Intent(this,RegisterActivity::class.java))
                         finish()
                     }
+
+
+
         //endregion
     }
+
     /**
      * ·······
      *  METODO PARA LOGUEAR A UN USUARIO EN FIREBASE

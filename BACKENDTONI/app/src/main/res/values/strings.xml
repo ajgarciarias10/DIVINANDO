@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">BACKENDTONI</string>
+    <string name="app_name">FirebaseLogin</string>
+    <string name="textLoginUsername">Correo electrónico</string>
+    <string name="textLoginPassword">Contraseña</string>
+    <string name="btForgotPass">¿Olvidaste tu contraseña?</string>
+    <string name="btLogin">entrar</string>
+    <string name="tvCreateAccount">¿Aún no tienes una cuenta?</string>
+    <string name="btCreateAccount">Registrarse</string>
+    <string name="btLoginFacebook">Entrar con Facebook</string>
+    <string name="facebook_app_id">684240492998094</string>
+    <string name="facebook_client_token">3419547319a5b1c9d8b911dce79f212e</string>
+    <string name="fb_login_protocol_scheme">fb684240492998094</string>
 </resources>

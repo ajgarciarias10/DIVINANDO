@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         // getting the bundle back from the android
         val bundle = intent.extras
         // performing the safety null check
-        var email :String? = null
+        var email :String?
         // getting the string back
         email= bundle!!.getString("email", "Default")
 
