@@ -1,7 +1,6 @@
 package com.ieszv.deintyad.backendtoni
 
 import android.content.ContentValues
-import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -17,6 +16,12 @@ import com.facebook.FacebookCallback
 import com.facebook.FacebookException
 import com.facebook.login.LoginResult
 import com.facebook.login.widget.LoginButton
+import com.google.android.gms.auth.api.identity.BeginSignInRequest
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.SignInButton
+import com.google.android.gms.common.api.ApiException
 
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.*
@@ -29,9 +34,12 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var callbackManager: CallbackManager
     //Inicializamos el boton de tipo Facebook
     private lateinit var buttonFacebookLogin: LoginButton
-
+    //Inicializamos Variable tipo registro de cliente google
+    private lateinit var googleSignInClient: GoogleSignInClient
+    private lateinit var  SignInButton : SignInButton
     companion object {
         private const val TAG = "FacebookLogin"
+        private const val RC_SIGN_IN = 9001
     }
 
     /**
@@ -126,10 +134,34 @@ class LoginActivity : AppCompatActivity() {
                 }
             })
         // endregion
-
-
+        //region Login with Google
+            //Variable googleSingOptions con cliente web
+                val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestIdToken(getString(R.string.your_web_client_id))
+                    .requestEmail()
+                    .build()
+            //Variable googleSignClient que coge el cliente
+            googleSignInClient =  GoogleSignIn.getClient(this,gso)
+            //IDENTIFICANDO EL BOTON
+            SignInButton = findViewById(R.id.sigN_in_btn)
+            //Accion del boton de login
+            SignInButton.setOnClickListener{
+                signIn()
+            }
+            //Firebase  Auth Instance
+            auth  = FirebaseAuth.getInstance()
 
         //endregion
+    }
+    /**
+     * ·······
+     * METODO  signIn PARA Loguearse
+     * ·······
+     *
+     */
+    private fun signIn() {
+        val signInIntent = googleSignInClient.signInIntent
+        startActivityForResult(signInIntent, RC_SIGN_IN)
     }
     /**
      * ·······
@@ -199,7 +231,21 @@ class LoginActivity : AppCompatActivity() {
      */
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        //Hilo de Facebook
         callbackManager.onActivityResult(requestCode, resultCode, data)
+        //Hilo de google
+            if (requestCode == RC_SIGN_IN) {
+                val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+                try {
+                    // Google Sign In was successful, authenticate with Firebase
+                    val account = task.getResult(ApiException::class.java)!!
+                    Log.d(TAG, "firebaseAuthWithGoogle:" + account.id)
+                    firebaseAuthWithGoogle(account.idToken!!)
+                } catch (e: ApiException) {
+                    // Google Sign In failed, update UI appropriately
+                    Log.w(TAG, "Google sign in failed", e)
+                }
+            }
     }
     /**
      * ·······
@@ -225,6 +271,28 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
     }
+    /**
+     * ·······
+     * METODO  firebaseAuthWithGoogle PARA AUTENTICACION DE FIREBASE CON GOOGLE
+     * ·······
+     *
+     */
+        private fun firebaseAuthWithGoogle(idToken: String) {
+            val credential = GoogleAuthProvider.getCredential(idToken, null)
+            auth.signInWithCredential(credential)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        // Sign in success, update UI with the signed-in user's information
+                        Log.d(TAG, "signInWithCredential:success")
+                        val user = auth.currentUser
+                        updateUI(user)
+                    } else {
+                        // If sign in fails, display a message to the user.
+                        Log.w(TAG, "signInWithCredential:failure", task.exception)
+                        updateUI(null)
+                    }
+                }
+        }
     /**
      * ·······
      * METODO PARA ACTUALIZAR DE INTERFAZ DE USUARIO
