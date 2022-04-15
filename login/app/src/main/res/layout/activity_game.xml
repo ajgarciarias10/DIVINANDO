@@ -6,4 +6,370 @@
     android:layout_height="match_parent"
     tools:context=".GameActivity">
 
+    <TextView
+        android:id="@+id/tvUser"
+        style="@style/wordStyle"
+        android:layout_width="201dp"
+        android:layout_height="wrap_content"
+        android:text="@string/usuario"
+        app:layout_constraintBottom_toBottomOf="@+id/iLogoGame"
+        app:layout_constraintEnd_toEndOf="@+id/tvWordA5"
+        app:layout_constraintStart_toEndOf="@+id/iLogoGame"
+        app:layout_constraintTop_toTopOf="@+id/iLogoGame" />
+
+    <ImageView
+        android:id="@+id/iLogoGame"
+        android:layout_width="137dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toTopOf="@+id/tv"
+        app:layout_constraintEnd_toStartOf="@+id/tvUser"
+        app:layout_constraintStart_toStartOf="@+id/tvWordA1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tvWordA1"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordA2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iLogoGame"
+        app:layout_constraintBottom_toTopOf="@+id/tvWordB1"
+        tools:text="W" />
+
+    <TextView
+        android:id="@+id/tvWordA2"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordA1"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordA3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordA1"
+        app:layout_constraintTop_toTopOf="@+id/tvWordA1"
+        tools:text="O" />
+
+    <TextView
+        android:id="@+id/tvWordA3"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordA1"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordA4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordA2"
+        app:layout_constraintTop_toTopOf="@+id/tvWordA1"
+        tools:text="R" />
+
+    <TextView
+        android:id="@+id/tvWordA4"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordA1"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordA5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordA3"
+        app:layout_constraintTop_toTopOf="@+id/tvWordA1"
+        tools:text="D" />
+
+    <TextView
+        android:id="@+id/tvWordA5"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordA1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordA4"
+        app:layout_constraintTop_toTopOf="@+id/tvWordA1"
+        tools:text="S" />
+
+    <TextView
+        android:id="@+id/tvWordB1"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordB2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWordA1"
+        app:layout_constraintBottom_toTopOf="@+id/tvWordC1"
+        tools:text="W" />
+
+    <TextView
+        android:id="@+id/tvWordB2"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordB1"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordB3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordB1"
+        app:layout_constraintTop_toTopOf="@+id/tvWordB1"
+        tools:text="O" />
+
+    <TextView
+        android:id="@+id/tvWordB3"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordB1"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordB4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordB2"
+        app:layout_constraintTop_toTopOf="@+id/tvWordB1"
+        tools:text="R" />
+
+    <TextView
+        android:id="@+id/tvWordB4"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordB1"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordB5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordB3"
+        app:layout_constraintTop_toTopOf="@+id/tvWordB1"
+        tools:text="D" />
+
+    <TextView
+        android:id="@+id/tvWordB5"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordB1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordB4"
+        app:layout_constraintTop_toTopOf="@+id/tvWordB1"
+        tools:text="S" />
+
+    <TextView
+        android:id="@+id/tvWordC1"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordC2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWordB1"
+        app:layout_constraintBottom_toTopOf="@+id/tvWordD1"
+        tools:text="W" />
+
+    <TextView
+        android:id="@+id/tvWordC2"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordC1"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordC3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordC1"
+        app:layout_constraintTop_toTopOf="@+id/tvWordC1"
+        tools:text="O" />
+
+    <TextView
+        android:id="@+id/tvWordC3"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordC1"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordC4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordC2"
+        app:layout_constraintTop_toTopOf="@+id/tvWordC1"
+        tools:text="R" />
+
+    <TextView
+        android:id="@+id/tvWordC4"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordC1"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordC5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordC3"
+        app:layout_constraintTop_toTopOf="@+id/tvWordC1"
+        tools:text="D" />
+
+    <TextView
+        android:id="@+id/tvWordC5"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordC1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordC4"
+        app:layout_constraintTop_toTopOf="@+id/tvWordC1"
+        tools:text="S" />
+
+    <TextView
+        android:id="@+id/tvWordD1"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordD2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWordC1"
+        app:layout_constraintBottom_toTopOf="@+id/tvWordE1"
+        tools:text="W" />
+
+    <TextView
+        android:id="@+id/tvWordD2"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordD1"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordD3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordD1"
+        app:layout_constraintTop_toTopOf="@+id/tvWordD1"
+        tools:text="O" />
+
+    <TextView
+        android:id="@+id/tvWordD3"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordD1"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordD4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordD2"
+        app:layout_constraintTop_toTopOf="@+id/tvWordD1"
+        tools:text="R" />
+
+    <TextView
+        android:id="@+id/tvWordD4"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordD1"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordD5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordD3"
+        app:layout_constraintTop_toTopOf="@+id/tvWordD1"
+        tools:text="D" />
+
+    <TextView
+        android:id="@+id/tvWordD5"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordD1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordD4"
+        app:layout_constraintTop_toTopOf="@+id/tvWordD1"
+        tools:text="S" />
+
+    <TextView
+        android:id="@+id/tvWordE1"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordE2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWordD1"
+        app:layout_constraintBottom_toTopOf="@+id/btSend"
+        tools:text="W" />
+
+    <TextView
+        android:id="@+id/tvWordE2"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordE1"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordE3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordE1"
+        app:layout_constraintTop_toTopOf="@+id/tvWordE1"
+        tools:text="O" />
+
+    <TextView
+        android:id="@+id/tvWordE3"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordE1"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordE4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordE2"
+        app:layout_constraintTop_toTopOf="@+id/tvWordE1"
+        tools:text="R" />
+
+    <TextView
+        android:id="@+id/tvWordE4"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordE1"
+        app:layout_constraintEnd_toStartOf="@+id/tvWordE5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordE3"
+        app:layout_constraintTop_toTopOf="@+id/tvWordE1"
+        tools:text="D" />
+
+    <TextView
+        android:id="@+id/tvWordE5"
+        style="@style/wordStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWordE1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvWordE4"
+        app:layout_constraintTop_toTopOf="@+id/tvWordE1"
+        tools:text="S" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvWord"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:boxCornerRadiusBottomEnd="32dp"
+        app:boxCornerRadiusBottomStart="32dp"
+        app:boxCornerRadiusTopEnd="32dp"
+        app:boxCornerRadiusTopStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btSend"
+        app:layout_constraintEnd_toStartOf="@+id/btSend"
+        app:layout_constraintStart_toStartOf="@+id/tvWordA1"
+        app:layout_constraintTop_toTopOf="@+id/btSend">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etWord"
+            style="@style/etField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="hint"
+            android:inputType="text"
+            android:textAlignment="center"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trade_winds"
+        android:text="SEND"
+        android:textSize="20sp"
+        app:backgroundTint="#4CAF50"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvWordA5"
+        app:layout_constraintTop_toBottomOf="@+id/tvWordE1"
+        tools:ignore="TextContrastCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

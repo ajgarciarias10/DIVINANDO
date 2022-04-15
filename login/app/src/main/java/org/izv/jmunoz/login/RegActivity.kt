@@ -15,6 +15,7 @@ import com.chaquo.python.android.AndroidPlatform
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import java.util.regex.Pattern
 
@@ -30,6 +31,7 @@ class RegActivity : AppCompatActivity() {
     lateinit var py: Python
     lateinit var pyObj: PyObject
     lateinit var msg: String
+    private val db = FirebaseFirestore.getInstance()
     val EMAIL_ADDRESS_PATTERN = Pattern.compile(
         "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
                 "\\@" +
@@ -112,6 +114,10 @@ class RegActivity : AppCompatActivity() {
                 }
 
             }
+        //AÑADIR DATOS
+            db.collection("Usuarios").document(etName.text.toString()).set(
+                hashMapOf("nombre" to etName.text.toString(), "mail" to etMail.text.toString())
+            )
 
     }
 

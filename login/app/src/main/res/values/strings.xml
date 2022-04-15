@@ -8,4 +8,5 @@
     <string name="confirm_pass">confirm pass</string>
     <string name="mail">mail</string>
     <string name="ground">ground</string>
+    <string name="usuario">usuario</string>
 </resources>

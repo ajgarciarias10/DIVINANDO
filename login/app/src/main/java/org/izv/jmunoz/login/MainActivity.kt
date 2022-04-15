@@ -1,18 +1,24 @@
 package org.izv.jmunoz.login
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import androidx.annotation.RequiresApi
 import com.chaquo.python.PyObject
 import com.chaquo.python.Python
 import com.chaquo.python.android.AndroidPlatform
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
+import java.io.BufferedReader
+import java.io.File
 import java.util.regex.Pattern
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +33,11 @@ class MainActivity : AppCompatActivity() {
     lateinit var msg: String
     lateinit var py: Python
     lateinit var pyObj: PyObject
+    private lateinit var lista: List<String>
+    lateinit var  palabra: Palabra
+    private val db = FirebaseFirestore.getInstance()
+    private lateinit var words: String
+    private var url = "https://www.listasdepalabras.es/palabras5letras.htm"
     val EMAIL_ADDRESS_PATTERN = Pattern.compile(
         "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
                 "\\@" +
@@ -37,6 +48,9 @@ class MainActivity : AppCompatActivity() {
                 ")+"
     )
 
+
+
+    @SuppressLint("NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -54,6 +68,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun init(){
 
         msg = ""
@@ -65,6 +80,25 @@ class MainActivity : AppCompatActivity() {
         logged = Intent(this,GameActivity::class.java)
         etMail = findViewById(R.id.etMailLog)
         etPass = findViewById(R.id.etPass)
+        lista = mutableListOf()
+
+        palabra = Palabra()
+        lista = palabra.getDB()
+        var id = lista.size
+        //AÑADIR DATOS
+        /*for(palabra in lista ) {
+            db.collection("Palabras").document(palabra).set(
+                hashMapOf("nombre" to palabra, "id" to id)
+            )
+            id++
+        }*/
+        //LEER DATOS
+        /*db.collection("Palabras").document("TUNOS").get()
+            .addOnSuccessListener{
+                etMail.setText(it.get("nombre") as String? +"   "+ it.get("id").toString())
+            }*/
+        //ELIMINAR DATOS
+        //db.collection("palabras").document("abrir").delete()
 
     }
 
@@ -77,6 +111,7 @@ class MainActivity : AppCompatActivity() {
         firebase.signInWithEmailAndPassword(etMail.text.toString(), etPass.text.toString())
             .addOnCompleteListener(this){ task ->
                 if(task.isSuccessful) {
+
                     startActivity(logged)
                     finish()
                 }
@@ -117,3 +152,4 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
+
