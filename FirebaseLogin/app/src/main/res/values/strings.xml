@@ -7,4 +7,9 @@
     <string name="tvCreateAccount">¿Aún no tienes una cuenta?</string>
     <string name="btCreateAccount">Registrarse</string>
     <string name="btLoginFacebook">Entrar con Facebook</string>
+    <string name="facebookLoginOption">O</string>
+    <string name="btRegister">Registrarse</string>
+    <string name="etRegisterUsername">Nombre de usuario</string>
+    <string name="tilRegisterPassRep">Repetir contraseña</string>
+    <string name="btLoginGoogle">entrar con google</string>
 </resources>
