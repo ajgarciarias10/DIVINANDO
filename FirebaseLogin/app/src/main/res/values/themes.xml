@@ -15,4 +15,13 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
     </style>
+
+    <style name="Theme.FirebaseLogin.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.FirebaseLogin.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.FirebaseLogin.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

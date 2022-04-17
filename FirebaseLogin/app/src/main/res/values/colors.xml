@@ -8,7 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#6DAA65</color>
-    <color name="facebook">#1877f2</color>
     <color name="green_500">#1EA61D</color>
     <color name="green_400">#57C94C</color>
     <color name="green_300">#86E372</color>
@@ -20,5 +19,14 @@
     <color name="gradient4">#FEE140</color>
     <color name="green1">#43e97b</color>
     <color name="green2">#38f9d7</color>
+    <color name="blue1">#b721ff</color>
+    <color name="blue2">#21d4fd</color>
+
     <color name="google">#ea4335</color>
+    <color name="facebook">#1877f2</color>
+
+    <color name="borderletter">#d4d4d4</color>
+    <color name="correctletter">#6aaa64</color>
+    <color name="positionletter">#c9b458</color>
+    <color name="incorrectletter">#787c7e</color>
 </resources>

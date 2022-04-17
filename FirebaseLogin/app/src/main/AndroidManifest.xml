@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirebaseLogin">
         <activity
+            android:name=".NavegationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_navegation"
+            android:theme="@style/Theme.FirebaseLogin.NoActionBar" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
