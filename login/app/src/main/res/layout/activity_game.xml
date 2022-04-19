@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".GameActivity">
 
+    <ImageView
+        android:id="@+id/iGroundGame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/ground"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ground"
+        tools:ignore="ImageContrastCheck" />
+
     <TextView
         android:id="@+id/tvUser"
         style="@style/wordStyle"
@@ -283,7 +296,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvWordD1"
-        app:layout_constraintBottom_toTopOf="@+id/btSend"
+        app:layout_constraintBottom_toTopOf="@+id/tvWord"
         tools:text="W" />
 
     <TextView
@@ -336,40 +349,64 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tvWord"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:boxCornerRadiusBottomEnd="32dp"
-        app:boxCornerRadiusBottomStart="32dp"
-        app:boxCornerRadiusTopEnd="32dp"
-        app:boxCornerRadiusTopStart="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btSend"
+        android:layout_height="wrap_content"
+        android:textColorHint="#00000000"
+        app:boxBackgroundColor="#99FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeColor="#4CAF50"
+        app:boxStrokeWidth="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btSend"
-        app:layout_constraintStart_toStartOf="@+id/tvWordA1"
-        app:layout_constraintTop_toTopOf="@+id/btSend">
+        app:layout_constraintStart_toEndOf="@+id/btBackGame"
+        app:layout_constraintTop_toBottomOf="@+id/tvWordE1">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etWord"
             style="@style/etField"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="hint"
+            android:layout_height="match_parent"
             android:inputType="text"
             android:textAlignment="center"
-            tools:ignore="TextContrastCheck" />
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btSend"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:fontFamily="@font/trade_winds"
         android:text="SEND"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:backgroundTint="#4CAF50"
         app:cornerRadius="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWord"
         app:layout_constraintEnd_toEndOf="@+id/tvWordA5"
-        app:layout_constraintTop_toBottomOf="@+id/tvWordE1"
+        app:layout_constraintStart_toEndOf="@+id/tvWord"
+        app:layout_constraintTop_toTopOf="@+id/tvWord"
         tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btBackGame"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/trade_winds"
+        android:foreground="?attr/actionModeCloseDrawable"
+        android:textSize="16sp"
+        app:backgroundTint="#3F51B5"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btSend"
+        app:layout_constraintEnd_toStartOf="@+id/tvWord"
+        app:layout_constraintStart_toStartOf="@+id/tvWordA1"
+        app:layout_constraintTop_toTopOf="@+id/btSend"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

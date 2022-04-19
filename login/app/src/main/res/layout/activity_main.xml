@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/iGround"
+        android:id="@+id/IGroundMain"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/ground"

@@ -22,8 +22,11 @@ import java.io.File
 import java.util.regex.Pattern
 
 class MainActivity : AppCompatActivity() {
+    object user {
+        lateinit var mail: String
+    }
 
-    lateinit var btRegister: Button
+    private lateinit var btRegister: Button
     lateinit var btLog: Button
     lateinit var navigate: Intent
     lateinit var logged: Intent
@@ -58,6 +61,9 @@ class MainActivity : AppCompatActivity() {
         init()
 
         btRegister.setOnClickListener{
+            var b = Bundle()
+            b.putString("user", etMail.text.toString())
+            navigate.putExtras(b)
             startActivity(navigate)
             finish()
         }
@@ -84,11 +90,14 @@ class MainActivity : AppCompatActivity() {
 
         palabra = Palabra()
         lista = palabra.getDB()
-        var id = lista.size
+        var id = 0
+        etMail.setText("milito@gmail.com")
+        etPass.setText("12345678")
+
         //AÑADIR DATOS
         /*for(palabra in lista ) {
-            db.collection("Palabras").document(palabra).set(
-                hashMapOf("nombre" to palabra, "id" to id)
+            db.collection("Palabras").document(id.toString()).set(
+                hashMapOf("nombre" to palabra)
             )
             id++
         }*/
@@ -111,7 +120,7 @@ class MainActivity : AppCompatActivity() {
         firebase.signInWithEmailAndPassword(etMail.text.toString(), etPass.text.toString())
             .addOnCompleteListener(this){ task ->
                 if(task.isSuccessful) {
-
+                    user.mail = etMail.text.toString()
                     startActivity(logged)
                     finish()
                 }
@@ -150,6 +159,5 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
 }
 
