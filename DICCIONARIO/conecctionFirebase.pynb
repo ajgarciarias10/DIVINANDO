@@ -1,0 +1,13 @@
+##IMPORTAMOS LIBRERIAS FIREBASE
+from firebase import firebase
+import extractingDataFromTXT as extr
+firebase = firebase.FirebaseApplication("https://loginandregister-86bb1-default-rtdb.europe-west1.firebasedatabase.app/",None)
+
+
+palabra = extr.extractSpanishDictionary
+
+print(palabra)
+
+##datos ={
+##    'palabra': palabra,    
+##}
