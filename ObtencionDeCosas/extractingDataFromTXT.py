@@ -1,4 +1,5 @@
 import extractingDataFromTXT as extr
+import json
 ##LIBRERIA EXTRACCION CSV
 import pandas as pd
 ##FUNCION QUE PALABRAS CON 5 LETRAS DEL DICCIONARIO 
@@ -33,13 +34,21 @@ def  gettingCSV():
     ##Devolvemos el array bidimensional
     return df
 #Limpiar los datos de la lista y sacamos esos datos en tuplas
-def  extractDataFromArrayList(arrayconlasCosas) :
+def  extractURLFromArrayList(arrayconlasCosas) :
     ##Almacenamos en un arraylist de Imagenes cada imagen
     imagesURL = list()
     tuples = [tuple(x) for x in arrayconlasCosas.values]
     for each in tuples:
         imagesURL.append(each[2])
     return imagesURL
+#Limpiamos los datos de la lista y obtenmos en la posicion 0 de la lista los nombres de los paises
+def  extractCountriesFromArrayList(arrayconlasCosas) :
+    ##Almacenamos en un arraylist de Imagenes cada imagen
+    Countries = list()
+    tuples = [tuple(x) for x in arrayconlasCosas.values]
+    for each in tuples:
+        Countries.append(each[0])
+    ##Devolvemos el pais
+    return Countries
 
-
-
+    
