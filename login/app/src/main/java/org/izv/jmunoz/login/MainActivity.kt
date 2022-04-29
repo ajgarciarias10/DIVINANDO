@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
         btRegister = findViewById(R.id.btReg)
         btLog = findViewById(R.id.btLog)
         navigate = Intent(this,RegActivity::class.java)
-        logged = Intent(this,GameActivity::class.java)
+        logged = Intent(this,MenuActivity::class.java)
         etMail = findViewById(R.id.etMailLog)
         etPass = findViewById(R.id.etPass)
         lista = mutableListOf()

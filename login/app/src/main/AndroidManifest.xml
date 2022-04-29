@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Login">
         <activity
+            android:name=".ChainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ClubActivity"
+            android:exported="false" />
+        <activity
             android:name=".EndActivity"
             android:exported="false" />
         <activity

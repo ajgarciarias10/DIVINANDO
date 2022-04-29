@@ -9,4 +9,9 @@
     <string name="mail">mail</string>
     <string name="ground">ground</string>
     <string name="usuario">usuario</string>
+    <string name="next">next</string>
+    <string name="backClub"><![CDATA[<<]]></string>
+    <string name="words">WORDS</string>
+    <string name="images">IMAGES</string>
+    <string name="chains">CHAINS</string>
 </resources>
