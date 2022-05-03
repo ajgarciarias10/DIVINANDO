@@ -1,13 +1,19 @@
 ##IMPORTAMOS LIBRERIAS FIREBASE
-from firebase import firebase
+import firebase_admin 
+from firebase_admin import credentials
+from firebase_admin import firestore
 ##IMPORTAMOS FUNCION DE EXTRAER DATA DE UN TXT EN FIREBASE
 import extractingDataFromTXT as extr
 ##Conectamos con nuestra base de datos en Firebase
-firebase = firebase.FirebaseApplication("https://loginandregister-86bb1-default-rtdb.europe-west1.firebasedatabase.app/",None)
+cred = credentials.Certificate("F:\DIVINANDO\ObtencionDeCosas\loginandregister-86bb1-firebase-adminsdk-rzsgq-76c0f3e43d.json")
 
+firebase_admin.initialize_app(cred)
+
+db=firestore.client()
 ##STRINGS DE CADA DICCIONARIO
 dictEspañol = 'listado-general.txt'
 dictBritish = 'wordsBritishhhh.txt'
+
 
 
 ##CREAMOS UN RESULTADO ARRAYLIST DE LO QUE TE DEVUELVE LA FUNCIÓN EXTRAE DICCIONARIO
@@ -17,9 +23,10 @@ palabrasBritanicasPataPirata = extr.extractDictionary(dictBritish)
 
 ##CREAMOS UN ARRAY DE DATOS CON LOS ARRAYLIST DENTRO DEL PROPIO ARRAY DE DATOS
 datos ={
-    'BR': palabrasBritanicasPataPirata,    
-    'ES' : palabrasEspañolasPataNegra,
+    'palabrasBritanicas': palabrasBritanicasPataPirata,    
+    'palabrasEspañola' : palabrasEspañolasPataNegra,
 }
 
 #UTILIZAMOS METODO POST PARA SUBIR EL ARRAY DE DATOS A FIREBASE
-resultado = firebase.post('/bd/diccionarios',datos)
+#Add documents
+db.collection('Diccionario').add(datos)

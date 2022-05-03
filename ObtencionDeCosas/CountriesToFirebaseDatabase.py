@@ -1,9 +1,15 @@
 ##IMPORTAMOS LIBRERIAS FIREBASE
-from firebase import firebase
+import firebase_admin 
+from firebase_admin import credentials
+from firebase_admin import firestore
 ##IMPORTAMOS FUNCION DE EXTRAER DATA DE UN TXT EN FIREBASE
 import extractingDataFromTXT as extr
 ##Conectamos con nuestra base de datos en Firebase
-firebase = firebase.FirebaseApplication("https://loginandregister-86bb1-default-rtdb.europe-west1.firebasedatabase.app/",None)
+cred = credentials.Certificate("F:\DIVINANDO\ObtencionDeCosas\loginandregister-86bb1-firebase-adminsdk-rzsgq-76c0f3e43d.json")
+
+firebase_admin.initialize_app(cred)
+db=firestore.client()
+
 ##Extraemos el país
 countries = extr.extractCountriesFromArrayList(extr.gettingCSV())
 ##Extraemos las imagenes
@@ -13,5 +19,5 @@ paises = {
     'pais' : countries,
     'url' : imagenes
 }
-#UTILIZAMOS METODO POST PARA SUBIR EL ARRAY DE DATOS A FIREBASE
-resultado = firebase.post('/bd/quizCountries', paises)
+#Add documents
+db.collection('Paises').add(paises)
