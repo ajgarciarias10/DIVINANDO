@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">BackENDWITHFRAGMENTS</string>
+    <string name="textLoginUsername">Correo electrónico</string>
+    <string name="textLoginPassword">Contraseña</string>
+    <string name="btForgotPass">¿Olvidaste tu contraseña?</string>
+    <string name="btLogin">entrar</string>
+    <string name="tvCreateAccount">¿Aún no tienes una cuenta?</string>
+    <string name="btCreateAccount">Registrarse</string>
+    <string name="btLoginFacebook">Entrar con Facebook</string>
+    <string name="facebook_app_id">1119193595479389</string>
+    <string name="facebook_client_token">5b3b8d965702c4868e97730ca2e37a5c</string>
+    <string name="fb_login_protocol_scheme">fb1119193595479389</string>
+    <string name="your_web_client_id">1068638417166-qh26h75c9cr367svdkilbfgmpe5i7hq4.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="facebookLoginOption">O</string>
+    <string name="btRegister">Registrarse</string>
+    <string name="etRegisterUsername">Nombre de usuario</string>
+    <string name="tilRegisterPassRep">Repetir contraseña</string>
+    <string name="btLoginGoogle">entrar con google</string>
+    <string name="title_activity_pantalla_logueado">PantallaLogueado</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
