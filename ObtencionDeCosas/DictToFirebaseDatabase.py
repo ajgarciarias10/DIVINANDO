@@ -5,7 +5,7 @@ from firebase_admin import firestore
 ##IMPORTAMOS FUNCION DE EXTRAER DATA DE UN TXT EN FIREBASE
 import extractingDataFromTXT as extr
 ##Conectamos con nuestra base de datos en Firebase
-cred = credentials.Certificate("F:\DIVINANDO\ObtencionDeCosas\loginandregister-86bb1-firebase-adminsdk-rzsgq-76c0f3e43d.json")
+cred = credentials.Certificate("./loginandregister-86bb1-firebase-adminsdk-rzsgq-76c0f3e43d.json")
 
 firebase_admin.initialize_app(cred)
 

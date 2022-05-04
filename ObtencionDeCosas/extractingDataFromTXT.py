@@ -16,6 +16,18 @@ def extractDictionary(archivo):
                 palabra.append(line.replace('\n',''))
     ##DEVOLVEMOS LA PALABRA       
     return palabra
+##FUNCION QUE PALABRAS CON 5 LETRAS DEL DICCIONARIO 
+def extractPaises(archivo):
+    ##CREAMOS UN ARRAYLIST DE PALABRA
+    palabra=list()
+    ##Abrimos el archivo lo lee
+    with open(archivo,'r', encoding='utf-8') as f:
+        ##Para cada linea en la lectura
+        for line in f:
+            ##METODO DE AÑADIR PALABRA
+            palabra.append(line.replace('\n',''))
+    ##DEVOLVEMOS LA PALABRA       
+    return palabra
 ##FUNCION EXTRAE TODOS LOS PAISES DEL MUNDO EN INGLES
 def extractCountries():
     ##CREAMOS UN ARRAYLIST DE PALABRA
