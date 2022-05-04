@@ -36,62 +36,44 @@ import com.ieszv.progmulti.backendwithfragments.databinding.FragmentFirstBinding
  */
 class FirstFragment : Fragment() {
 
+    //Inicializamos variable de Autenticacion de Firebase
     private lateinit var auth : FirebaseAuth
     //Manejo de las llamadas las inicializamos
     private lateinit var callbackManager: CallbackManager
     //Inicializamos Variable tipo registro de cliente google
     private lateinit var googleSignInClient: GoogleSignInClient
-    private lateinit var  SignInButton : SignInButton
     companion object {
         private const val TAG = "FacebookLogin"
         private const val RC_SIGN_IN = 9001
     }
-
-
-
-
+    //Variable para hacer el findByViewID
     private var _binding: FragmentFirstBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
+    /**
+     * Metodo  en el momento de crear la vista
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
         return binding.root
 
-        initialize()
 
     }
-
+    /**
+     * Metodo al crearse la vista
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btCreateAccount.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }
-
-
         //AUTORIZAMOS A FIREBASE
         auth = Firebase.auth
-
         //region Como obtener las funciones de Python
         if (! Python.isStarted()) {
             Python.start(AndroidPlatform(requireContext()))
         }
-
-
-
-
-    }
-
-    fun initialize(){
-
         //COGEMOS LA INSTANCIA DE PYTHON
         val py: Python = Python.getInstance()
         //BUSCAMOS EL OBJETO QUE CONTIENE LOS METODOS A UTILIZAR
@@ -161,7 +143,7 @@ class FirstFragment : Fragment() {
             .requestEmail()
             .build()
         //Variable googleSignClient que coge el cliente
-        googleSignInClient =  GoogleSignIn.getClient(requireActivity(),gso)
+        googleSignInClient =  GoogleSignIn.getClient(requireContext(),gso)
         //IDENTIFICANDO EL BOTON
         //Accion del boton de login
         binding.btGoogle.setOnClickListener {
@@ -171,7 +153,11 @@ class FirstFragment : Fragment() {
         auth  = FirebaseAuth.getInstance()
 
         //endregion
+
+
+
     }
+
     /**
      * ·······
      * METODO  signIn PARA Loguearse
@@ -181,11 +167,6 @@ class FirstFragment : Fragment() {
     private fun signIn() {
         val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
     /**
      * ·······
@@ -215,14 +196,13 @@ class FirstFragment : Fragment() {
             }
         }
     }
-    //endregion
     /**
      * ·······
      * METODO PARA QUE CUANDO EMPIECE LA APP SI ESTAS REGISTRADO LLAME AL METODO ACTUALIZAR USERINTERFACE
      * ·······
      *
      */
-    public override fun onStart() {
+     override fun onStart() {
         super.onStart()
         val currentUser = auth.currentUser
         updateUI(currentUser)
@@ -305,8 +285,14 @@ class FirstFragment : Fragment() {
      */
     private fun updateUI(user: FirebaseUser?) {
         if(user != null){
-            user.displayName?.let { Log.v("TE HAS LOGUEADO MI PANA",user.toString()) }
+            user.displayName?.let { findNavController().navigate(R.id.action_FirstFragment_to_pantallaLogueado)}
         }
     }
+
+
+
+
+
+
 
 }
