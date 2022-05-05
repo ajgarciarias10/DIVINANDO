@@ -29,4 +29,4 @@ datos ={
 
 #UTILIZAMOS METODO POST PARA SUBIR EL ARRAY DE DATOS A FIREBASE
 #Add documents
-db.collection('Diccionario').add(datos)
+db.collection('Diccionario').document("palabras").set(datos)

@@ -23,4 +23,4 @@ paises = {
     'Url' : imagenes
 }
 #Add documents
-db.collection('Paises').add(paises)
+db.collection('Paises').document("ListaPaises").set(paises)

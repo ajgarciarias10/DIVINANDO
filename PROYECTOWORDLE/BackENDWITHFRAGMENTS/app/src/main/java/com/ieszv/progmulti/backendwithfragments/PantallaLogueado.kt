@@ -37,7 +37,11 @@ class PantallaLogueado : Fragment() {
         //AUTORIZAMOS A FIREBASE
         mFirebaseAuth = Firebase.auth
         binding.btLogout.setOnClickListener {
-            logout()
+            findNavController().navigate(R.id.action_pantallaLogueado_to_FirstFragment)
+            mFirebaseAuth.signOut()
+        }
+        binding.btWorldQuiz.setOnClickListener{
+            findNavController().navigate(R.id.action_pantallaLogueado_to_countryFragment)
         }
 
 
@@ -45,11 +49,7 @@ class PantallaLogueado : Fragment() {
 
     }
 
-     fun logout(){
-        mFirebaseAuth.signOut()
-         findNavController().navigate(R.id.action_pantallaLogueado_to_FirstFragment)
 
-    }
 
 
 }

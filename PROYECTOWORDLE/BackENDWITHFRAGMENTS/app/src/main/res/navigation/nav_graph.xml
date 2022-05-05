@@ -37,5 +37,13 @@
         <action
             android:id="@+id/action_pantallaLogueado_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_pantallaLogueado_to_countryFragment"
+            app:destination="@id/countryFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/countryFragment"
+        android:name="com.ieszv.progmulti.backendwithfragments.CountryFragment"
+        android:label="fragment_country"
+        tools:layout="@layout/fragment_country" />
 </navigation>

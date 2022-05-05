@@ -179,7 +179,7 @@ class FirstFragment : Fragment() {
                 task ->
             //SI EL LOGUEO ES EXITOSO
             if (task.isSuccessful){
-
+                findNavController().navigate(R.id.action_FirstFragment_to_pantallaLogueado)
             }
             else{
                 try {

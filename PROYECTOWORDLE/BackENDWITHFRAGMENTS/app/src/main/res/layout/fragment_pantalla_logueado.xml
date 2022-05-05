@@ -19,4 +19,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btForgotPass" />
+
+    <Button
+        android:id="@+id/bt_football_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Football Quiz"
+        app:layout_constraintBottom_toTopOf="@+id/bt_world_quiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_wordle" />
+
+    <Button
+        android:id="@+id/bt_world_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="World Quiz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_football_quiz" />
+
+    <Button
+        android:id="@+id/bt_wordle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wordle"
+        app:layout_constraintBottom_toTopOf="@+id/bt_football_quiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_logout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
