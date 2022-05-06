@@ -40,6 +40,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var  palabra: Palabra
     private val db = FirebaseFirestore.getInstance()
     private lateinit var words: String
+    lateinit var  URL: String
+    lateinit var  nombre: String
     private var url = "https://www.listasdepalabras.es/palabras5letras.htm"
     val EMAIL_ADDRESS_PATTERN = Pattern.compile(
         "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
@@ -90,17 +92,19 @@ class MainActivity : AppCompatActivity() {
 
         palabra = Palabra()
         lista = palabra.getDB()
-        var id = 0
+
         etMail.setText("milito@gmail.com")
         etPass.setText("12345678")
-
+        var id = 7
+        URL = "https://e00-marca.uecdn.es/assets/sports/logos/basket/png/144x144/7420.png"
+        nombre = "Dallas Mavericks"
         //AÑADIR DATOS
-        /*for(palabra in lista ) {
-            db.collection("Palabras").document(id.toString()).set(
-                hashMapOf("nombre" to palabra)
-            )
-            id++
-        }*/
+
+            /*db.collection("Clubs").document(id.toString()).set(
+                hashMapOf("id" to id,"url" to URL, "nombre" to nombre)
+            )*/
+
+
         //LEER DATOS
         /*db.collection("Palabras").document("TUNOS").get()
             .addOnSuccessListener{

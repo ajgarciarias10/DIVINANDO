@@ -14,4 +14,7 @@
     <string name="words">WORDS</string>
     <string name="images">IMAGES</string>
     <string name="chains">CHAINS</string>
+
+    <string name="false_">FALSE</string>
+    <string name="true_">TRUE</string>
 </resources>

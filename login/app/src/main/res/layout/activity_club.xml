@@ -28,50 +28,62 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRound"
 
-        app:layout_constraintBottom_toTopOf="@+id/tvPoints"
+        app:layout_constraintBottom_toTopOf="@+id/tvClubName"
         tools:ignore="ImageContrastCheck"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/tvPoints"
+        android:id="@+id/tvClubName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/btBackClub"
         app:layout_constraintEnd_toEndOf="@+id/iClub"
         app:layout_constraintStart_toStartOf="@+id/iClub"
         app:layout_constraintTop_toBottomOf="@+id/iClub"
+        app:layout_constraintBottom_toTopOf="@+id/btTrue"
         tools:text="0 POINTS" />
 
-    <TextView
-        android:id="@+id/tvWordClub"
+    <Button
+        android:id="@+id/btTrue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="@+id/btBackClub"
-        app:layout_constraintEnd_toStartOf="@+id/btNextClub"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btBackClub"
-        app:layout_constraintTop_toTopOf="@+id/btBackClub"
-        tools:text="example" />
+        android:fontFamily="@font/trade_winds"
+        android:text="@string/true_"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#4CAF50"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btNextClub"
+        app:layout_constraintEnd_toStartOf="@+id/btFalse"
+        app:layout_constraintStart_toStartOf="@+id/iClub"
+        app:layout_constraintTop_toBottomOf="@+id/tvClubName"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btFalse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/trade_winds"
+        android:text="@string/false_"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#F44336"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btTrue"
+        app:layout_constraintEnd_toEndOf="@+id/iClub"
+        app:layout_constraintStart_toEndOf="@+id/btTrue"
+        app:layout_constraintTop_toTopOf="@+id/btTrue" />
 
     <Button
         android:id="@+id/btNextClub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="@+id/btBackClub"
-        app:layout_constraintEnd_toEndOf="@+id/iClub"
-        app:layout_constraintStart_toEndOf="@+id/tvWordClub"
-        app:layout_constraintTop_toTopOf="@+id/btBackClub" />
-
-    <Button
-        android:id="@+id/btBackClub"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/backClub"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvWordClub"
-        app:layout_constraintTop_toBottomOf="@+id/tvPoints"
+        app:layout_constraintEnd_toEndOf="@+id/iClub"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/btTrue"
         app:layout_constraintStart_toStartOf="@+id/iClub" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
