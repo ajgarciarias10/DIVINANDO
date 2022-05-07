@@ -2,25 +2,25 @@
 import firebase_admin 
 from firebase_admin import credentials
 from firebase_admin import firestore
+from numpy import extract
 ##IMPORTAMOS FUNCION DE EXTRAER DATA DE UN TXT EN FIREBASE
 import extractingDataFromTXT as extr
+import traduciendotextoALoQueQueramos as traduct
 ##Conectamos con nuestra base de datos en Firebase
 cred = credentials.Certificate("./loginandregister-86bb1-firebase-adminsdk-rzsgq-76c0f3e43d.json")
 
 firebase_admin.initialize_app(cred)
 db=firestore.client()
 
-##Extraemos el país
-countries = extr.extractCountriesFromArrayList(extr.gettingCSV())
-##Extraemos las imagenes
-imagenes = extr.extractURLFromArrayList(extr.gettingCSV())
-##Extramos los paises pero en castellano
-pais = extr.extractPaises("paisesEnEspañol.txt")
-##DATO DE TIPO PAIS
-paises = {
-    'EnglishCountries' : countries,
-    'Paises': pais,
-    'Url' : imagenes
+paises ={
+    "EnglishCountries" : extr.devuelvepaisEnIngles(),
+    "Paises": extr.devuelvepaisEnEspañol(),
+    "urls" : extr.url()
+
 }
-#Add documents
+
+
+
+    
+    #Add documents
 db.collection('Paises').document("ListaPaises").set(paises)
