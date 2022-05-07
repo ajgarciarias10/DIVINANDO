@@ -10,4 +10,10 @@
 
     <color name="appcolor1">#667EEA</color>
     <color name="appcolor2">#764BA2</color>
+
+    <color name="borderletter">#d4d4d4</color>
+    <color name="givenletter">#424242</color>
+    <color name="correctletter">#6aaa64</color>
+    <color name="positionletter">#c9b458</color>
+    <color name="incorrectletter">#787c7e</color>
 </resources>

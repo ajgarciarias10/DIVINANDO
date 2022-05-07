@@ -7,11 +7,24 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!--NAVIGATION DRAWER MENU-->
     <string name="menu_home">Home</string>
     <string name="menu_ranking">Ranking</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_login">Log In</string>
     <string name="menu_logout">Log Out</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--LOGIN-->
+    <string name="textLoginUsername">Correo electrónico</string>
+    <string name="textLoginPassword">Contraseña</string>
+    <string name="btForgotPass">¿Olvidaste tu contraseña?</string>
+    <string name="btLogin">entrar</string>
+    <string name="tvCreateAccount">¿Aún no tienes una cuenta?</string>
+    <string name="btCreateAccount">Registrarse</string>
+
+    <!--REGISTER-->
+    <string name="btRegister">Registrarse</string>
+    <string name="etRegisterUsername">Nombre de usuario</string>
+    <string name="tilRegisterPassRep">Repetir contraseña</string>
+
 </resources>
