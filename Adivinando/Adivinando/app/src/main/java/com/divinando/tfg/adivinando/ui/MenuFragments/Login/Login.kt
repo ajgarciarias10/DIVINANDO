@@ -1,4 +1,4 @@
-package com.divinando.tfg.adivinando.ui.Login
+package com.divinando.tfg.adivinando.ui.MenuFragments.Login
 
 import android.content.ContentValues
 import android.content.Intent

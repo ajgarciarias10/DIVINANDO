@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/app_gradient_2"
-    tools:context=".ui.Register.Register">
+    tools:context=".ui.MenuFragments.Register.Register">
 
     <ImageView
         android:id="@+id/registerLogo"

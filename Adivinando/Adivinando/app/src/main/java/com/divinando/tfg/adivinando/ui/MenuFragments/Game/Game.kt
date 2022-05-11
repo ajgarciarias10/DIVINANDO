@@ -1,4 +1,4 @@
-package com.divinando.tfg.adivinando.ui.Game
+package com.divinando.tfg.adivinando.ui.MenuFragments.Game
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -32,22 +32,13 @@ class Game : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
-
-
-
-
-
-
-
         //region  SETEAR EL ADAPTADOR
 
         binding.rv.layoutManager = LinearLayoutManager(context)
             val gameAdapter = GameAdapter(requireContext())
         binding.rv.adapter = gameAdapter
             val games: ArrayList<GameObjeto> = MainActivity.games
-            gameAdapter.setCarList(games)
+            gameAdapter.setGameList(games)
         //endregion
     }
 

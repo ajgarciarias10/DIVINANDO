@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/DIVINANDO/Adivinando/Adivinando/app/src/main/res/drawable/letter_border.xml" value="0.354" />
+        <entry key="..\:/DIVINANDO/Adivinando/Adivinando/app/src/main/res/layout/fragment_login.xml" value="0.14537037037037037" />
+        <entry key="..\:/DIVINANDO/Adivinando/Adivinando/app/src/main/res/layout/fragment_normal_mode.xml" value="0.22" />
+        <entry key="..\:/DIVINANDO/Adivinando/Adivinando/app/src/main/res/layout/game_fragment.xml" value="0.14537037037037037" />
+        <entry key="..\:/DIVINANDO/Adivinando/Adivinando/app/src/main/res/layout/layout_game.xml" value="0.5" />
         <entry key="..\:/Users/ajgar/OneDrive/Escritorio/TFG/Adivinando/Adivinando/app/src/main/res/drawable/app_gradient_splash.xml" value="0.1" />
         <entry key="..\:/Users/ajgar/OneDrive/Escritorio/TFG/Adivinando/Adivinando/app/src/main/res/drawable/ic_launcher_background.xml" value="0.114" />
         <entry key="..\:/Users/ajgar/OneDrive/Escritorio/TFG/Adivinando/Adivinando/app/src/main/res/drawable/ic_menu_logout.xml" value="0.1" />

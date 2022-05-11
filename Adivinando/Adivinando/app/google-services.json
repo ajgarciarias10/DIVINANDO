@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "1068638417166-l6bfq5gng06idc4efsnt6jeki8ke2sc8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.divinando.tfg.adivinando",
+            "certificate_hash": "590404ec373cee180a5716be0dfaf77d3b70dab2"
+          }
+        },
+        {
           "client_id": "1068638417166-qh26h75c9cr367svdkilbfgmpe5i7hq4.apps.googleusercontent.com",
           "client_type": 3
         }

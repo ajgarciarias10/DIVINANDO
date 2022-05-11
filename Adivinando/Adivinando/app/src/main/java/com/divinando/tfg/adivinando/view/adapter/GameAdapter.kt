@@ -28,7 +28,8 @@ class GameAdapter(context: Context) : RecyclerView.Adapter<GameViewHolder>() {
             holder.gameObjeto = gameObjeto
             holder.tvGameTitle.text = gameObjeto.nombre
             holder.tvGameDesc.text = gameObjeto.descripcionJuego
-            Glide.with(context).load(gameObjeto.ImagenDelJuego).error(R.mipmap.ic_launcher).into(holder.ivGameIcon)
+            Glide.with(context).load(gameObjeto.imagenDelJuego)
+                .override(80,80).error(R.mipmap.ic_launcher).into(holder.ivGameIcon)
         //enddregion
     }
 
@@ -38,7 +39,8 @@ class GameAdapter(context: Context) : RecyclerView.Adapter<GameViewHolder>() {
         } else gamee!!.size
     }
 
-    fun setCarList(gamee: ArrayList<GameObjeto>) {
+
+    fun setGameList(gamee: ArrayList<GameObjeto>) {
         this.gamee = gamee
     }
 
