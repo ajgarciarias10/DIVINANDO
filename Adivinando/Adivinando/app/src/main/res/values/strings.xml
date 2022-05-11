@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">DivinandoApp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Usuario</string>
+    <string name="nav_header_subtitle">usuario@example.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!--NAVIGATION DRAWER MENU-->
+    <string name="menu_home">Home</string>
+    <string name="menu_ranking">Ranking</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_login">Log In</string>
+    <string name="menu_logout">Log Out</string>
+
+    <!--LOGIN-->
+    <string name="textLoginUsername">Correo electrónico</string>
+    <string name="textLoginPassword">Contraseña</string>
+    <string name="btForgotPass">¿Olvidaste tu contraseña?</string>
+    <string name="btLogin">entrar</string>
+    <string name="tvCreateAccount">¿Aún no tienes una cuenta?</string>
+    <string name="btCreateAccount">Registrarse</string>
+
+    <!--REGISTER-->
+    <string name="btRegister">Registrarse</string>
+    <string name="etRegisterUsername">Nombre de usuario</string>
+    <string name="tilRegisterPassRep">Repetir contraseña</string>
+
+
+    <string name="facebook_app_id">1119193595479389</string>
+    <string name="facebook_client_token">5b3b8d965702c4868e97730ca2e37a5c</string>
+    <string name="fb_login_protocol_scheme">fb1119193595479389</string>
+    <string name="your_web_client_id">1068638417166-qh26h75c9cr367svdkilbfgmpe5i7hq4.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
