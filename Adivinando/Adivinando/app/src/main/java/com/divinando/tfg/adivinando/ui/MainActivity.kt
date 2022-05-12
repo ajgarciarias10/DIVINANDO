@@ -36,11 +36,17 @@ class MainActivity : AppCompatActivity() {
         companion object {
              var games = ArrayList<GameObjeto>()
         }
-        //region Lista de Paises en el idioma español,ingles y sus respectivas urls
+        //region Lista de Paises en el idioma español,ingles y sus respectivas urlssinlimp
+            var listaDePaisesEnEspañolsinlimp = ArrayList<String>()
             var listaDePaisesEnEspañol = ArrayList<String>()
+            var listaDePaisesEnInglessinlimp = ArrayList<String>()
             var listaDePaisesEnIngles = ArrayList<String>()
+            var listaDiccionarioEspañollmp= ArrayList<String>()
             var listaDiccionarioEspañol= ArrayList<String>()
+
+            var listaDiccionarioEnInglesinlimp = ArrayList<String>()
             var listaDiccionarioEnIngles = ArrayList<String>()
+            var urlssinlimp = ArrayList<String>()
             var urls = ArrayList<String>()
         //endregion
         //region Cogiendo la instancia de la bd de Firestore
@@ -110,7 +116,23 @@ class MainActivity : AppCompatActivity() {
             navView.setupWithNavController(navController)
         //endregion
         loadGamesFromFirebase()
+        //region Cargando el ArrayList
+        val game1 = GameObjeto("Divinando","Normal","Español","https://www.astucesmobiles.com/wp-content/uploads/2022/02/Install-and-Play-Wordle-on-iPhone-.png",null,listaDiccionarioEspañol,"Pon a prueba al diccionario de la RAE",5,null)
+        games.add(game1)
+        val game2= GameObjeto("Divinando","Con Tildes","Español","https://tamtampress.files.wordpress.com/2012/10/tilde.jpg",null,listaDiccionarioEspañol,"Pon a prueba al diccionario de la RAE con tildes",5,null)
+        games.add(game2)
+        val game3= GameObjeto("Divinando","Encadenados","Español","https://m.media-amazon.com/images/I/71bt3CtdEkL._SX342_.jpg",null,listaDiccionarioEspañol,"Pon a prueba a tu mapa mental",5,null)
+        games.add(game3)
+        val game4= GameObjeto("Guesser","CountryGuesser","Español","https://cdn.icon-icons.com/icons2/1531/PNG/512/3253482-flag-spain-icon_106784.png",urls,listaDePaisesEnEspañol,"Pon a prueba a tu mapa geográfico",5,null)
+        games.add(game4)
+        val game5= GameObjeto("InsertMode","Inserta Palabras","Español","https://www.gmkfreelogos.com/logos/I/img/InsERT.gif",null,null,"Insertenos alguna palabra para ayudarnos",5,null)
+        games.add(game5)
+        val game6 = GameObjeto("Chooser","4Chooser","Español","https://www.crushpixel.com/big-static11/preview4/pencil-4-options-infographic-piad-710269.jpg",null,null,"Modo de 4 elecciones ",5,null)
+        games.add(game6)
+        val game7 = GameObjeto("TOF","GUESS IT","Español","https://icon-library.com/images/true-false-icon/true-false-icon-14.jpg",null,null,"Adivina si es verdadera o falsa ",5,null)
+        games.add(game7)
 
+        //endregion
 
 
     }
@@ -196,13 +218,29 @@ class MainActivity : AppCompatActivity() {
                  */
 
                 //region Esto te devuelve la lista de paises en español y lo parseo arrayList ya que arriba he inicializado un ArrayList
-                    listaDePaisesEnEspañol = document.data?.get("Paises") as ArrayList<String>
+                    listaDePaisesEnEspañolsinlimp = document.data?.get("Paises") as ArrayList<String>
+                listaDePaisesEnEspañolsinlimp.forEach{
+                        entry->
+                    listaDePaisesEnEspañol.add(entry)
+
+                }
                 //endregion
                 //region Esto te devuelve la lista de paises en ingles y lo parseo arrayList ya que arriba he inicializado un ArrayList
-                    listaDePaisesEnIngles = document.data?.get("EnglishCountries") as ArrayList<String>
+                    listaDePaisesEnInglessinlimp = document.data?.get("EnglishCountries") as ArrayList<String>
+                    listaDePaisesEnInglessinlimp.forEach{
+                                entry->
+                        listaDePaisesEnIngles.add(entry)
+
+                        }
                 //endregion
-                //region URLS DE LAS IMAGENES
-                     urls = document.data?.get("urls") as ArrayList<String>
+                //region urlssinlimp DE LAS IMAGENES
+                     urlssinlimp = document.data?.get("urls") as ArrayList<String>
+                    urlssinlimp.forEach{
+                            entry->
+                        urls.add(entry)
+
+                    }
+                        
                 //endregion
             }
         //endregion
@@ -217,31 +255,26 @@ class MainActivity : AppCompatActivity() {
              */
 
             //region Esto te devuelve la lista de paises en español y lo parseo arrayList ya que arriba he inicializado un ArrayList
-            listaDiccionarioEspañol = document.data?.get("palabrasEspañola") as ArrayList<String>
+                listaDiccionarioEspañollmp = document.data?.get("palabrasEspañola") as ArrayList<String>
+                listaDiccionarioEspañollmp.forEach{
+                    entry->
+                    listaDiccionarioEspañol.add(entry)
+                    
+                }
             //endregion
             //region Esto te devuelve la lista de paises en ingles y lo parseo arrayList ya que arriba he inicializado un ArrayList
-            listaDiccionarioEnIngles = document.data?.get("palabrasBritanicas") as ArrayList<String>
-            //endregion
+             listaDiccionarioEnInglesinlimp = document.data?.get("palabrasBritanicas") as ArrayList<String>
+            listaDiccionarioEnInglesinlimp.forEach{
+                    entry->
+                listaDiccionarioEnIngles.add(entry)
+
+            }
+        //endregion
 
         }
         //endregion
-        //region Cargando el ArrayList
-            var game1 = GameObjeto("Divinando","Normal","Español","https://www.astucesmobiles.com/wp-content/uploads/2022/02/Install-and-Play-Wordle-on-iPhone-.png",null,listaDiccionarioEspañol,"Pon a prueba al diccionario de la RAE",5,null)
-            games.add(game1)
-            var game2= GameObjeto("Divinando","Con Tildes","Español","https://tamtampress.files.wordpress.com/2012/10/tilde.jpg",null,listaDiccionarioEspañol,"Pon a prueba al diccionario de la RAE con tildes",5,null)
-            games.add(game2)
-            var game3= GameObjeto("Divinando","Encadenados","Español","https://m.media-amazon.com/images/I/71bt3CtdEkL._SX342_.jpg",null,listaDiccionarioEspañol,"Pon a prueba a tu mapa mental",5,null)
-            games.add(game3)
-            var game4= GameObjeto("Guesser","CountryGuesser","Español","https://cdn.icon-icons.com/icons2/1531/PNG/512/3253482-flag-spain-icon_106784.png",null,listaDePaisesEnEspañol,"Pon a prueba a tu mapa geográfico",5,null)
-            games.add(game4)
-            var game5= GameObjeto("InsertMode","Inserta Palabras","Español","https://www.gmkfreelogos.com/logos/I/img/InsERT.gif",null,null,"Insertenos alguna palabra para ayudarnos",5,null)
-            games.add(game5)
-            var game6 = GameObjeto("Chooser","4Chooser","Español","https://www.crushpixel.com/big-static11/preview4/pencil-4-options-infographic-piad-710269.jpg",null,null,"Modo de 4 elecciones ",5,null)
-            games.add(game6)
-            var game7 = GameObjeto("TOF","GUESS IT","Español","https://icon-library.com/images/true-false-icon/true-false-icon-14.jpg",null,null,"Adivina si es verdadera o falsa ",5,null)
-            games.add(game7)
 
-        //endregion
+
 
 
     }
