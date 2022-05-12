@@ -22,6 +22,12 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Round 1    0 Points" />
 
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/GroupA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvChainA1,tvChainA2,tvChainA3,tvChainA4,tvChainA5" />
+
     <TextView
         android:id="@+id/tvChainA1"
         android:layout_width="48dp"
@@ -112,18 +118,25 @@
         app:layout_constraintTop_toTopOf="@+id/tvChainA1"
         tools:text="A" />
 
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/GroupB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvChainB1,tvChainB2,tvChainB3,tvChainB4,tvChainB5" />
+
     <TextView
         android:id="@+id/tvChainB1"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:background="@color/black"
         android:fontFamily="@font/trade_winds"
+        android:maxLength="1"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tvWordChain"
+        app:layout_constraintBottom_toTopOf="@+id/tvChainC1"
         app:layout_constraintEnd_toStartOf="@+id/tvChainB2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvChainA1"
@@ -135,6 +148,7 @@
         android:layout_height="48dp"
         android:background="@color/black"
         android:fontFamily="@font/trade_winds"
+        android:maxLength="1"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -153,6 +167,7 @@
         android:layout_height="48dp"
         android:background="@color/black"
         android:fontFamily="@font/trade_winds"
+        android:maxLength="1"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -171,6 +186,7 @@
         android:layout_height="48dp"
         android:background="@color/black"
         android:fontFamily="@font/trade_winds"
+        android:maxLength="1"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -189,6 +205,7 @@
         android:layout_height="48dp"
         android:background="@color/black"
         android:fontFamily="@font/trade_winds"
+        android:maxLength="1"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -200,29 +217,127 @@
         app:layout_constraintTop_toTopOf="@+id/tvChainB1"
         tools:text="A" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tvWordChain"
-        android:layout_width="0dp"
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/GroupC"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btNextChain"
-        app:layout_constraintStart_toStartOf="@+id/tvChainA1"
-        app:layout_constraintTop_toBottomOf="@+id/tvChainB1">
+        app:constraint_referenced_ids="tvChainC1,tvChainC2,tvChainC3,tvChainC4,tvChainC5" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etWordChain"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/tvChainC1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#474444"
+        android:ems="10"
+        android:fontFamily="@font/trade_winds"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:maxLength="1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btNextChain"
+        app:layout_constraintEnd_toStartOf="@+id/tvChainC2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChainB1"
+        tools:ignore="DuplicateSpeakableTextCheck"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/tvChainC2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#474444"
+        android:ems="10"
+        android:fontFamily="@font/trade_winds"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:maxLength="1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvChainC1"
+        app:layout_constraintEnd_toStartOf="@+id/tvChainC3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvChainC1"
+        app:layout_constraintTop_toTopOf="@+id/tvChainC1"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/tvChainC3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#474444"
+        android:ems="10"
+        android:fontFamily="@font/trade_winds"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:maxLength="1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvChainC1"
+        app:layout_constraintEnd_toStartOf="@+id/tvChainC4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvChainC2"
+        app:layout_constraintTop_toTopOf="@+id/tvChainC1"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/tvChainC4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#474444"
+        android:ems="10"
+        android:fontFamily="@font/trade_winds"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:maxLength="1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvChainC1"
+        app:layout_constraintEnd_toStartOf="@+id/tvChainC5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvChainC3"
+        app:layout_constraintTop_toTopOf="@+id/tvChainC1"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/tvChainC5"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#474444"
+        android:ems="10"
+        android:fontFamily="@font/trade_winds"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:maxLength="1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvChainC1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvChainC4"
+        app:layout_constraintTop_toTopOf="@+id/tvChainC1"
+        tools:text="A" />
 
     <Button
         android:id="@+id/btNextChain"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="@+id/tvWordChain"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tvChainA5"
-        app:layout_constraintStart_toEndOf="@+id/tvWordChain"
-        app:layout_constraintTop_toTopOf="@+id/tvWordChain" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tvChainA1"
+        app:layout_constraintTop_toBottomOf="@+id/tvChainC1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
