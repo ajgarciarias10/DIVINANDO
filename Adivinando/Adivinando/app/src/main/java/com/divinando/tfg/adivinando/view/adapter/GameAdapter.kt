@@ -25,7 +25,7 @@ class GameAdapter(context: Context) : RecyclerView.Adapter<GameViewHolder>() {
     override fun onBindViewHolder(@NonNull holder: GameViewHolder, position: Int) {
         val gameObjeto: GameObjeto = gamee!![position] //Obtenemos la posicion del juego
         //region Seteamos el texto
-            holder.gameObjeto = gameObjeto
+            holder.objeto = gameObjeto
             holder.tvGameTitle.text = gameObjeto.nombre
             holder.tvGameDesc.text = gameObjeto.descripcionJuego
             Glide.with(context).load(gameObjeto.imagenDelJuego)

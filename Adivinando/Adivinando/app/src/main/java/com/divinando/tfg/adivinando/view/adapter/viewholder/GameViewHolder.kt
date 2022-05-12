@@ -15,13 +15,13 @@ class GameViewHolder(@NonNull itemView: View) : RecyclerView.ViewHolder(itemView
     var ivGameIcon: ImageView = itemView.findViewById(R.id.ivGameIcon)
     var tvGameTitle: TextView = itemView.findViewById(R.id.tvGameTitle)
     var tvGameDesc: TextView = itemView.findViewById(R.id.tvGameDesc)
-    var gameObjeto =  GameObjeto()
+    var objeto= GameObjeto()
     var bundle = Bundle()
 
 
         init {
             itemView.setOnClickListener { v ->
-               bundle.putSerializable("juegos", gameObjeto)
+               bundle.putSerializable("juegos", objeto)
 
              //region Navegacion dependiendo de lo que contenga el titulo y donde se clickeeee
 

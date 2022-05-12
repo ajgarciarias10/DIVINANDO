@@ -37,7 +37,7 @@ class NormalMode : Fragment() {
 
     fun initialize(){
          bundle = requireArguments()
-            objeto = bundle.getSerializable("juegos") as GameObjeto
+         objeto = bundle.getSerializable("juegos") as GameObjeto
 
 
 
