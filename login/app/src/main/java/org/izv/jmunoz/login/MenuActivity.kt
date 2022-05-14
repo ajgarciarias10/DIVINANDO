@@ -11,6 +11,7 @@ class MenuActivity : AppCompatActivity() {
     lateinit var btImage: Button
     lateinit var btBack: Button
     lateinit var btChains: Button
+    lateinit var btWho: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +27,8 @@ class MenuActivity : AppCompatActivity() {
 
         btChains.setOnClickListener { startActivity(Intent(this,ChainActivity::class.java)) }
 
+        btWho.setOnClickListener { startActivity(Intent(this,WhoActivity::class.java)) }
+
     }
 
     private fun init(){
@@ -33,6 +36,7 @@ class MenuActivity : AppCompatActivity() {
         btImage = findViewById(R.id.btImages)
         btBack = findViewById(R.id.btBackMenu)
         btChains = findViewById(R.id.btChains)
+        btWho = findViewById(R.id.btWho)
     }
 
 }

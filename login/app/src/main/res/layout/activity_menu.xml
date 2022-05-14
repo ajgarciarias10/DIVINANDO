@@ -13,11 +13,21 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:text="@string/words"
-        app:layout_constraintBottom_toTopOf="@+id/btImages"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btWho"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btWho"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/who"
+        app:layout_constraintBottom_toTopOf="@+id/btImages"
+        app:layout_constraintEnd_toEndOf="@+id/btWords"
+        app:layout_constraintStart_toStartOf="@+id/btWords"
+        app:layout_constraintTop_toBottomOf="@+id/btWords" />
 
     <Button
         android:id="@+id/btImages"
@@ -25,9 +35,9 @@
         android:layout_height="wrap_content"
         android:text="@string/images"
         app:layout_constraintBottom_toTopOf="@+id/btBackMenu"
+        app:layout_constraintTop_toBottomOf="@+id/btWho"
         app:layout_constraintEnd_toEndOf="@+id/btWords"
-        app:layout_constraintStart_toStartOf="@+id/btWords"
-        app:layout_constraintTop_toBottomOf="@+id/btWords" />
+        app:layout_constraintStart_toStartOf="@+id/btWords" />
 
     <Button
         android:id="@+id/btChains"

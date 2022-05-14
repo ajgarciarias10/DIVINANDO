@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -37,6 +38,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var py: Python
     lateinit var pyObj: PyObject
     private lateinit var lista: List<String>
+    private lateinit var preName: MutableList<String>
+    private lateinit var preURL: MutableList<String>
     lateinit var  palabra: Palabra
     private val db = FirebaseFirestore.getInstance()
     private lateinit var words: String
@@ -95,15 +98,14 @@ class MainActivity : AppCompatActivity() {
 
         etMail.setText("milito@gmail.com")
         etPass.setText("12345678")
-        var id = 7
-        URL = "https://e00-marca.uecdn.es/assets/sports/logos/basket/png/144x144/7420.png"
-        nombre = "Dallas Mavericks"
+        //getDataPerson()
         //AÑADIR DATOS
 
-            /*db.collection("Clubs").document(id.toString()).set(
-                hashMapOf("id" to id,"url" to URL, "nombre" to nombre)
-            )*/
-
+        /*for(i in 0..preName.size - 1) {
+            db.collection("Famosos").document((i+4).toString()).set(
+                hashMapOf("id" to i+4, "nombre" to preName[i], "url" to preURL[i])
+            )
+        }*/
 
         //LEER DATOS
         /*db.collection("Palabras").document("TUNOS").get()
@@ -163,5 +165,19 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    private fun getDataPerson(){
+        preName = mutableListOf()
+        preName.add("The Rock")
+        preName.add("Messi")
+        preName.add("Cristiano Ronaldo")
+        preName.add("Rafa Nadal")
+        preURL = mutableListOf()
+        preURL.add("https://foreignpolicyi.org/wp-content/uploads/2019/06/Dwayne-Johnson.jpg")
+        preURL.add("https://portal.andina.pe/EDPfotografia3/Thumbnail/2020/10/07/000716490W.jpg")
+        preURL.add("https://the18.com/sites/default/files/feature-images/20181004-The18-Image-Cristiano-Ronaldo-Portugal.jpg")
+        preURL.add("https://lalupadigital.com/wp-content/uploads/2019/10/908843-1024x708.jpg")
+    }
+
 }
 
