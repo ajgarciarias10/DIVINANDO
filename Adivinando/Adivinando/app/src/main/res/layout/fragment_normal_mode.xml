@@ -704,11 +704,11 @@
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabLinea15l3"
         app:layout_constraintHorizontal_bias="0.5"
+
         app:layout_constraintStart_toEndOf="@+id/f5p4"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
-
         tools:text="A" />
 
     <EditText
@@ -805,7 +805,7 @@
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabLinea15l4"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f4p4"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
@@ -906,7 +906,7 @@
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabLinea15l5"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f3p4"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
@@ -1010,7 +1010,7 @@
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabLinea15l2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toEndOf="@+id/f2p4"
@@ -1108,7 +1108,6 @@
         android:layout_height="80dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:background="@color/white"
         android:gravity="center"
@@ -1117,7 +1116,7 @@
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabLinea15l"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f1p4"
         app:layout_constraintTop_toTopOf="parent"
@@ -1128,7 +1127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f1p1,f1p4,f1p2,f1p5,f1p3" />
+        app:constraint_referenced_ids="f1p1,f1p4,f1p2,f1p5,f1p3,fabLinea15l" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
@@ -1163,6 +1162,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:visibility="gone"
         app:layout_constraintGuide_percent="1.0" />
 
     <androidx.constraintlayout.widget.Group
@@ -1170,28 +1170,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f2p1,f2p2,f2p3,f2p4,f2p5" />
+        app:constraint_referenced_ids="f2p1,f2p2,f2p3,f2p4,f2p5,fabLinea15l2" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group5p3afila"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f3p1,f3p2,f3p3,f3p4,f3p5" />
+        app:constraint_referenced_ids="f3p1,f3p2,f3p3,f3p4,f3p5,fabLinea15l5" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group5p5fila"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f5p1,f5p2,f5p3,f5p4,f5p5" />
+        app:constraint_referenced_ids="f5p1,f5p2,f5p3,f5p4,f5p5,fabLinea15l3" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group5p4fila"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f4p1,f4p2,f4p3,f4p4,f4p5" />
+        app:constraint_referenced_ids="f4p1,f4p2,f4p3,f4p4,f4p5,fabLinea15l4" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group6pf1"
@@ -1229,14 +1229,95 @@
         android:visibility="gone"
         app:constraint_referenced_ids="f5p16l,f5p26l,f5p36l,f5p46l,f5p56l,f5p66l" />
 
-    <Button
-        android:id="@+id/bt_next"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLinea15l"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/f1p5"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLinea15l2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLinea15l3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLinea15l4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLinea15l5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline6"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/bt_terminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terminar"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bt_siguiente"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+    <Button
+        android:id="@+id/bt_siguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bt_terminar"
+        app:layout_constraintTop_toTopOf="@+id/guideline8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

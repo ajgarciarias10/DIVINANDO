@@ -65,6 +65,12 @@
     <fragment
         android:id="@+id/normalMode"
         android:name="com.divinando.tfg.adivinando.ui.GameModes.modNormal.NormalMode"
-        android:label="fragment_normal_mode"
-        tools:layout="@layout/fragment_normal_mode" />
+        tools:layout="@layout/fragment_normal_mode" >
+        <action
+            android:id="@+id/action_normalMode_self"
+            app:destination="@id/normalMode" />
+        <action
+            android:id="@+id/action_normalMode_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
 </navigation>
