@@ -72,34 +72,37 @@ class NormalMode : Fragment() {
 
 
         }else {
-            /*
             //region fase1aFila
-            binding.group6pf1.visibility = View.VISIBLE
-            binding.fabLinea15l.setOnClickListener {
-                compruebafilas(palabraDiccionario,binding.f1p1,binding.f1p2,binding.f1p3,binding.f1p4,binding.f1p5,null,0,binding.group5p2aFila)
-            }
+                binding.group6pf1.visibility = View.VISIBLE
+                binding.fabLineal6.setOnClickListener {
+                    compruebafilas(palabraDiccionario,binding.f1p16l,binding.f1p26l,binding.f1p36l,binding.f1p46l,binding.f1p56l,binding.f1p66l,0,binding.group6pf2)
+                }
             //endregion
+
             // region fase2aFila
-            binding.fabLinea15l2.setOnClickListener {
-                compruebafilas(palabraDiccionario,binding.f2p1,binding.f2p2,binding.f2p3,binding.f2p4,binding.f2p5,null,0,binding.group5p3afila)
-            }
+                binding.fabLineal61.setOnClickListener {
+                    compruebafilas(palabraDiccionario,binding.f2p16l,binding.f2p26l,binding.f2p36l,binding.f2p46l,binding.f2p56l,binding.f2p66l,0,binding.group6pf3)
+                }
             //endregion
+
             // region fase3aFila
-            binding.fabLinea15l3.setOnClickListener {
-                compruebafilas(palabraDiccionario,binding.f3p1,binding.f3p2,binding.f3p3,binding.f3p4,binding.f3p5,null,0,binding.group5p4fila)
-            }
+                binding.fabLineal62.setOnClickListener {
+                    compruebafilas(palabraDiccionario,binding.f3p16l,binding.f3p26l,binding.f3p36l,binding.f3p46l,binding.f3p56l,binding.f3p66l,0,binding.group6pf4)
+                }
             //endregion
+
             // region fase4aFila
-            binding.fabLinea15l4.setOnClickListener {
-                compruebafilas(palabraDiccionario,binding.f4p1,binding.f4p2,binding.f4p3,binding.f4p4,binding.f4p5,null,0,binding.group5p5fila)
-            }
+                binding.fabLineal63.setOnClickListener {
+                    compruebafilas(palabraDiccionario,binding.f4p16l,binding.f4p26l,binding.f4p36l,binding.f4p46l,binding.f4p56l,binding.f4p66l,0,binding.group6pf5)
+                }
             //endregion
+
             // region fase5aFila
-            binding.fabLinea15l5.setOnClickListener {
-                compruebafilas(palabraDiccionario,binding.f5p1,binding.f5p2,binding.f5p3,binding.f5p4,binding.f5p5,null,0,null)
-            }
+                binding.fabLineal65.setOnClickListener {
+                    compruebafilas(palabraDiccionario,binding.f5p16l,binding.f5p26l,binding.f5p36l,binding.f5p46l,binding.f5p56l,binding.f5p56l,0,null)
+                }
             //endregion
-            */
+
 
 
 
@@ -288,12 +291,14 @@ class NormalMode : Fragment() {
                       letra5.text +
                       letra6!!.text
               if(coincidenciaPerfecta(palabraDiccionario,palabra1fila)){
+
                   letra1.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.correctletter))
                   letra2.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.correctletter))
                   letra3.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.correctletter))
                   letra4.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.correctletter))
                   letra5.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.correctletter))
                   letra6.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.correctletter))
+
                   letra1.isEnabled = false
                   letra2.isEnabled = false
                   letra3.isEnabled = false

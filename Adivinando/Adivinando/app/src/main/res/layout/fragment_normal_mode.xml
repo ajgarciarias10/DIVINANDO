@@ -8,6 +8,62 @@
     android:background="@drawable/app_gradient_1"
     tools:context=".ui.GameModes.modNormal.NormalMode">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLineal65"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLineal63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLineal62"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline6"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLineal61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        tools:ignore="SpeakableTextPresentCheck" />
+
     <EditText
         android:id="@+id/f4p16l"
         android:layout_width="0dp"
@@ -26,6 +82,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -46,6 +103,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f4p16l"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -66,6 +124,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f4p46l"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -82,10 +141,12 @@
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabLineal63"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f4p56l"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:layout_constraintVertical_bias="0.489"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -106,6 +167,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -126,6 +188,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f5p16l"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -146,6 +209,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f5p26l"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -166,6 +230,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f5p36l"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -186,6 +251,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f5p46l"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -193,6 +259,7 @@
         android:layout_width="0dp"
         android:layout_height="83dp"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:background="@color/white"
         android:gravity="center"
@@ -201,10 +268,11 @@
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabLineal65"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f5p56l"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -225,6 +293,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f4p36l"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -245,6 +314,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f4p26l"
         app:layout_constraintTop_toTopOf="@+id/guideline7"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -265,6 +335,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -286,6 +357,7 @@
         app:layout_constraintStart_toEndOf="@+id/f3p16l"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
         app:layout_constraintVertical_bias="0.492"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -306,6 +378,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f3p26l"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -326,6 +399,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f3p36l"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -347,6 +421,7 @@
         app:layout_constraintStart_toEndOf="@+id/f3p46l"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
         app:layout_constraintVertical_bias="0.489"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -361,13 +436,14 @@
         android:maxLength="1"
         android:textColor="@color/black"
         android:textSize="60sp"
-        android:textStyle="bold"
 
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabLineal62"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f3p56l"
         app:layout_constraintTop_toTopOf="@+id/guideline6"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -388,6 +464,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -408,6 +485,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f2p16l"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -428,6 +506,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f2p26l"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -448,6 +527,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f2p36l"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -468,12 +548,14 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f2p46l"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
         android:id="@+id/f2p66l"
         android:layout_width="0dp"
         android:layout_height="83dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:background="@color/white"
         android:gravity="center"
@@ -482,10 +564,11 @@
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabLineal61"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f2p56l"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -506,6 +589,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -527,6 +611,7 @@
         app:layout_constraintStart_toEndOf="@+id/f1p16l"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.507"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -547,6 +632,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f1p26l"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -567,6 +653,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f1p36l"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -587,6 +674,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f1p46l"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -603,10 +691,11 @@
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabLineal6"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f1p56l"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
@@ -1199,35 +1288,35 @@
         android:layout_height="wrap_content"
         android:background="#E8DEDE"
         android:visibility="gone"
-        app:constraint_referenced_ids="f1p16l,f1p26l,f1p36l,f1p46l,f1p56l,f1p66l" />
+        app:constraint_referenced_ids="f1p16l,f1p26l,f1p36l,f1p46l,f1p56l,f1p66l,fabLineal6" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group6pf2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f2p26l,f2p16l,f2p36l,f2p46l,f2p56l,f2p66l" />
+        app:constraint_referenced_ids="f2p26l,f2p16l,f2p36l,f2p46l,f2p56l,f2p66l,fabLineal61" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group6pf4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f4p26l,f4p36l,f4p16l,f4p46l,f4p56l,f4p66l" />
+        app:constraint_referenced_ids="f4p26l,f4p36l,f4p16l,f4p46l,f4p56l,f4p66l,fabLineal63" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group6pf3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f3p16l,f3p26l,f3p36l,f3p46l,f3p56l,f3p66l" />
+        app:constraint_referenced_ids="f3p16l,f3p26l,f3p36l,f3p46l,f3p56l,f3p66l,fabLineal62" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group6pf5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f5p16l,f5p26l,f5p36l,f5p46l,f5p56l,f5p66l" />
+        app:constraint_referenced_ids="f5p16l,f5p26l,f5p36l,f5p46l,f5p56l,f5p66l,fabLineal65" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabLinea15l"
@@ -1255,6 +1344,20 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLineal6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
