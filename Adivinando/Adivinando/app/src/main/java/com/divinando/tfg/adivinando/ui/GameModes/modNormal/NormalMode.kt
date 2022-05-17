@@ -527,13 +527,9 @@ class NormalMode : Fragment() {
         do {
 
             val index = (Math.random() * objeto.listaPalabras!!.size).toInt()
-            //endregion
-
             palabraDiccionario = objeto.listaPalabras!![index].trim()
-            if (!funcionCompruebamela(palabraDiccionario)){
-                Log.v("Tilde","No tiene tilde")
-            }
-        } while (!funcionCompruebamela(palabraDiccionario)  && palabraDiccionario.length == 6 && palabraDiccionario.length == 7)
+
+        } while ((palabraDiccionario.length == 6 || palabraDiccionario.length == 7))
         //endregion
         Log.v("Palabra",palabraDiccionario)
         return palabraDiccionario
@@ -642,10 +638,4 @@ class NormalMode : Fragment() {
         }
     }
 
-     fun  funcionCompruebamela(palabraDic: String): Boolean {
-         var patron = Pattern.compile("[0-9A-Za-zñÑáéíóúÁÉÍÓÚ¡!¿?@#$%()=+-€/.,]{1,50}")
-         //region indice aleatorio para coger un dato aleatorio
-            return patron.matcher(palabraDic).matches()
-         //endregion
-     }
 }

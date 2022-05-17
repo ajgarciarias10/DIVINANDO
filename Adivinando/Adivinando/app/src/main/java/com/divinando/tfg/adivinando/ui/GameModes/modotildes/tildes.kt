@@ -514,9 +514,6 @@ class tildes : Fragment() {
         }
 
     }
-
-
-
     fun getWordFromDict(): String {
         var palabraDiccionario = ""
         //Sacamos los argumentos de los objetos
@@ -531,7 +528,7 @@ class tildes : Fragment() {
 
             palabraDiccionario = objeto.listaPalabras!![index].trim()
 
-        } while (!funcionCompruebamela(palabraDiccionario)  && palabraDiccionario.length == 6 && palabraDiccionario.length == 7)
+        } while (palabraDiccionario.length == 6 && palabraDiccionario.length == 7)
         //endregion
         Log.v("Palabra",palabraDiccionario)
         return palabraDiccionario
@@ -593,6 +590,7 @@ class tildes : Fragment() {
 
     }
     fun terminar(){
+
         findNavController().navigate(R.id.action_normalMode_to_nav_home)
     }
     fun limpiatexto(fila1: EditText, fila2: EditText, fila3: EditText, fila4 : EditText, fila5 : EditText, fila6 : EditText?){
@@ -640,10 +638,4 @@ class tildes : Fragment() {
         }
     }
 
-    fun  funcionCompruebamela(palabraDic: String): Boolean {
-        var patron = Pattern.compile("[0-9A-Za-zñÑáéíóúÁÉÍÓÚ¡!¿?@#\$%()=+-€/.,]{1,50}")
-        //region indice aleatorio para coger un dato aleatorio
-        return patron.matcher(palabraDic).matches()
-        //endregion
-    }
 }
