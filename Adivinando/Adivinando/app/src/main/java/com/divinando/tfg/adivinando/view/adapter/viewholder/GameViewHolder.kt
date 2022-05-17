@@ -24,17 +24,14 @@ class GameViewHolder(@NonNull itemView: View) : RecyclerView.ViewHolder(itemView
                bundle.putSerializable("juegos", objeto)
 
              //region Navegacion dependiendo de lo que contenga el titulo y donde se clickeeee
-
-                if ( tvGameTitle.text == "Normal"){
-                    findNavController(itemView).navigate(R.id.action_game_to_normalMode,bundle);
-                }else if(tvGameTitle.text == ""){
-                    findNavController(itemView).navigate(R.id.action_game_to_nav_home);
+                when (tvGameTitle.text) {
+                    "Normal" ->  findNavController(itemView).navigate(R.id.action_game_to_normalMode,bundle);
+                    "Con Tildes" -> findNavController(itemView).navigate(R.id.action_game_to_tildes,bundle);
+                    else -> {
+                        findNavController(itemView).navigate(R.id.action_game_to_nav_home);
+                    }
                 }
-
-
-
-
-
+            //endregion
        }
 
 
