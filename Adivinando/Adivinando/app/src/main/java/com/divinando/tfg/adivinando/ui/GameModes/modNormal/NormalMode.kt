@@ -4,7 +4,6 @@ import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,10 +11,12 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.constraintlayout.widget.Group
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.divinando.tfg.adivinando.R
 import com.divinando.tfg.adivinando.databinding.FragmentNormalModeBinding
 import com.divinando.tfg.adivinando.model.entity.GameObjeto
+import java.text.Normalizer
 import java.util.regex.Pattern
 
 
@@ -45,6 +46,9 @@ class NormalMode : Fragment() {
 
 
     fun initialize() {
+
+        Toast.makeText(requireContext(),tieneLaPalabraTilde("josé").toString(),Toast.LENGTH_LONG).show()
+
         val palabraDiccionario = getWordFromDict()
         //Caso de que la longitud sea de 5 letras
         if (palabraDiccionario.length == 5){
@@ -638,4 +642,17 @@ class NormalMode : Fragment() {
         }
     }
 
+
+
+
+    fun tieneLaPalabraTilde(palabraDic: String): Boolean {
+        var letra = ""
+        for (i in palabraDic.indices){
+            Log.v("HOLA", i.toString())
+            letra = palabraDic[i].toString()
+        }
+
+        val pattern = Pattern.compile("[\\\\p{InCombiningDiacriticalMarks}]")
+        return pattern.matcher(letra).matches()
+    }
 }
