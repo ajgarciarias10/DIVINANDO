@@ -27,6 +27,7 @@ class GameViewHolder(@NonNull itemView: View) : RecyclerView.ViewHolder(itemView
                 when (tvGameTitle.text) {
                     "Normal" ->  findNavController(itemView).navigate(R.id.action_game_to_normalMode,bundle);
                     "Con Tildes" -> findNavController(itemView).navigate(R.id.action_game_to_tildes,bundle);
+                    "CountryGuesser" -> findNavController(itemView).navigate(R.id.action_game_to_countryFlags,bundle);
                     else -> {
                         findNavController(itemView).navigate(R.id.action_game_to_nav_home);
                     }

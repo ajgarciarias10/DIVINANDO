@@ -1,7 +1,824 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.GameModes.CountryFlags.CountryFlags" />
+    android:background="@drawable/app_gradient_1"
+    tools:context=".ui.GameModes.CountryFlags.CountryFlags">
+
+    <Button
+        android:id="@+id/bt_terminar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terminar"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bt_siguiente"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+    <Button
+        android:id="@+id/bt_siguiente2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bt_terminar"
+        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+    <EditText
+        android:id="@+id/f5p"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/fabLinea15l6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p6"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p10"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/f5p11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p20"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/f5p21"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p21"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/f5p22"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p20"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p22"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/f5p23"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p21"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p23"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/f5p24"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p22"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p24"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/f5p25"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p23"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p25"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/fabLinea15l9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p24"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p11"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/f5p12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p10"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p12"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/f5p13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p11"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p13"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/f5p14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p12"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p14"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/fabLinea15l7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p13"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p15"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/f5p16"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        tools:text="A" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLinea15l10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p19"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLinea15l11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p42"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/f5p16"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/f5p17"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p15"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p17"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/f5p18"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p16"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p31"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/f5p32"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p32"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/f5p33"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p31"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p33"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/f5p34"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p32"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p34"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/f5p35"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p33"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p35"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/f5p36"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p34"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p36"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/fabLinea15l8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p35"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p18"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/f5p19"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p17"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p19"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabLinea15l10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p18"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p37"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/f5p38"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p38"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/f5p39"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p37"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p39"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/f5p40"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p38"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p40"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/f5p41"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p39"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p41"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/f5p42"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p40"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p42"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabLinea15l11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p41"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p6"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/f5p"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p7"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p7"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/f5p6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p8"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p8"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/f5p7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p9"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        tools:text="A" />
+
+    <EditText
+        android:id="@+id/f5p9"
+        android:layout_width="40dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:maxLength="1"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toStartOf="@+id/f5p8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        tools:text="A" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLinea15l6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLinea15l7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p14"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLinea15l9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p25"
+        app:layout_constraintTop_toTopOf="@+id/guideline10"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLinea15l8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:src="@drawable/com_facebook_button_like_icon_selected"
+        app:backgroundTint="#64DD17"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/f5p36"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group5pl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="f5p9,f5p8,f5p7,f5p6,f5p,fabLinea15l6" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group6pl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="f5p20,f5p21,f5p22,f5p23,f5p24,f5p25,fabLinea15l9" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group5pl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="f5p10,f5p11,f5p12,f5p13,f5p14,fabLinea15l7" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group6pl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="f5p31,f5p32,f5p33,f5p34,f5p35,f5p36,fabLinea15l8" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group5pl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="f5p17,f5p15,f5p16,f5p18,f5p19,fabLinea15l10" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group6pl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="f5p37,f5p38,f5p39,f5p40,f5p41,f5p42,fabLinea15l11" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

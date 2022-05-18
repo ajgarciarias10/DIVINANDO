@@ -64,6 +64,9 @@
         <action
             android:id="@+id/action_game_to_tildes"
             app:destination="@id/tildes" />
+        <action
+            android:id="@+id/action_game_to_countryFlags"
+            app:destination="@id/countryFlags" />
     </fragment>
     <fragment
         android:id="@+id/normalMode"
@@ -81,4 +84,9 @@
         android:name="com.divinando.tfg.adivinando.ui.GameModes.modotildes.tildes"
         android:label="fragment_tildes"
         tools:layout="@layout/fragment_tildes" />
+    <fragment
+        android:id="@+id/countryFlags"
+        android:name="com.divinando.tfg.adivinando.ui.GameModes.CountryFlags.CountryFlags"
+        android:label="fragment_country_flags"
+        tools:layout="@layout/fragment_country_flags" />
 </navigation>
