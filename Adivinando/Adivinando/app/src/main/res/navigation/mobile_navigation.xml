@@ -44,8 +44,8 @@
     <fragment
         android:id="@+id/register"
         android:name="com.divinando.tfg.adivinando.ui.MenuFragments.Register.Register"
-        android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_register_to_nav_home"
             app:destination="@id/nav_home" />
@@ -71,7 +71,8 @@
     <fragment
         android:id="@+id/normalMode"
         android:name="com.divinando.tfg.adivinando.ui.GameModes.modNormal.NormalMode"
-        tools:layout="@layout/fragment_normal_mode" >
+        android:label="Normal"
+        tools:layout="@layout/fragment_normal_mode">
         <action
             android:id="@+id/action_normalMode_self"
             app:destination="@id/normalMode" />
@@ -82,11 +83,11 @@
     <fragment
         android:id="@+id/tildes"
         android:name="com.divinando.tfg.adivinando.ui.GameModes.modotildes.tildes"
-        android:label="fragment_tildes"
+        android:label="Tildes"
         tools:layout="@layout/fragment_tildes" />
     <fragment
         android:id="@+id/countryFlags"
         android:name="com.divinando.tfg.adivinando.ui.GameModes.CountryFlags.CountryFlags"
-        android:label="fragment_country_flags"
+        android:label="FlagGuesser"
         tools:layout="@layout/fragment_country_flags" />
 </navigation>

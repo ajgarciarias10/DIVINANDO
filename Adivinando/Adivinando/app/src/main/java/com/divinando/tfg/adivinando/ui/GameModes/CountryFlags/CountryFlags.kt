@@ -60,9 +60,10 @@ class CountryFlags : Fragment() {
              palabraDiccionario = objeto.listaPalabras!![index].trim()
              paisimagen = objeto.imagenUrl!![index].trim()
 
-        } while ((palabraDiccionario.length == 5 && palabraDiccionario.length == 6))
+        } while (palabraDiccionario.trim().length != 5 && palabraDiccionario.trim().length != 6)
         //endregion
         Log.v("pais",palabraDiccionario)
+        Log.v("pais", palabraDiccionario.length.toString())
 
         Glide.with(requireActivity()).load(paisimagen)
             .override(80,80).error(R.mipmap.ic_launcher).into(binding.imageView2)
@@ -94,7 +95,7 @@ class CountryFlags : Fragment() {
             }
             //endregion
             // region fase3aFila
-            binding.fabLinea15l8.setOnClickListener {
+            binding.fabLinea15l9.setOnClickListener {
                 if(estaLaPalabraVacia(binding.f5p15.text,binding.f5p16.text,binding.f5p17.text,binding.f5p18.text,binding.f5p19.text,null)) {
                     Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
                 }else{
@@ -128,7 +129,7 @@ class CountryFlags : Fragment() {
             //endregion
 
             // region fase3aFila
-            binding.fabLinea15l8.setOnClickListener {
+            binding.fabLinea15l11.setOnClickListener {
                 if(estaLaPalabraVacia(binding.f5p37.text,binding.f5p38.text,binding.f5p39.text,binding.f5p40.text,binding.f5p41.text,binding.f5p42.text)){
                     Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
                 }else{
@@ -469,18 +470,6 @@ class CountryFlags : Fragment() {
         }
 
     }
-
-
-
-    fun getCountryFromFirebase(index: Int): String {
-        var pais = ""
-
-        //region Extraer del diccionario palabras de 5 a 6 letras sin tildes
-
-        return pais
-
-
-    }
     fun coincidenciaPerfecta(palabraDic:String,palabrafilax:String): Boolean {
         return palabraDic == palabrafilax
     }
@@ -496,10 +485,11 @@ class CountryFlags : Fragment() {
             binding.group5pl2.visibility = View.GONE
             binding.group5pl3.visibility = View.GONE
 
-
-            limpiatexto(binding.f5p15,binding.f5p16,binding.f5p17,binding.f5p18,binding.f5p19,null)
             limpiatexto(binding.f5p9,binding.f5p8,binding.f5p7,binding.f5p6,binding.f5p,null)
             limpiatexto(binding.f5p10,binding.f5p11,binding.f5p12,binding.f5p13,binding.f5p14,null)
+            limpiatexto(binding.f5p15,binding.f5p16,binding.f5p17,binding.f5p18,binding.f5p19,null)
+
+
 
 
             binding.btSiguiente2.visibility = View.GONE

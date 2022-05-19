@@ -665,6 +665,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/f5p9"
         app:layout_constraintTop_toTopOf="@+id/guideline10"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="A" />
 
     <EditText
