@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">1087116395341-12qu89kf6najbai67cdrnp13dcc0nl2h.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1087116395341</string>
+    <string name="google_api_key" translatable="false">AIzaSyDVnNqE4KdhK4q5SRe5WXFzg2wubR5KBwQ</string>
+    <string name="google_app_id" translatable="false">1:1087116395341:android:facebaa54d362a74c02d04</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDVnNqE4KdhK4q5SRe5WXFzg2wubR5KBwQ</string>
+    <string name="google_storage_bucket" translatable="false">divinando-5bf80.appspot.com</string>
+    <string name="project_id" translatable="false">divinando-5bf80</string>
+</resources>

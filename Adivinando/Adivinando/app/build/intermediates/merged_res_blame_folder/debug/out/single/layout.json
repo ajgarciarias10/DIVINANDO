@@ -1,0 +1,78 @@
+[
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_normal_mode.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\fragment_normal_mode.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_gallery.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\fragment_gallery.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\game_fragment.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\game_fragment.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_guess_i_t.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\fragment_guess_i_t.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_tildes.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\fragment_tildes.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_register.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\fragment_register.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_encadenados.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\fragment_encadenados.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_slideshow.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\fragment_slideshow.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_insert_word.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\fragment_insert_word.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_four_chooser.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\fragment_four_chooser.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_game.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\layout_game.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash_screen.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_login.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_main.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\content_main.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\app_bar_main.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\app_bar_main.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_header_main.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\nav_header_main.xml"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_country_flags.xml",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\fragment_country_flags.xml"
+    }
+]

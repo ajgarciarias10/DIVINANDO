@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.divinando.tfg.adivinando.ui.MenuFragments.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_nav_home_self"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.divinando.tfg.adivinando.ui.MenuFragments.gallery.GalleryFragment"
+        android:label="Ranking"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.divinando.tfg.adivinando.ui.MenuFragments.slideshow.SlideshowFragment"
+        android:label="Ajustes"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.divinando.tfg.adivinando.ui.MenuFragments.Login.Login"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/register" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.divinando.tfg.adivinando.ui.MenuFragments.Register.Register"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_register_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/game"
+        android:name="com.divinando.tfg.adivinando.ui.MenuFragments.Game.Game"
+        android:label="Game"
+        tools:layout="@layout/game_fragment" >
+        <action
+            android:id="@+id/action_game_to_normalMode"
+            app:destination="@id/normalMode" />
+        <action
+            android:id="@+id/action_game_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_game_to_tildes"
+            app:destination="@id/tildes" />
+        <action
+            android:id="@+id/action_game_to_countryFlags"
+            app:destination="@id/countryFlags" />
+        <action
+            android:id="@+id/action_game_to_guessIT"
+            app:destination="@id/guessIT" />
+        <action
+            android:id="@+id/action_game_to_encadenados"
+            app:destination="@id/encadenados" />
+        <action
+            android:id="@+id/action_game_to_insertWord"
+            app:destination="@id/insertWord" />
+        <action
+            android:id="@+id/action_game_to_fourChooser"
+            app:destination="@id/fourChooser" />
+    </fragment>
+    <fragment
+        android:id="@+id/normalMode"
+        android:name="com.divinando.tfg.adivinando.ui.GameModes.modNormal.NormalMode"
+        android:label="Normal"
+        tools:layout="@layout/fragment_normal_mode">
+        <action
+            android:id="@+id/action_normalMode_self"
+            app:destination="@id/normalMode" />
+        <action
+            android:id="@+id/action_normalMode_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/tildes"
+        android:name="com.divinando.tfg.adivinando.ui.GameModes.modotildes.tildes"
+        android:label="Tildes"
+        tools:layout="@layout/fragment_tildes" />
+    <fragment
+        android:id="@+id/countryFlags"
+        android:name="com.divinando.tfg.adivinando.ui.GameModes.CountryFlags.CountryFlags"
+        android:label="FlagGuesser"
+        tools:layout="@layout/fragment_country_flags" />
+    <fragment
+        android:id="@+id/encadenados"
+        android:name="com.divinando.tfg.adivinando.ui.GameModes.encadenados.Encadenados"
+        android:label="fragment_encadenados"
+        tools:layout="@layout/fragment_encadenados" />
+    <fragment
+        android:id="@+id/insertWord"
+        android:name="com.divinando.tfg.adivinando.ui.GameModes.InsertaPalabraBd.insertWord"
+        android:label="fragment_insert_word"
+        tools:layout="@layout/fragment_insert_word" />
+    <fragment
+        android:id="@+id/fourChooser"
+        android:name="com.divinando.tfg.adivinando.ui.GameModes.fourChooser.fourChooser"
+        android:label="fragment_four_chooser"
+        tools:layout="@layout/fragment_four_chooser" />
+    <fragment
+        android:id="@+id/guessIT"
+        android:name="com.divinando.tfg.adivinando.ui.GameModes.modoGuessIT.GuessIT"
+        android:label="fragment_guess_i_t"
+        tools:layout="@layout/fragment_guess_i_t" />
+</navigation>
