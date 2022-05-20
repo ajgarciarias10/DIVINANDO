@@ -7,7 +7,7 @@ from numpy import extract
 import extractingDataFromTXT as extr
 import traduciendotextoALoQueQueramos as traduct
 ##Conectamos con nuestra base de datos en Firebase
-cred = credentials.Certificate("./loginandregister-86bb1-firebase-adminsdk-rzsgq-76c0f3e43d.json")
+cred = credentials.Certificate("./divinando-5bf80-firebase-adminsdk-j0xou-12697c0f12.json")
 
 firebase_admin.initialize_app(cred)
 db=firestore.client()

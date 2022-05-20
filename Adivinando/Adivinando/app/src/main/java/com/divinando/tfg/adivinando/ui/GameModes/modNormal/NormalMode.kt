@@ -16,6 +16,7 @@ import androidx.navigation.fragment.findNavController
 import com.divinando.tfg.adivinando.R
 import com.divinando.tfg.adivinando.databinding.FragmentNormalModeBinding
 import com.divinando.tfg.adivinando.model.entity.GameObjeto
+import java.io.Console
 import java.text.Normalizer
 import java.util.regex.Pattern
 
@@ -46,9 +47,6 @@ class NormalMode : Fragment() {
 
 
     fun initialize() {
-
-        Toast.makeText(requireContext(),tieneLaPalabraTilde("josé").toString(),Toast.LENGTH_LONG).show()
-
         val palabraDiccionario = getWordFromDict()
         //Caso de que la longitud sea de 5 letras
         if (palabraDiccionario.length == 5){
@@ -422,7 +420,7 @@ class NormalMode : Fragment() {
                       binding.btTerminar.visibility = View.VISIBLE
 
                       binding.btSiguiente.setOnClickListener {
-                          siguiente(true)
+                          siguiente(false)
                       }
                       binding.btTerminar.setOnClickListener {
                           terminar()
@@ -532,8 +530,9 @@ class NormalMode : Fragment() {
 
             val index = (Math.random() * objeto.listaPalabras!!.size).toInt()
             palabraDiccionario = objeto.listaPalabras!![index].trim()
-
-        } while ((palabraDiccionario.length == 6 || palabraDiccionario.length == 7))
+            var tilde = tieneLaPalabraTilde(palabraDiccionario.toLowerCase())
+            Log.v("CACA",tilde.toString())
+        } while (!tilde || (palabraDiccionario.length == 6 || palabraDiccionario.length == 7))
         //endregion
         Log.v("Palabra",palabraDiccionario)
         return palabraDiccionario
@@ -646,13 +645,7 @@ class NormalMode : Fragment() {
 
 
     fun tieneLaPalabraTilde(palabraDic: String): Boolean {
-        var letra = ""
-        for (i in palabraDic.indices){
-            Log.v("HOLA", i.toString())
-            letra = palabraDic[i].toString()
-        }
-
-        val pattern = Pattern.compile("[\\\\p{InCombiningDiacriticalMarks}]")
-        return pattern.matcher(letra).matches()
+        val regex = Regex("\\S*[\\u00E0-\\u00FC]\\S*")
+        return palabraDic.toLowerCase().matches(regex)
     }
 }

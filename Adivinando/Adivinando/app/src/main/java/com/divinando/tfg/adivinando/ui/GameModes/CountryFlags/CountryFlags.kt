@@ -374,7 +374,7 @@ class CountryFlags : Fragment() {
                 binding.btTerminar2.visibility = View.VISIBLE
 
                 binding.btSiguiente2.setOnClickListener {
-                    siguiente(true)
+                    siguiente(false)
                 }
                 binding.btTerminar2.setOnClickListener {
                     terminar()

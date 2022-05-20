@@ -67,6 +67,18 @@
         <action
             android:id="@+id/action_game_to_countryFlags"
             app:destination="@id/countryFlags" />
+        <action
+            android:id="@+id/action_game_to_guessIT"
+            app:destination="@id/guessIT" />
+        <action
+            android:id="@+id/action_game_to_encadenados"
+            app:destination="@id/encadenados" />
+        <action
+            android:id="@+id/action_game_to_insertWord"
+            app:destination="@id/insertWord" />
+        <action
+            android:id="@+id/action_game_to_fourChooser"
+            app:destination="@id/fourChooser" />
     </fragment>
     <fragment
         android:id="@+id/normalMode"
@@ -90,4 +102,24 @@
         android:name="com.divinando.tfg.adivinando.ui.GameModes.CountryFlags.CountryFlags"
         android:label="FlagGuesser"
         tools:layout="@layout/fragment_country_flags" />
+    <fragment
+        android:id="@+id/encadenados"
+        android:name="com.divinando.tfg.adivinando.ui.GameModes.encadenados.Encadenados"
+        android:label="fragment_encadenados"
+        tools:layout="@layout/fragment_encadenados" />
+    <fragment
+        android:id="@+id/insertWord"
+        android:name="com.divinando.tfg.adivinando.ui.GameModes.InsertaPalabraBd.insertWord"
+        android:label="fragment_insert_word"
+        tools:layout="@layout/fragment_insert_word" />
+    <fragment
+        android:id="@+id/fourChooser"
+        android:name="com.divinando.tfg.adivinando.ui.GameModes.fourChooser.fourChooser"
+        android:label="fragment_four_chooser"
+        tools:layout="@layout/fragment_four_chooser" />
+    <fragment
+        android:id="@+id/guessIT"
+        android:name="com.divinando.tfg.adivinando.ui.GameModes.modoGuessIT.GuessIT"
+        android:label="fragment_guess_i_t"
+        tools:layout="@layout/fragment_guess_i_t" />
 </navigation>

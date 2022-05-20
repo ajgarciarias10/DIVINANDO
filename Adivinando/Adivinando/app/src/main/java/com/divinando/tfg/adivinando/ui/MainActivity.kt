@@ -125,7 +125,7 @@ class MainActivity : AppCompatActivity() {
             games.add(game3)
             val game4= GameObjeto("Guesser","CountryGuesser","Español","https://cdn.icon-icons.com/icons2/1531/PNG/512/3253482-flag-spain-icon_106784.png",urls,listaDePaisesEnEspañol,"Pon a prueba a tu mapa geográfico",5,null)
             games.add(game4)
-            val game5= GameObjeto("InsertMode","Inserta Palabras","Español","https://www.gmkfreelogos.com/logos/I/img/InsERT.gif",null,null,"Insertenos alguna palabra para ayudarnos",5,null)
+            val game5= GameObjeto("InsertMode","InsertPalabras","Español","https://www.gmkfreelogos.com/logos/I/img/InsERT.gif",null,null,"Insertenos alguna palabra para ayudarnos",5,null)
             games.add(game5)
             val game6 = GameObjeto("Chooser","4Chooser","Español","https://www.crushpixel.com/big-static11/preview4/pencil-4-options-infographic-piad-710269.jpg",null,null,"Modo de 4 elecciones ",5,null)
             games.add(game6)

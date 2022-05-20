@@ -29,10 +29,10 @@
     <string name="tilRegisterPassRep">Repetir contraseña</string>
 
 
-    <string name="facebook_app_id">1119193595479389</string>
-    <string name="facebook_client_token">5b3b8d965702c4868e97730ca2e37a5c</string>
-    <string name="fb_login_protocol_scheme">fb1119193595479389</string>
-    <string name="your_web_client_id">1068638417166-qh26h75c9cr367svdkilbfgmpe5i7hq4.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">521285542814103</string>
+    <string name="facebook_client_token">6abeb6951f0fb45668db661d3dc5a041</string>
+    <string name="fb_login_protocol_scheme">fb521285542814103</string>
+    <string name="your_web_client_id">1087116395341-12qu89kf6najbai67cdrnp13dcc0nl2h.apps.googleusercontent.com</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

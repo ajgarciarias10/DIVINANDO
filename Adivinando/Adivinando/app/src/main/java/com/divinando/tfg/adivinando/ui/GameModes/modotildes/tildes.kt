@@ -418,7 +418,7 @@ class tildes : Fragment() {
                 binding.btTerminar.visibility = View.VISIBLE
 
                 binding.btSiguiente.setOnClickListener {
-                    siguiente(true)
+                    siguiente(false)
                 }
                 binding.btTerminar.setOnClickListener {
                     terminar()
@@ -528,7 +528,9 @@ class tildes : Fragment() {
 
             palabraDiccionario = objeto.listaPalabras!![index].trim()
 
-        } while (palabraDiccionario.length == 6 && palabraDiccionario.length == 7)
+            var tilde = tieneLaPalabraTilde(palabraDiccionario.toLowerCase())
+            Log.v("CACA",tilde.toString())
+        } while (tilde && (palabraDiccionario.length == 6 || palabraDiccionario.length == 7))
         //endregion
         Log.v("Palabra",palabraDiccionario)
         return palabraDiccionario
@@ -636,6 +638,10 @@ class tildes : Fragment() {
             return letra1.isEmpty() || letra2.isEmpty() || letra3.isEmpty() ||
                     letra4.isEmpty() || letra5.isEmpty()
         }
+    }
+    fun tieneLaPalabraTilde(palabraDic: String): Boolean {
+        val regex = Regex("\\S*[\\u00E0-\\u00FC]\\S*")
+        return palabraDic.toLowerCase().matches(regex)
     }
 
 }
