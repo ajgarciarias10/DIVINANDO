@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Login">
         <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RankingActivity"
+            android:exported="false" />
+        <activity
             android:name=".WhoActivity"
             android:exported="false" />
         <activity

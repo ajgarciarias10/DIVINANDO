@@ -168,7 +168,7 @@ class ClubActivity : AppCompatActivity() {
 
         }
         else{
-            startActivity(Intent(this,EndActivity::class.java))
+            navigate()
         }
     }
 
@@ -196,6 +196,16 @@ class ClubActivity : AppCompatActivity() {
             }
         }
         return numId
+    }
+
+    private fun navigate(){
+        var b = Bundle()
+        var navigate = Intent(this,EndActivity::class.java)
+        b.putString("game", "escudos")
+        b.putString("points", points.toString())
+        navigate.putExtras(b)
+        startActivity(navigate)
+        finish()
     }
 
 }

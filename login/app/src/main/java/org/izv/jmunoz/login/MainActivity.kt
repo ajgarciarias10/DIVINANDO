@@ -27,6 +27,14 @@ class MainActivity : AppCompatActivity() {
         lateinit var mail: String
     }
 
+    object gameActive{
+        lateinit var game: String
+    }
+
+    object userPoints{
+        lateinit var points: String
+    }
+
     private lateinit var btRegister: Button
     lateinit var btLog: Button
     lateinit var navigate: Intent
@@ -87,7 +95,7 @@ class MainActivity : AppCompatActivity() {
 
         btRegister = findViewById(R.id.btReg)
         btLog = findViewById(R.id.btLog)
-        navigate = Intent(this,RegActivity::class.java)
+        navigate = Intent(this,RankingActivity::class.java)
         logged = Intent(this,MenuActivity::class.java)
         etMail = findViewById(R.id.etMailLog)
         etPass = findViewById(R.id.etPass)
