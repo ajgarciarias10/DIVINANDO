@@ -12,12 +12,12 @@
         "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\merged_res\\debug\\navigation_mobile_navigation.xml.flat",
-        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
-    },
-    {
         "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\merged_res\\debug\\navigation_mobile_navigation.xml.flat",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
     },
     {
         "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_videogame_asset_24.xml.flat",
@@ -100,16 +100,16 @@
         "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\drawable\\ic_menu_slideshow.xml"
     },
     {
-        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_country_flags.xml.flat",
-        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\fragment_country_flags.xml"
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_autorenew_24.xml.flat",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\drawable\\ic_baseline_autorenew_24.xml"
     },
     {
         "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_slideshow.xml.flat",
         "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\fragment_slideshow.xml"
     },
     {
-        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_autorenew_24.xml.flat",
-        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\drawable\\ic_baseline_autorenew_24.xml"
+        "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_country_flags.xml.flat",
+        "source": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\src\\main\\res\\layout\\fragment_country_flags.xml"
     },
     {
         "merged": "F:\\DIVINANDO\\Adivinando\\Adivinando\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_game.xml.flat",
