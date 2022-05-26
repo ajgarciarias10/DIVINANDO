@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1087116395341",
+    "project_id": "divinando-5bf80",
+    "storage_bucket": "divinando-5bf80.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087116395341:android:facebaa54d362a74c02d04",
+        "android_client_info": {
+          "package_name": "com.divinando.tfg.adivinando"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1087116395341-mv97qumn995meb21kfugvjd32r7ih14s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.divinando.tfg.adivinando",
+            "certificate_hash": "590404ec373cee180a5716be0dfaf77d3b70dab2"
+          }
+        },
+        {
+          "client_id": "1087116395341-12qu89kf6najbai67cdrnp13dcc0nl2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVnNqE4KdhK4q5SRe5WXFzg2wubR5KBwQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1087116395341-12qu89kf6najbai67cdrnp13dcc0nl2h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
