@@ -56,6 +56,7 @@ class CountryFlags : Fragment() {
 
         var palabraDiccionario =" "
         var paisimagen = " "
+        //region obtencion del pais
         do {
             val index = (Math.random() * objeto.listaPalabras!!.size).toInt()
              palabraDiccionario = objeto.listaPalabras!![index].trim()
@@ -64,8 +65,6 @@ class CountryFlags : Fragment() {
         } while (palabraDiccionario.trim().length != 5 && palabraDiccionario.trim().length != 6)
         //endregion
         Log.v("pais",palabraDiccionario)
-        Log.v("pais", palabraDiccionario.length.toString())
-
         Glide.with(requireActivity()).load(paisimagen)
             .override(80,80).error(R.mipmap.ic_launcher).into(binding.imageView2)
 
@@ -75,6 +74,7 @@ class CountryFlags : Fragment() {
         if (palabraDiccionario.length == 5){
             //region fase1aFila
             binding.group5pl1.visibility = View.VISIBLE
+            //URBANO AQUI METE LO DEL GOO
             binding.fabLinea15l6.setOnClickListener {
                 if(estaLaPalabraVacia(binding.f5p9.text,binding.f5p8.text,binding.f5p7.text,binding.f5p6.text,binding.f5p.text,null)){
                     Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
@@ -86,6 +86,7 @@ class CountryFlags : Fragment() {
             }
             //endregion
             // region fase2aFila
+            //URBANO AQUI METE LO DEL GOO
             binding.fabLinea15l7.setOnClickListener {
                 if(estaLaPalabraVacia(binding.f5p10.text,binding.f5p11.text,binding.f5p12.text,binding.f5p13.text,binding.f5p14.text,null)){
                     Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
@@ -96,6 +97,7 @@ class CountryFlags : Fragment() {
             }
             //endregion
             // region fase3aFila
+            //URBANO AQUI METE LO DEL GOO
             binding.fabLinea15l9.setOnClickListener {
                 if(estaLaPalabraVacia(binding.f5p15.text,binding.f5p16.text,binding.f5p17.text,binding.f5p18.text,binding.f5p19.text,null)) {
                     Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
@@ -107,6 +109,7 @@ class CountryFlags : Fragment() {
         //Caso de que la longitud sea de 6 letras
         }else {
             //region fase1aFila
+            //URBANO AQUI METE LO DEL GOO
             binding.group6pl1.visibility = View.VISIBLE
             binding.fabLinea15l9.setOnClickListener {
                 if(estaLaPalabraVacia(binding.f5p20.text,binding.f5p21.text,binding.f5p22.text,binding.f5p23.text,binding.f5p24.text,binding.f5p25.text)) {
@@ -119,6 +122,7 @@ class CountryFlags : Fragment() {
             //endregion
 
             // region fase2aFila
+            //URBANO AQUI METE LO DEL GOO
             binding.fabLinea15l8.setOnClickListener {
                 if(estaLaPalabraVacia(binding.f5p31.text,binding.f5p32.text,binding.f5p33.text,binding.f5p34.text,binding.f5p35.text,binding.f5p36.text)){
                     Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
@@ -130,6 +134,7 @@ class CountryFlags : Fragment() {
             //endregion
 
             // region fase3aFila
+            //URBANO AQUI METE LO DEL GOO
             binding.fabLinea15l11.setOnClickListener {
                 if(estaLaPalabraVacia(binding.f5p37.text,binding.f5p38.text,binding.f5p39.text,binding.f5p40.text,binding.f5p41.text,binding.f5p42.text)){
                     Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
@@ -145,7 +150,7 @@ class CountryFlags : Fragment() {
         }
 
     }
-
+    //region METODO PARA COMPROBAR LAS FILAS!!!
     fun compruebafilas(
         palabraDiccionario: String,
         letra1: EditText,
@@ -480,15 +485,23 @@ class CountryFlags : Fragment() {
         }
 
     }
+    //endregion
+    //region Metodo de  ver si la palabra coincide 100%
     fun coincidenciaPerfecta(palabraDic:String,palabrafilax:String): Boolean {
         return palabraDic == palabrafilax
     }
+    //endregion
+    //region Metodo si coincide por posicion para ponerla en verde
     fun coincidenciaPerfectaPorPosicion(palabraDic:String,letra:String,posicion:Int): Boolean {
         return letra == palabraDic[posicion].toString()
     }
+    //endregion
+    //region Metodo ver si la palabra esta dentro para ponerla en narajuita
     fun coincidenciaEstaDentro(palabraDic:String,letra:String): Boolean{
         return palabraDic.contains(letra)
     }
+    //endregion
+    //region Metodo para cuando le de al botón siguiente
     fun siguiente(boooleano : Boolean){
         if(boooleano){
             binding.group5pl1.visibility = View.GONE
@@ -530,11 +543,15 @@ class CountryFlags : Fragment() {
 
 
     }
+    //endregion
+    //region Método de cuando termine le envie a la pantalla final con sus puntos
     fun terminar(){
         MainActivity.ObjUser.game = "paises"
         MainActivity.ObjUser.point = points.toString()
         findNavController().navigate(R.id.normal_toend)
     }
+    //endregion
+    //region Metodo limpiar texto de cada grupo pasandole la fila
     fun limpiatexto(fila1: EditText, fila2: EditText, fila3: EditText, fila4 : EditText, fila5 : EditText, fila6 : EditText?){
 
         fila1.setText("")
@@ -563,6 +580,8 @@ class CountryFlags : Fragment() {
 
 
     }
+    //endregion
+    //region Método de si esta la palabra esta vacia
     fun estaLaPalabraVacia(
         letra1: Editable,
         letra2: Editable,
@@ -579,6 +598,7 @@ class CountryFlags : Fragment() {
                     letra4.isEmpty() || letra5.isEmpty()
         }
     }
+    //endregion
 
 
 

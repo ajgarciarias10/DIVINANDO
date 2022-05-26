@@ -2,6 +2,7 @@ package com.divinando.tfg.adivinando.ui.MenuFragments.Login
 
 import android.content.ContentValues
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -78,6 +79,15 @@ class Login : Fragment() {
         //BUSCAMOS EL OBJETO QUE CONTIENE LOS METODOS A UTILIZAR
         val pyObj: PyObject = py.getModule("ValidatingEmailAndPassword")
         //endregion
+
+
+        if (Build.VERSION.SDK_INT >= 30) {
+            binding.sigNInBtn.visibility = View.GONE
+            binding.loginButton.visibility = View.GONE
+        }
+
+
+
         //region  CAMPOS DE TIPO BUTTON
         binding.btLogin.setOnClickListener {
             // region FUNCION QUE CHECKEA LOS CAMPOS INPUTEDIT EN PYTHON

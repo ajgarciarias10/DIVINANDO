@@ -53,6 +53,7 @@ class NormalMode : Fragment() {
         if (palabraDiccionario.length == 5){
             //region fase1aFila
                 binding.group5palabras.visibility = View.VISIBLE
+             //URBANO AQUI METE LO DEL GOO EN FUNCION DE LA FILA ESTA ES DE 5 PALABRAS FILA 1
                 binding.fabLinea15l.setOnClickListener {
                     if(estaLaPalabraVacia(binding.f1p1.text,binding.f1p2.text,binding.f1p3.text,binding.f1p4.text,binding.f1p5.text,null)){
                         Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
@@ -64,6 +65,7 @@ class NormalMode : Fragment() {
                 }
             //endregion
             // region fase2aFila
+            //URBANO AQUI METE LO DEL GOO EN FUNCION DE LA FILA ESTA ES DE 5 PALABRAS FILA 2
                 binding.fabLinea15l2.setOnClickListener {
                     if(estaLaPalabraVacia(binding.f2p1.text,binding.f2p2.text,binding.f2p3.text,binding.f2p4.text,binding.f2p5.text,null)){
                         Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
@@ -83,6 +85,7 @@ class NormalMode : Fragment() {
                 }
             //endregion
             // region fase3aFila
+            //URBANO AQUI METE LO DEL GOO EN FUNCION DE LA FILA ESTA ES DE 5 PALABRAS FILA 3
             binding.fabLinea15l5.setOnClickListener {
                 if(estaLaPalabraVacia(binding.f3p1.text,binding.f3p2.text,binding.f3p3.text,binding.f3p4.text,binding.f3p5.text,null)) {
                     Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
@@ -102,6 +105,7 @@ class NormalMode : Fragment() {
              }
             //endregion
             // region fase4aFila
+            //URBANO AQUI METE LO DEL GOO EN FUNCION DE LA FILA ESTA ES DE 5 PALABRAS FILA 4
             binding.fabLinea15l4.setOnClickListener {
                 if(estaLaPalabraVacia(binding.f4p1.text,binding.f4p2.text,binding.f4p3.text,binding.f4p4.text,binding.f4p5.text,null)) {
                     Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
@@ -121,6 +125,7 @@ class NormalMode : Fragment() {
             }
             //endregion
             // region fase5aFila
+            //URBANO AQUI METE LO DEL GOO EN FUNCION DE LA FILA ESTA ES DE 5 PALABRAS FILA 5
             binding.fabLinea15l3.setOnClickListener {
                 if(estaLaPalabraVacia(binding.f5p1.text,binding.f5p2.text,binding.f5p3.text,binding.f5p4.text,binding.f5p5.text,null)) {
                     Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
@@ -134,6 +139,7 @@ class NormalMode : Fragment() {
         }else {
             //region fase1aFila
                 binding.group6pf1.visibility = View.VISIBLE
+            //URBANO AQUI METE LO DEL GOO EN FUNCION DE LA FILA ESTA ES DE 6 PALABRAS FILA 1
                 binding.fabLineal6.setOnClickListener {
                     if(estaLaPalabraVacia(binding.f1p16l.text,binding.f1p26l.text,binding.f1p36l.text,binding.f1p46l.text,binding.f1p56l.text,binding.f1p66l.text)) {
                         Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
@@ -145,6 +151,7 @@ class NormalMode : Fragment() {
             //endregion
 
             // region fase2aFila
+            //URBANO AQUI METE LO DEL GOO EN FUNCION DE LA FILA ESTA ES DE 6 PALABRAS FILA 2
                 binding.fabLineal61.setOnClickListener {
                     if(estaLaPalabraVacia(binding.f2p16l.text,binding.f2p26l.text,binding.f2p36l.text,binding.f2p46l.text,binding.f2p56l.text,binding.f2p66l.text)) {
                         Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
@@ -156,6 +163,7 @@ class NormalMode : Fragment() {
             //endregion
 
             // region fase3aFila
+            //URBANO AQUI METE LO DEL GOO EN FUNCION DE LA FILA ESTA ES DE 6 PALABRAS FILA 3
                 binding.fabLineal62.setOnClickListener {
                     if(estaLaPalabraVacia(binding.f3p16l.text,binding.f3p26l.text,binding.f3p36l.text,binding.f3p46l.text,binding.f3p56l.text,binding.f3p66l.text)){
                         Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
@@ -167,6 +175,7 @@ class NormalMode : Fragment() {
             //endregion
 
             // region fase4aFila
+            //URBANO AQUI METE LO DEL GOO EN FUNCION DE LA FILA ESTA ES DE 6 PALABRAS FILA 4
                 binding.fabLineal63.setOnClickListener {
                     if(estaLaPalabraVacia(binding.f4p16l.text,binding.f4p26l.text,binding.f4p36l.text,binding.f4p46l.text,binding.f4p56l.text,binding.f4p66l.text)){
                         Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
@@ -178,6 +187,7 @@ class NormalMode : Fragment() {
             //endregion
 
             // region fase5aFila
+            //URBANO AQUI METE LO DEL GOO EN FUNCION DE LA FILA ESTA ES DE 6 PALABRAS FILA 5
                 binding.fabLineal65.setOnClickListener {
                     if(estaLaPalabraVacia(binding.f5p16l.text,binding.f5p26l.text,binding.f5p36l.text,binding.f5p46l.text,binding.f5p56l.text,binding.f5p66l.text)){
                         Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
@@ -191,7 +201,7 @@ class NormalMode : Fragment() {
         }
 
     }
-
+//region METODO PARA COMPROBAR LAS FILAS!!!
     fun compruebafilas(
         palabraDiccionario: String,
         letra1:EditText,
@@ -511,7 +521,7 @@ class NormalMode : Fragment() {
                       if(group == null){
                           binding.btSiguiente.visibility = View.VISIBLE
                           binding.btTerminar.visibility = View.VISIBLE
-
+                            // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! AQUI TIENES QUE METER EL ALERTBUILD DIALOGG!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                           binding.btSiguiente.setOnClickListener {
                               siguiente(true)
                           }
@@ -527,9 +537,9 @@ class NormalMode : Fragment() {
           }
 
     }
+//endregion
 
-
-
+//region Metodo de obtencio palabra del objeto y sacamos palabra aleatoria
     fun getWordFromDict(): String {
         var palabraDiccionario = ""
         //Sacamos los argumentos de los objetos
@@ -541,26 +551,34 @@ class NormalMode : Fragment() {
 
             val index = (Math.random() * objeto.listaPalabras!!.size).toInt()
             palabraDiccionario = objeto.listaPalabras!![index].trim()
-            var tilde = tieneLaPalabraTilde(palabraDiccionario.toLowerCase())
-            Log.v("CACA",tilde.toString())
-        } while (!tilde || (palabraDiccionario.length == 6 || palabraDiccionario.length == 7))
+        } while (palabraDiccionario.length == 6 || palabraDiccionario.length == 7)
         //endregion
         Log.v("Palabra",palabraDiccionario)
         return palabraDiccionario
 
 
     }
+//endregion
+//region Metodo de  ver si la palabra coincide 100%
     fun coincidenciaPerfecta(palabraDic:String,palabrafilax:String): Boolean {
         return palabraDic == palabrafilax
     }
+//endregion
+//region Metodo si coincide por posicion para ponerla en verde
     fun coincidenciaPerfectaPorPosicion(palabraDic:String,letra:String,posicion:Int): Boolean {
         return letra == palabraDic[posicion].toString()
     }
+//endregion
+//region Metodo ver si la palabra esta dentro para ponerla en narajuita
     fun coincidenciaEstaDentro(palabraDic:String,letra:String): Boolean{
         return palabraDic.contains(letra)
     }
+//endregion
+//region Metodo para cuando le de al botón siguiente
     fun siguiente(boooleano : Boolean){
+        //EL IF ES EN EL CASO DE QUE SEA DE 5 PALABRAS BOOLEANO = TRUE
         if(boooleano){
+
             binding.group5palabras.visibility = View.GONE
             binding.group5p2aFila.visibility = View.GONE
             binding.group5p3afila.visibility = View.GONE
@@ -604,11 +622,15 @@ class NormalMode : Fragment() {
 
 
     }
+//endregion
+//region Método de cuando termine le envie a la pantalla final con sus puntos
     fun terminar(){
         MainActivity.ObjUser.game = "divinando"
         MainActivity.ObjUser.point = points.toString()
         findNavController().navigate(R.id.normal_toend)
     }
+//endregion
+//region Metodo limpiar texto de cada grupo pasandole la fila
     fun limpiatexto(fila1: EditText, fila2:EditText, fila3: EditText ,fila4 : EditText, fila5 : EditText, fila6 : EditText?){
 
         fila1.setText("")
@@ -637,6 +659,8 @@ class NormalMode : Fragment() {
 
 
     }
+//endregion
+//region Método de si esta la palabra esta vacia
     fun estaLaPalabraVacia(
         letra1: Editable,
         letra2: Editable,
@@ -653,12 +677,5 @@ class NormalMode : Fragment() {
                     letra4.isEmpty() || letra5.isEmpty() 
         }
     }
-
-
-
-
-    fun tieneLaPalabraTilde(palabraDic: String): Boolean {
-        val regex = Regex("\\S*[\\u00E0-\\u00FC]\\S*")
-        return palabraDic.toLowerCase().matches(regex)
-    }
+//endregion
 }

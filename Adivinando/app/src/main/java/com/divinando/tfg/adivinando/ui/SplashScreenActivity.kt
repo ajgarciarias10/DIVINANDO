@@ -15,10 +15,11 @@ import com.divinando.tfg.adivinando.databinding.ActivitySplashScreenBinding
  * status bar and navigation/system bar) with user interaction.
  */
 class SplashScreenActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivitySplashScreenBinding
-    private val hideHandler = Handler()
-
+    //region SplashScreen Activity Binding
+        private lateinit var binding: ActivitySplashScreenBinding
+        private val hideHandler = Handler()
+    //endregion
+    //region  Dependiendo de la Api te carga la pantalla
     @SuppressLint("InlinedApi")
     private val hidePart2Runnable = Runnable {
         // Delayed removal of status and navigation bar
