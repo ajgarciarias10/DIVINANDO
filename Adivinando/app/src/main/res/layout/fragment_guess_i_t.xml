@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClubActivity">
+
+    <TextView
+        android:id="@+id/tvRound"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/trade_winds"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/iClub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ROUND 1" />
+
+    <ImageView
+        android:id="@+id/iClub"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toTopOf="@+id/tvClubName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/tvRound"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvClubName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trade_winds"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btTrue"
+        app:layout_constraintEnd_toEndOf="@+id/tvRound"
+        app:layout_constraintStart_toStartOf="@+id/tvRound"
+        app:layout_constraintTop_toBottomOf="@+id/iClub"
+        tools:text="0 POINTS" />
+
+    <Button
+        android:id="@+id/btTrue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trade_winds"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/true_"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#4CAF50"
+        android:textSize="20sp"
+        app:backgroundTint="@android:color/white"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btNextClub"
+        app:layout_constraintEnd_toStartOf="@+id/btFalse"
+        app:layout_constraintStart_toStartOf="@+id/tvRound"
+        app:layout_constraintTop_toBottomOf="@+id/tvClubName"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btFalse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trade_winds"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/false_"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#F44336"
+        android:textSize="20sp"
+        app:backgroundTint="@android:color/white"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btTrue"
+        app:layout_constraintEnd_toEndOf="@+id/tvRound"
+        app:layout_constraintStart_toEndOf="@+id/btTrue"
+        app:layout_constraintTop_toTopOf="@+id/btTrue" />
+
+    <Button
+        android:id="@+id/btNextClub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvRound"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tvRound"
+        app:layout_constraintTop_toBottomOf="@+id/btTrue"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
