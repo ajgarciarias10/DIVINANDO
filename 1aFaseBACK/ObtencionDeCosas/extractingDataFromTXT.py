@@ -1,9 +1,31 @@
+import re 
+from bs4 import SoupStrainer
 import extractingDataFromTXT as extr
 import json
 ##LIBRERIA EXTRACCION CSV
 import pandas as pd
 import traduciendotextoALoQueQueramos as traduct
 ##FUNCION QUE PALABRAS CON 5 LETRAS DEL DICCIONARIO 
+def  isAccent(s):
+    lista = list()
+    for word  in s :
+        if re.search(r'[À-ÿ]', word):
+            lista.append(word)
+    return lista
+def  isnotAccent(s):
+    lista = list()
+    for word in s:
+        if re.search(r'[À-ÿ]', word):
+            print("caca")
+        else:
+            lista.append(word)
+    return lista
+            
+
+
+        
+        
+
 def extractDictionary(archivo):
     ##CREAMOS UN ARRAYLIST DE PALABRA
     palabra=list()

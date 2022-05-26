@@ -17,7 +17,9 @@ dictBritish = 'wordsBritishhhh.txt'
 
 
 ##CREAMOS UN RESULTADO ARRAYLIST DE LO QUE TE DEVUELVE LA FUNCIÓN EXTRAE DICCIONARIO
-palabrasEspañolasPataNegra = extr.extractDictionary(dictEspañol)
+listadepalabritas =  extr.extractDictionary(dictEspañol)
+palabrasEspañolasPataNegra = extr.isnotAccent(listadepalabritas)
+palabrasTildeanasEspañolasPataNegra = extr.isAccent(listadepalabritas)
 palabrasBritanicasPataPirata = extr.extractDictionary(dictBritish)
 
 
@@ -25,6 +27,7 @@ palabrasBritanicasPataPirata = extr.extractDictionary(dictBritish)
 datos ={
     'palabrasBritanicas': palabrasBritanicasPataPirata,    
     'palabrasEspañola' : palabrasEspañolasPataNegra,
+    'palabrastildeanas' : palabrasTildeanasEspañolasPataNegra
 }
 
 #UTILIZAMOS METODO POST PARA SUBIR EL ARRAY DE DATOS A FIREBASE
