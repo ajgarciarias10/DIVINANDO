@@ -548,7 +548,7 @@ class CountryFlags : Fragment() {
     fun terminar(){
         MainActivity.ObjUser.game = "paises"
         MainActivity.ObjUser.point = points.toString()
-        findNavController().navigate(R.id.normal_toend)
+        findNavController().navigate(R.id.country_toend)
     }
     //endregion
     //region Metodo limpiar texto de cada grupo pasandole la fila
