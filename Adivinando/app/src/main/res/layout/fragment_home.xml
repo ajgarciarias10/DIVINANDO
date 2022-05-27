@@ -173,4 +173,17 @@
             tools:text="GAME    POINTS    USER" />
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:id="@+id/noestalogueado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="TextView"
+        android:textSize="34sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

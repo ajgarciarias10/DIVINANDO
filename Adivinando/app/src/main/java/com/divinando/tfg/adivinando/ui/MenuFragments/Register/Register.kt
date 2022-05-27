@@ -13,16 +13,17 @@ import com.chaquo.python.Python
 import com.chaquo.python.android.AndroidPlatform
 import com.divinando.tfg.adivinando.R
 import com.divinando.tfg.adivinando.databinding.FragmentRegisterBinding
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
-import com.google.firebase.auth.FirebaseAuthUserCollisionException
-import com.google.firebase.auth.FirebaseAuthWeakPasswordException
+import com.google.firebase.auth.*
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
 import com.google.firebase.ktx.Firebase
 
 class Register : Fragment() {
     //Inicializamos variable de autenticacion de Firebase
     private lateinit var auth : FirebaseAuth
+
+    private val db = FirebaseFirestore.getInstance()
 
     private var _binding: FragmentRegisterBinding? = null
 
@@ -74,6 +75,7 @@ class Register : Fragment() {
 
         //region REGISTER ONCLICK EVENTO
         binding.btRegister.setOnClickListener {
+            val username = binding.etRegisterUsername.text.toString()
             //Sacamos el email del campo de texto
             val  email =  binding.etRegisterEmail.text.toString()
             //PASAMOS AL LA FUNCION SI EL EMAIL ES VALIDO PARA CHECKEARLO
@@ -90,7 +92,7 @@ class Register : Fragment() {
                 //SI LA CONTRASEÑA SE REPITE
                 if(repeatPassword == password){
                     //REGISTRAMOS EL USUARIO
-                    registerUser(email,password)
+                    registerUser(username,email,password)
                 }
                 else{
                     binding.etRegisterPassRep.error = "Error no es similiar a la contraseña de arriba"
@@ -120,15 +122,41 @@ class Register : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+    private  fun registraUsuarioEnElRanking(username : String, email : String){
+            db.collection("Ranking").document(email).get().addOnSuccessListener { document ->
+                if(document.data == null){
+                    //region Insertamos en la tabla de ranking el usuario y devolvemos
+                    val data = hashMapOf(
+                        "nombre" to  username,
+                        "mail" to email,
+                        "divinando" to "0",
+                        "divtildes" to "0",
+                        "encadenados" to "0",
+                        "paises" to "0",
+                        "escudos" to "0",
+                        "famosos" to "0"
+                    )
+                    db.collection("Ranking").document(email).set(data, SetOptions.merge())
+                    //endregion
+
+                }
+                else{
+                    Log.v("CACA","ESTA YA METIDO" )
+                }
+            }
+
+
+    }
     /**
      * METODO PARA REGISTRAR A UN USUARIO EN FIREBASE
      */
-    fun  registerUser(email: String ,password : String) {
+    fun  registerUser(username:String, email: String ,password : String) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                 //Si la tarea de registro es exitosa
                 if (task.isSuccessful) {
-                    findNavController().navigate(R.id.action_register_to_nav_home)
+                    registraUsuarioEnElRanking(username, email)
+                    findNavController().navigate(R.id.action_register_to_login)
                 } else {
                     try {
                         throw task.exception!!

@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.divinando.tfg.adivinando.ui.MenuFragments.home.HomeFragment"
-        android:label="Home"
+        android:label="Adivinando"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_nav_home_to_login"
@@ -49,6 +49,9 @@
         <action
             android:id="@+id/action_register_to_nav_home"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/login" />
     </fragment>
     <fragment
         android:id="@+id/game"
@@ -73,9 +76,6 @@
         <action
             android:id="@+id/action_game_to_encadenados"
             app:destination="@id/encadenados" />
-        <action
-            android:id="@+id/action_game_to_insertWord"
-            app:destination="@id/insertWord" />
         <action
             android:id="@+id/action_game_to_fourChooser"
             app:destination="@id/fourChooser" />
@@ -113,22 +113,17 @@
     <fragment
         android:id="@+id/encadenados"
         android:name="com.divinando.tfg.adivinando.ui.GameModes.encadenados.Encadenados"
-        android:label="fragment_encadenados"
-        tools:layout="@layout/fragment_encadenados" >
+        android:label="Encadenados"
+        tools:layout="@layout/fragment_encadenados">
         <action
             android:id="@+id/enc_toend"
             app:destination="@id/endFragment" />
     </fragment>
     <fragment
-        android:id="@+id/insertWord"
-        android:name="com.divinando.tfg.adivinando.ui.GameModes.InsertaPalabraBd.insertWord"
-        android:label="fragment_insert_word"
-        tools:layout="@layout/fragment_insert_word" />
-    <fragment
         android:id="@+id/fourChooser"
         android:name="com.divinando.tfg.adivinando.ui.GameModes.fourChooser.fourChooser"
-        android:label="fragment_four_chooser"
-        tools:layout="@layout/fragment_four_chooser" >
+        android:label="4Chooser"
+        tools:layout="@layout/fragment_four_chooser">
         <action
             android:id="@+id/chooser_toend"
             app:destination="@id/endFragment" />
@@ -136,8 +131,8 @@
     <fragment
         android:id="@+id/guessIT"
         android:name="com.divinando.tfg.adivinando.ui.GameModes.modoGuessIT.GuessIT"
-        android:label="fragment_guess_i_t"
-        tools:layout="@layout/fragment_guess_i_t" >
+        android:label="GuessIt"
+        tools:layout="@layout/fragment_guess_i_t">
         <action
             android:id="@+id/guess_toend"
             app:destination="@id/endFragment" />
@@ -145,7 +140,7 @@
     <fragment
         android:id="@+id/endFragment"
         android:name="com.divinando.tfg.adivinando.ui.EndFragment"
-        android:label="EndFragment" >
+        android:label="Puntuacion">
         <action
             android:id="@+id/end_tohome"
             app:destination="@id/nav_home" />

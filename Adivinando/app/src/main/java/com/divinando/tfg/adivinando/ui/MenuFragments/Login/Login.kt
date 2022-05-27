@@ -28,12 +28,16 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.*
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
 import com.google.firebase.ktx.Firebase
 
 class Login : Fragment() {
 
     //Inicializamos variable de Autenticacion de Firebase
     private lateinit var auth: FirebaseAuth
+
+    private val db = FirebaseFirestore.getInstance()
 
     //Manejo de las llamadas las inicializamos
     private lateinit var callbackManager: CallbackManager
@@ -187,7 +191,6 @@ class Login : Fragment() {
             .addOnCompleteListener(requireActivity()) { task ->
                 //SI EL LOGUEO ES EXITOSO
                 if (task.isSuccessful) {
-                    MainActivity.ObjUser.mail = email
                     findNavController().navigate(R.id.action_login_to_nav_home)
                 } else {
                     try {
@@ -292,17 +295,55 @@ class Login : Fragment() {
                 }
             }
     }
-
     /**
      * ·······
-     * METODO PARA ACTUALIZAR DE INTERFAZ DE USUARIO
+     * METODO PARA ACTUALIZAR LA TABLA RANKING
+     * ·······
+     *
+     */
+    private  fun estaElUserInRanking(user: FirebaseUser?){
+        if (user != null) {
+            db.collection("Ranking").document(user.email.toString()).get().addOnSuccessListener { document ->
+               if(document.data == null){
+                    //region Insertamos en la tabla de ranking el usuario y devolvemos
+                       val data = hashMapOf(
+                           "nombre" to  user.displayName.toString(),
+                           "mail" to user.email.toString(),
+                           "divinando" to "0",
+                           "divtildes" to "0",
+                           "encadenados" to "0",
+                           "paises" to "0",
+                           "escudos" to "0",
+                           "famosos" to "0"
+                       )
+                       db.collection("Ranking").document(user.email.toString()).set(data, SetOptions.merge())
+                   //endregion
+
+               }
+               else{
+                   Log.v("CACA","ESTA YA METIDO" )
+               }
+            }
+        }
+
+
+
+
+    }
+    /**
+     * ·······
+     * METODO PARA ACTUALIZAR DE INTERFAZ DE USUARIO Y INSERTAR EN LA BD SI EL USUARIO NO SE HA METIDO EN LA TABLA RANKING
      * ·······
      *
      */
     private fun updateUI(user: FirebaseUser?) {
         if (user != null) {
+            estaElUserInRanking(user)
+            MainActivity.ObjUser.name = user.displayName.toString()
             user.displayName?.let { findNavController().navigate(R.id.action_login_to_nav_home) }
-            MainActivity.ObjUser.mail = user.email.toString()
+
         }
     }
+
+
 }

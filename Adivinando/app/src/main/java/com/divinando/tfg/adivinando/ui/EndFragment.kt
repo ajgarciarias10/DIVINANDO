@@ -9,17 +9,20 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.divinando.tfg.adivinando.R
 import com.divinando.tfg.adivinando.databinding.FragmentEndBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 
 class EndFragment : Fragment() {
 
     private var _binding: FragmentEndBinding? = null
     private val binding get() = _binding!!
     private val db = FirebaseFirestore.getInstance()
+    private  lateinit var  mFirebaseAuth: FirebaseAuth
 
 
     //User data
-    var userID = ""
     var userName = ""
     var userMail = ""
     var userDivinando = ""
@@ -52,13 +55,10 @@ class EndFragment : Fragment() {
     }
 
     private fun init(){
-
+        mFirebaseAuth = Firebase.auth
         game = MainActivity.ObjUser.game
-
         points = MainActivity.ObjUser.point
-                db.collection("Usuarios").document(MainActivity.ObjUser.id).get().addOnSuccessListener {
-
-                        userID = it.get("id").toString()
+                db.collection("Ranking").document(mFirebaseAuth.currentUser!!.email.toString()).get().addOnSuccessListener {
                         userName = it.get("nombre").toString()
                         userMail = it.get("mail").toString()
                         userDivinando = it.get("divinando").toString()
@@ -71,9 +71,8 @@ class EndFragment : Fragment() {
                         binding.tvPlayerPoint.text = game + " " + points
                         save(game)
 
-                    db.collection("Usuarios").document(MainActivity.ObjUser.id).set(
+                    db.collection("Ranking").document(mFirebaseAuth.currentUser!!.email.toString()).set(
                         hashMapOf(
-                            "id" to userID,
                             "nombre" to userName,
                             "mail" to userMail,
                             "divinando" to userDivinando,
@@ -109,5 +108,7 @@ class EndFragment : Fragment() {
             userFamosos = (userFamosos.toInt() + points.toInt()).toString()
         }
     }
+
+
 
 }

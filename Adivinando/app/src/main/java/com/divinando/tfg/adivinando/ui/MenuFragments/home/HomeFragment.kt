@@ -9,64 +9,87 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.divinando.tfg.adivinando.databinding.FragmentHomeBinding
 import com.divinando.tfg.adivinando.ui.MainActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private val db = FirebaseFirestore.getInstance()
-    var userName = "Sonia"
+    private  lateinit var  mFirebaseAuth: FirebaseAuth
+
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
         return root
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        mFirebaseAuth = Firebase.auth
         getUser()
 
+
     }
 
-    private fun getRecord(s: String, t: TextView){
-        t.text = "0"
-        db.collection("Usuarios").document(MainActivity.ObjUser.id).get().addOnSuccessListener {
-            t.text = s.uppercase()+"    "+it.get(s).toString()
-        }
-    }
+
 
     private fun getUser(){
-        db.collection("Usuarios").get().addOnSuccessListener {
-            var i = 0
-            var size = it.documents.size
-            while(i in 0 until size){
-                db.collection("Usuarios").document(i.toString()).get().addOnSuccessListener {
-                    if(MainActivity.ObjUser.mail == it.get("mail").toString()) {
-                        MainActivity.ObjUser.name = it.get("nombre").toString()
-                        MainActivity.ObjUser.id = it.get("id").toString()
-                    }
-                    if (MainActivity.ObjUser.id != "") {
-                        getRecord("divinando", binding.tvDivHome)
-                        getRecord("divtildes", binding.tvDivTilHome)
-                        getRecord("encadenados", binding.tvEncHome)
-                        getRecord("paises", binding.tvPaisHome)
-                        getRecord("escudos", binding.tvEscudoHome)
-                        getRecord("famosos", binding.tvFamhome)
-                    }
-                    else{
-                        binding.tvDivHome.text = "0"
-                        binding.tvDivTilHome.text = "0"
-                        binding.tvEncHome.text = "0"
-                        binding.tvPaisHome.text = "0"
-                        binding.tvEscudoHome.text = "0"
-                        binding.tvFamhome.text = "0"
-                    }
-                }
-                i++
+       
+
+        binding.tvDivHome.visibility = View.GONE
+        binding.tvDivTilHome.visibility = View.GONE
+        binding.tvEncHome.visibility = View.GONE
+        binding.tvPaisHome.visibility = View.GONE
+        binding.tvEscudoHome.visibility = View.GONE
+        binding.tvFamhome.visibility = View.GONE
+
+
+        if (mFirebaseAuth.currentUser == null) {
+            binding.noestalogueado.visibility = View.VISIBLE
+            binding.noestalogueado.text = "Loguese si desea jugar"
+            binding.tvDivHome.visibility = View.GONE
+            binding.tvDivTilHome.visibility = View.GONE
+            binding.tvEncHome.visibility = View.GONE
+            binding.tvPaisHome.visibility = View.GONE
+            binding.tvEscudoHome.visibility = View.GONE
+            binding.tvFamhome.visibility = View.GONE
+
+        }else{
+            binding.tvDivHome.visibility = View.VISIBLE
+            binding.tvDivTilHome.visibility = View.VISIBLE
+            binding.tvEncHome.visibility = View.VISIBLE
+            binding.tvPaisHome.visibility = View.VISIBLE
+            binding.tvEscudoHome.visibility = View.VISIBLE
+            binding.tvFamhome.visibility = View.VISIBLE
+            binding.noestalogueado.visibility = View.GONE
+
+
+
+            db.collection("Ranking").document(mFirebaseAuth.currentUser!!.email.toString()).get().addOnSuccessListener { document ->
+                binding.tvDivHome.text = document.getString("divinando").toString()
+                binding.tvDivTilHome.text = document.getString("divtildes").toString()
+                binding.tvEncHome.text = document.getString("encadenados").toString()
+                binding.tvPaisHome.text = document.getString("paises").toString()
+                binding.tvEscudoHome.text = document.getString("escudos").toString()
+                binding.tvFamhome.text = document.getString("famosos").toString()
             }
         }
+
+
+
+
+
     }
 
     override fun onDestroyView() {

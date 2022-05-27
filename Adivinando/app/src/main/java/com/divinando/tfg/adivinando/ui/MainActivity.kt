@@ -162,7 +162,6 @@ class MainActivity : AppCompatActivity() {
             //region En el caso que se desloguee se van todos los items del menu
                 navView.menu.findItem(R.id.nav_logout).isVisible = false
                 navView.menu.findItem(R.id.nav_gallery).isVisible = false
-                navView.menu.findItem(R.id.nav_slideshow).isVisible = false
                 navView.menu.findItem(R.id.game).isVisible = false
                 navView.menu.findItem(R.id.login).isVisible = true
             //endregion
@@ -193,8 +192,7 @@ class MainActivity : AppCompatActivity() {
             user.text = currentUser.displayName
             correo.text = currentUser.email
 
-            Glide.with(this).load(currentUser.photoUrl).into(image)
-
+            Glide.with(this).load(currentUser.photoUrl).override(80,80).error(R.mipmap.ic_launcher).into(image)
         }
     //endregion
     /**
