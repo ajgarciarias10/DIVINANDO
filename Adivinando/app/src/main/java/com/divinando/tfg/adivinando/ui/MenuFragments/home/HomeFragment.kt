@@ -77,19 +77,14 @@ class HomeFragment : Fragment() {
 
 
             db.collection("Ranking").document(mFirebaseAuth.currentUser!!.email.toString()).get().addOnSuccessListener { document ->
-                binding.tvDivHome.text = document.getString("divinando").toString()
-                binding.tvDivTilHome.text = document.getString("divtildes").toString()
-                binding.tvEncHome.text = document.getString("encadenados").toString()
-                binding.tvPaisHome.text = document.getString("paises").toString()
-                binding.tvEscudoHome.text = document.getString("escudos").toString()
-                binding.tvFamhome.text = document.getString("famosos").toString()
+                binding.tvDivHome.text = document.getString("divinando").toString() + " ptos."
+                binding.tvDivTilHome.text = document.getString("divtildes").toString() + " ptos."
+                binding.tvEncHome.text = document.getString("encadenados").toString() + " ptos."
+                binding.tvPaisHome.text = document.getString("paises").toString() + " ptos."
+                binding.tvEscudoHome.text = document.getString("famosos").toString() + " ptos."
+                binding.tvFamhome.text = document.getString("escudos").toString() + " ptos."
             }
         }
-
-
-
-
-
     }
 
     override fun onDestroyView() {

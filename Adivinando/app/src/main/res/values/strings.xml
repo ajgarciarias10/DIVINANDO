@@ -42,4 +42,12 @@
     <string name="false_">false</string>
     <string name="images">images</string>
     <string name="add_">ADD</string>
+    
+    <!--HOME MENU GAMES-->
+    <string name="gamenormal">Normal</string>
+    <string name="gametildes">Tildes</string>
+    <string name="gamecadena">Encadenados</string>
+    <string name="gamecountry">CountryGuesser</string>
+    <string name="gamechooser">4Chooser</string>
+    <string name="gameguessit">GuessIt</string>
 </resources>

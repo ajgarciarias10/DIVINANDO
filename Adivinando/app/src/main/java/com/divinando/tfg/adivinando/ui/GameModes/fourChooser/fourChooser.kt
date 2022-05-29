@@ -121,10 +121,10 @@ class fourChooser : Fragment() {
     }
 
     private fun chooseAnswer(a: String){
-        binding.btAnswerA.setBackgroundColor(Color.BLUE)
-        binding.btAnswerB.setBackgroundColor(Color.BLUE)
-        binding.btAnswerC.setBackgroundColor(Color.BLUE)
-        binding.btAnswerD.setBackgroundColor(Color.BLUE)
+        binding.btAnswerA.setBackgroundColor(Color.parseColor("#667EEA"))
+        binding.btAnswerB.setBackgroundColor(Color.parseColor("#667EEA"))
+        binding.btAnswerC.setBackgroundColor(Color.parseColor("#667EEA"))
+        binding.btAnswerD.setBackgroundColor(Color.parseColor("#667EEA"))
         Picasso.get().load(R.drawable.nerviouspeppo).into(binding.iPeppo)
         pyObj = getPythonFile("setTextWho")
         if(a == "A"){
