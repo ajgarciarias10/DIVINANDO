@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/alvar/Desktop/2DAM/DIVINANDO/AdivinandoFrontEnd/app/src/main/res/drawable/button_finish_background.xml" value="0.1705" />
+        <entry key="..\:/Users/alvar/Desktop/2DAM/DIVINANDO/AdivinandoFrontEnd/app/src/main/res/drawable/button_next_background.xml" value="0.1705" />
+        <entry key="..\:/Users/alvar/Desktop/2DAM/DIVINANDO/AdivinandoFrontEnd/app/src/main/res/drawable/dialog_background.xml" value="0.1705" />
+        <entry key="..\:/Users/alvar/Desktop/2DAM/DIVINANDO/AdivinandoFrontEnd/app/src/main/res/drawable/game_alert_background.xml" value="0.1705" />
+        <entry key="..\:/Users/alvar/Desktop/2DAM/DIVINANDO/AdivinandoFrontEnd/app/src/main/res/layout/game_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/alvar/Desktop/2DAM/DIVINANDO/AdivinandoFrontEnd/app/src/main/res/layout/layout_game_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/alvar/Desktop/2DAM/DIVINANDO/AdivinandoFrontEnd/app/src/main/res/layout/nav_header_main_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/alvar/Desktop/2DAM/DIVINANDO/AdivinandoFrontEnd/app/src/main/res/layout/wordle.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/alvar/Desktop/PROYECTOWORDLE/AdivinandoFrontEnd/app/src/main/res/drawable/app_gradient_1.xml" value="0.276" />
         <entry key="..\:/Users/alvar/Desktop/PROYECTOWORDLE/AdivinandoFrontEnd/app/src/main/res/drawable/app_gradient_2.xml" value="0.276" />
         <entry key="..\:/Users/alvar/Desktop/PROYECTOWORDLE/AdivinandoFrontEnd/app/src/main/res/drawable/app_gradient_splash.xml" value="0.276" />

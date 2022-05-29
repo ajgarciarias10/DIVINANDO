@@ -11,31 +11,27 @@
         android:id="@+id/tvRoundWho"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:fontFamily="@font/trade_winds"
+        android:background="@drawable/app_gradient_1"
         android:gravity="center"
         android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btAnswerA"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2"
         tools:text="ROUND 1 0 Points" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardWho"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        app:cardCornerRadius="64dp"
-        app:layout_constraintBottom_toTopOf="@+id/btAnswerA"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="75dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRoundWho"
-        app:layout_constraintVertical_bias="0.52">
+        app:layout_constraintTop_toBottomOf="@+id/tvRoundWho">
 
         <ImageView
             android:id="@+id/iWho"
@@ -47,84 +43,121 @@
             tools:srcCompat="@drawable/peppo" />
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/btAnswerA"
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:backgroundTint="#3F51B5"
-        app:layout_constraintBottom_toTopOf="@+id/btAnswerC"
-        app:layout_constraintEnd_toStartOf="@+id/btAnswerB"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="@+id/tvRoundWho"
-        app:layout_constraintTop_toBottomOf="@+id/cardWho"
-        tools:ignore="DuplicateSpeakableTextCheck"
-        tools:text="respuesta" />
-
-    <Button
-        android:id="@+id/btAnswerB"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:backgroundTint="#3F51B5"
-        app:layout_constraintBottom_toBottomOf="@+id/btAnswerA"
-        app:layout_constraintEnd_toEndOf="@+id/tvRoundWho"
-        app:layout_constraintStart_toEndOf="@+id/btAnswerA"
-        app:layout_constraintTop_toTopOf="@+id/btAnswerA"
-        tools:ignore="TextContrastCheck"
-        tools:text="respuesta" />
-
-    <Button
-        android:id="@+id/btAnswerC"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:backgroundTint="#3F51B5"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/cardPeppo"
-        app:layout_constraintEnd_toStartOf="@+id/btAnswerD"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="@+id/tvRoundWho"
-        app:layout_constraintTop_toBottomOf="@+id/btAnswerA"
-        tools:text="respuesta" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardWho">
 
-    <Button
-        android:id="@+id/btAnswerD"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:visibility="invisible"
-        app:backgroundTint="#3F51B5"
-        app:layout_constraintBottom_toBottomOf="@+id/btAnswerC"
-        app:layout_constraintEnd_toEndOf="@+id/tvRoundWho"
-        app:layout_constraintStart_toEndOf="@+id/btAnswerC"
-        app:layout_constraintTop_toTopOf="@+id/btAnswerC"
-        tools:ignore="TextContrastCheck"
-        tools:text="respuesta" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btAnswerA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#667EEA"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                tools:ignore="DuplicateSpeakableTextCheck"
+                tools:text="respuesta"
+                tools:visibility="visible" />
+
+            <Button
+                android:id="@+id/btAnswerC"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#667EEA"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                tools:text="respuesta"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btAnswerB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#667EEA"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                tools:ignore="TextContrastCheck"
+                tools:text="respuesta"
+                tools:visibility="visible" />
+
+            <Button
+                android:id="@+id/btAnswerD"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#667EEA"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                tools:ignore="TextContrastCheck"
+                tools:text="respuesta"
+                tools:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardPeppo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#3F51B5"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/appcolor1"
         app:cardCornerRadius="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tvRoundWho"
-        app:layout_constraintTop_toBottomOf="@+id/btAnswerC"
         app:layout_constraintStart_toStartOf="@+id/tvRoundWho">
 
         <TextView
@@ -133,10 +166,9 @@
             android:layout_height="match_parent"
             android:layout_gravity="start|center_vertical"
             android:layout_marginStart="8dp"
-            android:fontFamily="@font/trade_winds"
             android:maxWidth="200dp"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             tools:text="ANSWER A IS..." />
 
