@@ -17,7 +17,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Adivinando">
+        android:theme="@style/Theme.Adivinando"
+        android:screenOrientation="portrait">
         <activity
             android:name="com.divinando.tfg.adivinando.ui.MenuFragments.Login.Login"
             android:exported="false"

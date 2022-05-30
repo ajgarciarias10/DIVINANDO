@@ -344,6 +344,11 @@ class CountryFlags : Fragment() {
 
                     }
                 }else{
+                    letra1.isEnabled = false
+                    letra2.isEnabled = false
+                    letra3.isEnabled = false
+                    letra4.isEnabled = false
+                    letra5.isEnabled = false
                     group!!.visibility = View.VISIBLE
                 }
 
@@ -478,6 +483,12 @@ class CountryFlags : Fragment() {
 
                     }
                 }else{
+                    letra1.isEnabled = false
+                    letra2.isEnabled = false
+                    letra3.isEnabled = false
+                    letra4.isEnabled = false
+                    letra5.isEnabled = false
+                    letra6.isEnabled = false
                     group!!.visibility = View.VISIBLE
                 }
             }

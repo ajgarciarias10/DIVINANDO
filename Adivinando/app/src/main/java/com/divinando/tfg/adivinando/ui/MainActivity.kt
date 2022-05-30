@@ -1,5 +1,6 @@
 package com.divinando.tfg.adivinando.ui
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -146,6 +147,7 @@ class MainActivity : AppCompatActivity() {
             games.add(game7)
 
         //endregion
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
     }
 

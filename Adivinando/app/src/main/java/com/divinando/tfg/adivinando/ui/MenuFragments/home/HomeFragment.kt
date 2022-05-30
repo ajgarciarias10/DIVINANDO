@@ -65,6 +65,14 @@ class HomeFragment : Fragment() {
             binding.tvEscudoHome.visibility = View.GONE
             binding.tvFamhome.visibility = View.GONE
 
+            binding.cardDivHome.visibility = View.GONE
+            binding.cardDivTilHome.visibility = View.GONE
+            binding.cardEncHome.visibility = View.GONE
+            binding.cardPaisHome.visibility = View.GONE
+            binding.cardEscudoHome.visibility = View.GONE
+            binding.cardFamHome.visibility = View.GONE
+
+
         }else{
             binding.tvDivHome.visibility = View.VISIBLE
             binding.tvDivTilHome.visibility = View.VISIBLE
@@ -73,6 +81,14 @@ class HomeFragment : Fragment() {
             binding.tvEscudoHome.visibility = View.VISIBLE
             binding.tvFamhome.visibility = View.VISIBLE
             binding.noestalogueado.visibility = View.GONE
+
+
+            binding.cardDivHome.visibility = View.VISIBLE
+            binding.cardDivTilHome.visibility = View.VISIBLE
+            binding.cardEncHome.visibility = View.VISIBLE
+            binding.cardPaisHome.visibility = View.VISIBLE
+            binding.cardEscudoHome.visibility = View.VISIBLE
+            binding.cardFamHome.visibility = View.VISIBLE
 
 
 
