@@ -172,62 +172,80 @@ class NormalMode : Fragment() {
             //region fase1aFila
                 binding.group6pf1.visibility = View.VISIBLE
             //URBANO AQUI METE LO DEL GOO EN FUNCION DE LA FILA ESTA ES DE 6 PALABRAS FILA 1
-                binding.fabLineal6.setOnClickListener {
-                    if(estaLaPalabraVacia(binding.f1p16l.text,binding.f1p26l.text,binding.f1p36l.text,binding.f1p46l.text,binding.f1p56l.text,binding.f1p66l.text)) {
-                        Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
-                    }else{
-                        compruebafilas(palabraDiccionario,binding.f1p16l,binding.f1p26l,binding.f1p36l,binding.f1p46l,binding.f1p56l,binding.f1p66l,1,binding.group6pf2)
+                binding.f1p66l.setOnEditorActionListener { v, actionId, event ->
+                    if (actionId == EditorInfo.IME_ACTION_DONE) {
+                        if(estaLaPalabraVacia(binding.f1p16l.text,binding.f1p26l.text,binding.f1p36l.text,binding.f1p46l.text,binding.f1p56l.text,binding.f1p66l.text)) {
+                            Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
+                        }else{
+                            compruebafilas(palabraDiccionario,binding.f1p16l,binding.f1p26l,binding.f1p36l,binding.f1p46l,binding.f1p56l,binding.f1p66l,1,binding.group6pf2)
+                        }
+                        true
                     }
-
+                    false
                 }
             //endregion
 
             // region fase2aFila
             //URBANO AQUI METE LO DEL GOO EN FUNCION DE LA FILA ESTA ES DE 6 PALABRAS FILA 2
-                binding.fabLineal61.setOnClickListener {
-                    if(estaLaPalabraVacia(binding.f2p16l.text,binding.f2p26l.text,binding.f2p36l.text,binding.f2p46l.text,binding.f2p56l.text,binding.f2p66l.text)) {
-                        Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
-                    }else{
-                        compruebafilas(palabraDiccionario,binding.f2p16l,binding.f2p26l,binding.f2p36l,binding.f2p46l,binding.f2p56l,binding.f2p66l,1,binding.group6pf3)
+                binding.f2p66l.setOnEditorActionListener { v, actionId, event ->
+                    if (actionId == EditorInfo.IME_ACTION_DONE) {
+                        if(estaLaPalabraVacia(binding.f2p16l.text,binding.f2p26l.text,binding.f2p36l.text,binding.f2p46l.text,binding.f2p56l.text,binding.f2p66l.text)) {
+                            Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
+                        }else{
+                            compruebafilas(palabraDiccionario,binding.f2p16l,binding.f2p26l,binding.f2p36l,binding.f2p46l,binding.f2p56l,binding.f2p66l,1,binding.group6pf3)
+                        }
+                        true
                     }
-
+                    false
                 }
             //endregion
 
             // region fase3aFila
             //URBANO AQUI METE LO DEL GOO EN FUNCION DE LA FILA ESTA ES DE 6 PALABRAS FILA 3
-                binding.fabLineal62.setOnClickListener {
-                    if(estaLaPalabraVacia(binding.f3p16l.text,binding.f3p26l.text,binding.f3p36l.text,binding.f3p46l.text,binding.f3p56l.text,binding.f3p66l.text)){
-                        Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
-                    }else{
-                        compruebafilas(palabraDiccionario,binding.f3p16l,binding.f3p26l,binding.f3p36l,binding.f3p46l,binding.f3p56l,binding.f3p66l,1,binding.group6pf4)
+                binding.f3p66l.setOnEditorActionListener { v, actionId, event ->
+                    if (actionId == EditorInfo.IME_ACTION_DONE) {
+                        if(estaLaPalabraVacia(binding.f3p16l.text,binding.f3p26l.text,binding.f3p36l.text,binding.f3p46l.text,binding.f3p56l.text,binding.f3p66l.text)){
+                            Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
+                        }else{
+                            compruebafilas(palabraDiccionario,binding.f3p16l,binding.f3p26l,binding.f3p36l,binding.f3p46l,binding.f3p56l,binding.f3p66l,1,binding.group6pf4)
+                        }
+                        true
                     }
-
+                    false
                 }
+
             //endregion
 
             // region fase4aFila
             //URBANO AQUI METE LO DEL GOO EN FUNCION DE LA FILA ESTA ES DE 6 PALABRAS FILA 4
-                binding.fabLineal63.setOnClickListener {
-                    if(estaLaPalabraVacia(binding.f4p16l.text,binding.f4p26l.text,binding.f4p36l.text,binding.f4p46l.text,binding.f4p56l.text,binding.f4p66l.text)){
-                        Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
-                    }else{
-                        compruebafilas(palabraDiccionario,binding.f4p16l,binding.f4p26l,binding.f4p36l,binding.f4p46l,binding.f4p56l,binding.f4p66l,1,binding.group6pf5)
+                binding.f4p66l.setOnEditorActionListener { v, actionId, event ->
+                    if (actionId == EditorInfo.IME_ACTION_DONE) {
+                        if(estaLaPalabraVacia(binding.f4p16l.text,binding.f4p26l.text,binding.f4p36l.text,binding.f4p46l.text,binding.f4p56l.text,binding.f4p66l.text)){
+                            Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
+                        }else{
+                            compruebafilas(palabraDiccionario,binding.f4p16l,binding.f4p26l,binding.f4p36l,binding.f4p46l,binding.f4p56l,binding.f4p66l,1,binding.group6pf5)
+                        }
+                        true
                     }
-
+                    false
                 }
+
             //endregion
 
             // region fase5aFila
             //URBANO AQUI METE LO DEL GOO EN FUNCION DE LA FILA ESTA ES DE 6 PALABRAS FILA 5
-                binding.fabLineal65.setOnClickListener {
-                    if(estaLaPalabraVacia(binding.f5p16l.text,binding.f5p26l.text,binding.f5p36l.text,binding.f5p46l.text,binding.f5p56l.text,binding.f5p66l.text)){
-                        Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
-                    }else{
-                        compruebafilas(palabraDiccionario,binding.f5p16l,binding.f5p26l,binding.f5p36l,binding.f5p46l,binding.f5p56l,binding.f5p66l,1,null)
+                binding.f5p66l.setOnEditorActionListener { v, actionId, event ->
+                    if (actionId == EditorInfo.IME_ACTION_DONE) {
+                        if(estaLaPalabraVacia(binding.f5p16l.text,binding.f5p26l.text,binding.f5p36l.text,binding.f5p46l.text,binding.f5p56l.text,binding.f5p66l.text)){
+                            Toast.makeText(requireContext(),"Escriba la palabra correctamente",Toast.LENGTH_LONG).show()
+                        }else{
+                            compruebafilas(palabraDiccionario,binding.f5p16l,binding.f5p26l,binding.f5p36l,binding.f5p46l,binding.f5p56l,binding.f5p66l,1,null)
+                        }
+                        true
                     }
-
+                    false
                 }
+
             //endregion
 
         }
