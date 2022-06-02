@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
 import androidx.constraintlayout.widget.Group
@@ -75,35 +76,47 @@ class CountryFlags : Fragment() {
             //region fase1aFila
             binding.group5pl1.visibility = View.VISIBLE
             //URBANO AQUI METE LO DEL GOO
-            binding.fabLinea15l6.setOnClickListener {
-                if(estaLaPalabraVacia(binding.f5p9.text,binding.f5p8.text,binding.f5p7.text,binding.f5p6.text,binding.f5p.text,null)){
-                    Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
-                }else {
-                    compruebafilas(palabraDiccionario,binding.f5p9,binding.f5p8,binding.f5p7,binding.f5p6,binding.f5p,null,0,binding.group5pl2)
+            binding.f5p.setOnEditorActionListener { v, actionId, event ->
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    if(estaLaPalabraVacia(binding.f5p9.text,binding.f5p8.text,binding.f5p7.text,binding.f5p6.text,binding.f5p.text,null)){
+                        Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
+                    }else {
+                        compruebafilas(palabraDiccionario,binding.f5p9,binding.f5p8,binding.f5p7,binding.f5p6,binding.f5p,null,0,binding.group5pl2)
+                    }
+                    true
                 }
-
-
+                false
             }
+
             //endregion
             // region fase2aFila
             //URBANO AQUI METE LO DEL GOO
-            binding.fabLinea15l7.setOnClickListener {
-                if(estaLaPalabraVacia(binding.f5p10.text,binding.f5p11.text,binding.f5p12.text,binding.f5p13.text,binding.f5p14.text,null)){
-                    Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
-                }else {
-                    compruebafilas(palabraDiccionario,binding.f5p10,binding.f5p11,binding.f5p12,binding.f5p13,binding.f5p14,null,0,binding.group5pl3)
+            binding.f5p14.setOnEditorActionListener { v, actionId, event ->
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    if(estaLaPalabraVacia(binding.f5p10.text,binding.f5p11.text,binding.f5p12.text,binding.f5p13.text,binding.f5p14.text,null)){
+                        Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
+                    }else {
+                        compruebafilas(palabraDiccionario,binding.f5p10,binding.f5p11,binding.f5p12,binding.f5p13,binding.f5p14,null,0,binding.group5pl3)
 
+                    }
+                    true
                 }
+                false
             }
+
             //endregion
             // region fase3aFila
             //URBANO AQUI METE LO DEL GOO
-            binding.fabLinea15l9.setOnClickListener {
-                if(estaLaPalabraVacia(binding.f5p15.text,binding.f5p16.text,binding.f5p17.text,binding.f5p18.text,binding.f5p19.text,null)) {
-                    Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
-                }else{
+            binding.f5p19.setOnEditorActionListener { v, actionId, event ->
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    if(estaLaPalabraVacia(binding.f5p15.text,binding.f5p16.text,binding.f5p17.text,binding.f5p18.text,binding.f5p19.text,null)) {
+                        Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
+                    }else{
                         compruebafilas(palabraDiccionario,binding.f5p15,binding.f5p16,binding.f5p17,binding.f5p18,binding.f5p19,null,0,null)
+                    }
+                    true
                 }
+                false
             }
             //endregion
         //Caso de que la longitud sea de 6 letras
@@ -111,37 +124,46 @@ class CountryFlags : Fragment() {
             //region fase1aFila
             //URBANO AQUI METE LO DEL GOO
             binding.group6pl1.visibility = View.VISIBLE
-            binding.fabLinea15l9.setOnClickListener {
-                if(estaLaPalabraVacia(binding.f5p20.text,binding.f5p21.text,binding.f5p22.text,binding.f5p23.text,binding.f5p24.text,binding.f5p25.text)) {
-                    Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
-                }else{
-                    compruebafilas(palabraDiccionario,binding.f5p20,binding.f5p21,binding.f5p22,binding.f5p23,binding.f5p24,binding.f5p25,1,binding.group6pl2)
+            binding.f5p25.setOnEditorActionListener { v, actionId, event ->
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    if(estaLaPalabraVacia(binding.f5p20.text,binding.f5p21.text,binding.f5p22.text,binding.f5p23.text,binding.f5p24.text,binding.f5p25.text)) {
+                        Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
+                    }else{
+                        compruebafilas(palabraDiccionario,binding.f5p20,binding.f5p21,binding.f5p22,binding.f5p23,binding.f5p24,binding.f5p25,1,binding.group6pl2)
+                    }
+                    true
                 }
-
+                false
             }
             //endregion
 
             // region fase2aFila
             //URBANO AQUI METE LO DEL GOO
-            binding.fabLinea15l8.setOnClickListener {
-                if(estaLaPalabraVacia(binding.f5p31.text,binding.f5p32.text,binding.f5p33.text,binding.f5p34.text,binding.f5p35.text,binding.f5p36.text)){
-                    Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
-                }else{
-                    compruebafilas(palabraDiccionario,binding.f5p31,binding.f5p32,binding.f5p33,binding.f5p34,binding.f5p35,binding.f5p36,1,binding.group6pl3)
+            binding.f5p36.setOnEditorActionListener { v, actionId, event ->
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    if(estaLaPalabraVacia(binding.f5p31.text,binding.f5p32.text,binding.f5p33.text,binding.f5p34.text,binding.f5p35.text,binding.f5p36.text)){
+                        Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
+                    }else{
+                        compruebafilas(palabraDiccionario,binding.f5p31,binding.f5p32,binding.f5p33,binding.f5p34,binding.f5p35,binding.f5p36,1,binding.group6pl3)
+                    }
+                    true
                 }
-
+                false
             }
             //endregion
 
             // region fase3aFila
             //URBANO AQUI METE LO DEL GOO
-            binding.fabLinea15l11.setOnClickListener {
-                if(estaLaPalabraVacia(binding.f5p37.text,binding.f5p38.text,binding.f5p39.text,binding.f5p40.text,binding.f5p41.text,binding.f5p42.text)){
-                    Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
-                }else{
-                    compruebafilas(palabraDiccionario,binding.f5p37,binding.f5p38,binding.f5p39,binding.f5p40,binding.f5p41,binding.f5p42,1,null)
+            binding.f5p42.setOnEditorActionListener { v, actionId, event ->
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    if(estaLaPalabraVacia(binding.f5p37.text,binding.f5p38.text,binding.f5p39.text,binding.f5p40.text,binding.f5p41.text,binding.f5p42.text)){
+                        Toast.makeText(requireContext(),"Escriba la palabra correctamente", Toast.LENGTH_LONG).show()
+                    }else{
+                        compruebafilas(palabraDiccionario,binding.f5p37,binding.f5p38,binding.f5p39,binding.f5p40,binding.f5p41,binding.f5p42,1,null)
+                    }
+                    true
                 }
-
+                false
             }
             //endregion
 

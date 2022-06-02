@@ -295,7 +295,6 @@ class fourChooser : Fragment() {
         }
         else {
             if (!isVerified) {
-                validateAnswer()
                 getTrueAnswer()
                 isVerified = true
             }
@@ -303,25 +302,26 @@ class fourChooser : Fragment() {
                 if(round < 5){
                     getPerson();
                     deleteAnswerList()
-                    binding.tvRoundWho.text = "ROUND $round  $points Points"
-
                     answerPlayer = ""
                     chooseAnswer(answerPlayer)
                     isVerified = false
                     setCardPeppo("", R.drawable.peppo)
+                    round++
+                    binding.tvRoundWho.text = "ROUND $round  $points Points"
                 }
                 else if(round == 5){
                     binding.btAnswerA.visibility = View.INVISIBLE
                     binding.btAnswerB.visibility = View.INVISIBLE
                     binding.btAnswerC.visibility = View.INVISIBLE
                     binding.btAnswerD.visibility = View.INVISIBLE
+                    binding.tvRoundWho.text = "ROUND $round  $points Points"
+                    round++
                 }
                 else{
                     MainActivity.ObjUser.game = "famosos"
                     MainActivity.ObjUser.point = points.toString()
                     findNavController().navigate(R.id.chooser_toend)
                 }
-                round++
             }
         }
     }
