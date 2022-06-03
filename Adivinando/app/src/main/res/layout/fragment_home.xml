@@ -16,7 +16,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="32dp"
+        app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:layout_constraintBottom_toTopOf="@+id/cardDivTilHome"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,8 +39,8 @@
 
                 <ImageView
                     android:id="@+id/ivHomeGameNormal"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
@@ -53,8 +53,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/gamenormal"
-                    android:textColor="@color/appcolor2"
-                    android:textSize="32sp"
+                    android:textColor="@color/appcolor1"
+                    android:textSize="30sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -65,8 +65,8 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:textColor="@color/appcolor2"
-                android:textSize="20sp"
+                android:textColor="@color/appcolor1"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="100 ptos." />
         </LinearLayout>
@@ -80,7 +80,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="32dp"
+        app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:layout_constraintBottom_toTopOf="@+id/cardEncHome"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,8 +103,8 @@
 
                 <ImageView
                     android:id="@+id/ivHomeGameTildes"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
@@ -117,8 +117,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/gametildes"
-                    android:textColor="@color/appcolor2"
-                    android:textSize="32sp"
+                    android:textColor="@color/appcolor1"
+                    android:textSize="30sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -130,8 +130,8 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:textColor="@color/appcolor2"
-                android:textSize="20sp"
+                android:textColor="@color/appcolor1"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="20 ptos." />
 
@@ -146,7 +146,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="32dp"
+        app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:layout_constraintBottom_toTopOf="@+id/cardPaisHome"
         app:layout_constraintEnd_toEndOf="parent"
@@ -168,8 +168,8 @@
 
                 <ImageView
                     android:id="@+id/ivHomeGameCadena"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
@@ -181,8 +181,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/gamecadena"
-                    android:textColor="@color/appcolor2"
-                    android:textSize="32sp"
+                    android:textColor="@color/appcolor1"
+                    android:textSize="30sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -193,8 +193,8 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:textColor="@color/appcolor2"
-                android:textSize="20sp"
+                android:textColor="@color/appcolor1"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="50 ptos." />
         </LinearLayout>
@@ -208,7 +208,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="32dp"
+        app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:layout_constraintBottom_toTopOf="@+id/cardEscudoHome"
         app:layout_constraintEnd_toEndOf="parent"
@@ -230,8 +230,8 @@
 
                 <ImageView
                     android:id="@+id/ivHomeGameFlag"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
@@ -243,8 +243,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/gamecountry"
-                    android:textColor="@color/appcolor2"
-                    android:textSize="32sp"
+                    android:textColor="@color/appcolor1"
+                    android:textSize="30sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -255,8 +255,8 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:textColor="@color/appcolor2"
-                android:textSize="20sp"
+                android:textColor="@color/appcolor1"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="50 ptos." />
         </LinearLayout>
@@ -270,7 +270,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="32dp"
+        app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:layout_constraintBottom_toTopOf="@+id/cardFamHome"
         app:layout_constraintEnd_toEndOf="parent"
@@ -292,8 +292,8 @@
 
                 <ImageView
                     android:id="@+id/ivHomeGameEsc"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
@@ -305,8 +305,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/gamechooser"
-                    android:textColor="@color/appcolor2"
-                    android:textSize="32sp"
+                    android:textColor="@color/appcolor1"
+                    android:textSize="30sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -317,8 +317,8 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:textColor="@color/appcolor2"
-                android:textSize="20sp"
+                android:textColor="@color/appcolor1"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="50 ptos." />
         </LinearLayout>
@@ -332,7 +332,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="32dp"
+        app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -354,8 +354,8 @@
 
                 <ImageView
                     android:id="@+id/ivHomeGameFam"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
@@ -367,8 +367,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/gameguessit"
-                    android:textColor="@color/appcolor2"
-                    android:textSize="32sp"
+                    android:textColor="@color/appcolor1"
+                    android:textSize="30sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -379,8 +379,8 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:textColor="@color/appcolor2"
-                android:textSize="20sp"
+                android:textColor="@color/appcolor1"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="50 ptos." />
         </LinearLayout>

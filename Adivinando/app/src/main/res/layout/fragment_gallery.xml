@@ -11,10 +11,10 @@
         android:id="@+id/cardDivRanking"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:cardCornerRadius="16dp"
-        app:cardElevation="0dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toTopOf="@+id/cardDivTilRanking"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -27,14 +27,18 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView4"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     android:src="@drawable/wordleicon"
                     app:srcCompat="@drawable/wordleicon" />
@@ -42,24 +46,27 @@
                 <TextView
                     android:id="@+id/tv_game"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:fontFamily="@font/trade_winds"
-                    android:textColor="@color/black" />
+                    android:gravity="center"
+                    android:text="@string/gamenormal"
+                    android:textColor="@color/appcolor1"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
             <TextView
                 android:id="@+id/tvDivRanking"
-                android:layout_width="343dp"
-                android:layout_height="47dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:fontFamily="@font/trade_winds"
                 android:gravity="center"
-                android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textColor="@color/appcolor1"
+                android:textSize="24sp"
                 android:textStyle="bold"
-                tools:text="GAME    POINTS    USER" />
+                tools:text="100 ptos." />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -68,12 +75,13 @@
         android:id="@+id/cardDivTilRanking"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:cardCornerRadius="16dp"
-        app:cardElevation="0dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toTopOf="@+id/cardEncRanking"
-        app:layout_constraintEnd_toEndOf="@+id/cardDivRanking"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/cardDivRanking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardDivRanking">
 
         <LinearLayout
@@ -82,24 +90,32 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView9"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/tildesicon" />
 
                 <TextView
                     android:id="@+id/tv_game2"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:fontFamily="@font/trade_winds"
-                    android:textColor="@color/black" />
+                    android:gravity="center"
+                    android:text="@string/gametildes"
+                    android:textColor="@color/appcolor1"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -108,12 +124,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:fontFamily="@font/trade_winds"
                 android:gravity="center"
-                android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textColor="@color/appcolor1"
+                android:textSize="24sp"
                 android:textStyle="bold"
-                tools:text="GAME    POINTS    USER" />
+                tools:text="100 ptos." />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -122,12 +137,13 @@
         android:id="@+id/cardFamRanking"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:cardCornerRadius="16dp"
-        app:cardElevation="0dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/cardDivRanking"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/cardDivRanking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardEscudoRanking">
 
         <LinearLayout
@@ -136,24 +152,32 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView5"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/ic_baseline_videogame_asset_24" />
 
                 <TextView
                     android:id="@+id/tv_game3"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:fontFamily="@font/trade_winds"
-                    android:textColor="@color/black" />
+                    android:gravity="center"
+                    android:text="@string/gamechooser"
+                    android:textColor="@color/appcolor1"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -162,12 +186,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:fontFamily="@font/trade_winds"
                 android:gravity="center"
-                android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textColor="@color/appcolor1"
+                android:textSize="24sp"
                 android:textStyle="bold"
-                tools:text="GAME    POINTS    USER" />
+                tools:text="100 ptos." />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -176,12 +199,13 @@
         android:id="@+id/cardEscudoRanking"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:cardCornerRadius="16dp"
-        app:cardElevation="0dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toTopOf="@+id/cardFamRanking"
-        app:layout_constraintEnd_toEndOf="@+id/cardDivRanking"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/cardDivRanking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardPaisRanking">
 
         <LinearLayout
@@ -190,24 +214,32 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView6"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/guessiticon" />
 
                 <TextView
                     android:id="@+id/tv_game4"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:fontFamily="@font/trade_winds"
-                    android:textColor="@color/black" />
+                    android:gravity="center"
+                    android:text="@string/gameguessit"
+                    android:textColor="@color/appcolor1"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -216,12 +248,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:fontFamily="@font/trade_winds"
                 android:gravity="center"
-                android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textColor="@color/appcolor1"
+                android:textSize="24sp"
                 android:textStyle="bold"
-                tools:text="GAME    POINTS    USER" />
+                tools:text="100 ptos." />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -230,12 +261,13 @@
         android:id="@+id/cardPaisRanking"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:cardCornerRadius="16dp"
-        app:cardElevation="0dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toTopOf="@+id/cardEscudoRanking"
-        app:layout_constraintEnd_toEndOf="@+id/cardDivRanking"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/cardDivRanking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardEncRanking">
 
         <LinearLayout
@@ -244,24 +276,32 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView7"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/flagicon" />
 
                 <TextView
                     android:id="@+id/tv_game5"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:fontFamily="@font/trade_winds"
-                    android:textColor="@color/black" />
+                    android:gravity="center"
+                    android:text="@string/gamecountry"
+                    android:textColor="@color/appcolor1"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -270,12 +310,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:fontFamily="@font/trade_winds"
                 android:gravity="center"
-                android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textColor="@color/appcolor1"
+                android:textSize="24sp"
                 android:textStyle="bold"
-                tools:text="GAME    POINTS    USER" />
+                tools:text="100 ptos." />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -284,12 +323,13 @@
         android:id="@+id/cardEncRanking"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:cardCornerRadius="16dp"
-        app:cardElevation="0dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toTopOf="@+id/cardPaisRanking"
-        app:layout_constraintEnd_toEndOf="@+id/cardDivRanking"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/cardDivRanking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardDivTilRanking">
 
         <LinearLayout
@@ -298,24 +338,32 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView8"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/encadenadosicon" />
 
                 <TextView
                     android:id="@+id/tv_game6"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:fontFamily="@font/trade_winds"
-                    android:textColor="@color/black" />
+                    android:gravity="center"
+                    android:text="@string/gamecadena"
+                    android:textColor="@color/appcolor1"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -324,12 +372,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:fontFamily="@font/trade_winds"
                 android:gravity="center"
-                android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textColor="@color/appcolor1"
+                android:textSize="24sp"
                 android:textStyle="bold"
-                tools:text="GAME    POINTS    USER" />
+                tools:text="100 ptos." />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
