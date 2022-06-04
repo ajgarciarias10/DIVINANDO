@@ -1202,28 +1202,42 @@
         android:visibility="gone"
         app:constraint_referenced_ids="f5p16l,f5p26l,f5p36l,f5p46l,f5p56l,f5p66l" />
 
-    <Button
-        android:id="@+id/bt_terminar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Terminar"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/bt_siguiente"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline8" />
-
-    <Button
-        android:id="@+id/bt_siguiente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Siguiente"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transdark"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/bt_terminar"
-        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/bt_terminar"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="160dp"
+            android:text="Terminar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_siguiente" />
+
+        <Button
+            android:id="@+id/bt_siguiente"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginEnd="32dp"
+            android:text="Siguiente"
+            app:layout_constraintBottom_toTopOf="@+id/bt_terminar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

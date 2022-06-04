@@ -25,4 +25,8 @@
     <color name="correctchain">#29AB87</color>
     <color name="incorrectchain">#D30000</color>
     <color name="prechain">#F209B1</color>
+
+    <color name="darkcolor">#434343</color>
+
+    <color name="transdark">#90000000</color>
 </resources>

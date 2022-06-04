@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.Group
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -18,9 +19,6 @@ import com.divinando.tfg.adivinando.R
 import com.divinando.tfg.adivinando.databinding.FragmentNormalModeBinding
 import com.divinando.tfg.adivinando.model.entity.GameObjeto
 import com.divinando.tfg.adivinando.ui.MainActivity
-import java.io.Console
-import java.text.Normalizer
-import java.util.regex.Pattern
 
 
 class NormalMode : Fragment() {
@@ -288,8 +286,10 @@ class NormalMode : Fragment() {
                   letra4.isEnabled = false
                   letra5.isEnabled = false
 
-                  binding.btSiguiente.visibility = View.VISIBLE
-                  binding.btTerminar.visibility = View.VISIBLE
+                  //binding.btSiguiente.visibility = View.VISIBLE
+                  //binding.btTerminar.visibility = View.VISIBLE
+
+                  binding.buttonsLayout.visibility = View.VISIBLE
 
                   points += 5
 
@@ -434,8 +434,10 @@ class NormalMode : Fragment() {
                       }
                   }
                   if(group == null){
-                      binding.btSiguiente.visibility = View.VISIBLE
-                      binding.btTerminar.visibility = View.VISIBLE
+                      //binding.btSiguiente.visibility = View.VISIBLE
+                      //binding.btTerminar.visibility = View.VISIBLE
+
+                      binding.buttonsLayout.visibility = View.VISIBLE
 
                       binding.btSiguiente.setOnClickListener {
                           siguiente(true)
@@ -484,8 +486,10 @@ class NormalMode : Fragment() {
                       letra6.isEnabled = false
 
 
-                      binding.btSiguiente.visibility = View.VISIBLE
-                      binding.btTerminar.visibility = View.VISIBLE
+                      //binding.btSiguiente.visibility = View.VISIBLE
+                      //binding.btTerminar.visibility = View.VISIBLE
+
+                      binding.buttonsLayout.visibility = View.VISIBLE
 
                       points += 5
 
@@ -574,8 +578,10 @@ class NormalMode : Fragment() {
                           }
                       }
                       if(group == null){
-                          binding.btSiguiente.visibility = View.VISIBLE
-                          binding.btTerminar.visibility = View.VISIBLE
+                          //binding.btSiguiente.visibility = View.VISIBLE
+                          //binding.btTerminar.visibility = View.VISIBLE
+
+                          binding.buttonsLayout.visibility = View.VISIBLE
                             // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! AQUI TIENES QUE METER EL ALERTBUILD DIALOGG!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                           binding.btSiguiente.setOnClickListener {
                               siguiente(true)
@@ -653,8 +659,10 @@ class NormalMode : Fragment() {
             limpiatexto(binding.f5p1,binding.f5p2,binding.f5p3,binding.f5p4,binding.f5p5,null)
 
 
-            binding.btSiguiente.visibility = View.GONE
-            binding.btTerminar.visibility = View.GONE
+            //binding.btSiguiente.visibility = View.GONE
+            //binding.btTerminar.visibility = View.GONE
+
+            binding.buttonsLayout.visibility = View.GONE
 
             initialize()
 
@@ -672,8 +680,10 @@ class NormalMode : Fragment() {
             limpiatexto(binding.f5p16l,binding.f5p26l,binding.f5p36l,binding.f5p46l,binding.f5p56l,binding.f5p66l)
 
 
-            binding.btSiguiente.visibility = View.GONE
-            binding.btTerminar.visibility = View.GONE
+            //binding.btSiguiente.visibility = View.GONE
+            //binding.btTerminar.visibility = View.GONE
+
+            binding.buttonsLayout.visibility = View.GONE
 
 
             initialize()
