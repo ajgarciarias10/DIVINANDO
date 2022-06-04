@@ -695,27 +695,27 @@ class NormalMode : Fragment() {
     fun limpiatexto(fila1: EditText, fila2:EditText, fila3: EditText ,fila4 : EditText, fila5 : EditText, fila6 : EditText?){
 
         fila1.setText("")
-        fila1.setBackgroundResource(R.drawable.letter_border)
+        fila1.setBackgroundColor(Color.WHITE)
         fila1.isEnabled = true
 
         fila2.setText("")
-        fila2.setBackgroundResource(R.drawable.letter_border)
+        fila2.setBackgroundColor(Color.WHITE)
         fila2.isEnabled = true
 
         fila3.setText("")
-        fila3.setBackgroundResource(R.drawable.letter_border)
+        fila3.setBackgroundColor(Color.WHITE)
         fila3.isEnabled = true
 
         fila4.setText("")
-        fila4.setBackgroundResource(R.drawable.letter_border)
+        fila4.setBackgroundColor(Color.WHITE)
         fila4.isEnabled = true
 
         fila5.setText("")
-        fila5.setBackgroundResource(R.drawable.letter_border)
+        fila5.setBackgroundColor(Color.WHITE)
         fila5.isEnabled = true
 
         fila6?.setText("")
-        fila6?.setBackgroundResource(R.drawable.letter_border)
+        fila6?.setBackgroundColor(Color.WHITE)
         fila6?.isEnabled = true
 
 

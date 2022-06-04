@@ -5,7 +5,7 @@
     android:id="@+id/cLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/app_gradient_splash"
+    android:background="@drawable/app_gradient_game"
     tools:context=".ui.GameModes.modotildes.tildes">
 
     <EditText
@@ -595,7 +595,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -615,7 +615,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -634,7 +634,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -653,7 +653,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -672,7 +672,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:imeOptions="actionDone"
         android:inputType="text"
@@ -693,7 +693,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -712,7 +712,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -731,7 +731,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -750,7 +750,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -769,7 +769,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:imeOptions="actionDone"
         android:inputType="text"
@@ -789,7 +789,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -809,7 +809,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -828,7 +828,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -847,7 +847,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -866,7 +866,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:imeOptions="actionDone"
         android:inputType="text"
@@ -886,7 +886,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -906,7 +906,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -926,7 +926,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -946,7 +946,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -966,7 +966,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:imeOptions="actionDone"
         android:inputType="text"
@@ -987,7 +987,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -1007,7 +1007,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -1026,7 +1026,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -1045,7 +1045,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:maxLength="1"
         android:textColor="@color/black"
@@ -1064,7 +1064,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/letter_border"
+        android:background="@color/white"
         android:gravity="center"
         android:imeOptions="actionDone"
         android:inputType="text"
@@ -1083,7 +1083,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f1p1,f1p4,f1p2,f1p5,f1p3" />
+        app:constraint_referenced_ids="f1p1,f1p4,f1p2,f1p5,f1p3"
+        tools:visibility="visible" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
@@ -1126,28 +1127,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f2p1,f2p2,f2p3,f2p4,f2p5" />
+        app:constraint_referenced_ids="f2p1,f2p2,f2p3,f2p4,f2p5"
+        tools:visibility="visible" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group5p3afila"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f3p1,f3p2,f3p3,f3p4,f3p5" />
+        app:constraint_referenced_ids="f3p1,f3p2,f3p3,f3p4,f3p5"
+        tools:visibility="visible" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group5p5fila"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f5p1,f5p2,f5p3,f5p4,f5p5" />
+        app:constraint_referenced_ids="f5p1,f5p2,f5p3,f5p4,f5p5"
+        tools:visibility="visible" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group5p4fila"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f4p1,f4p2,f4p3,f4p4,f4p5" />
+        app:constraint_referenced_ids="f4p1,f4p2,f4p3,f4p4,f4p5"
+        tools:visibility="visible" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group6pf1"
@@ -1155,40 +1160,35 @@
         android:layout_height="wrap_content"
         android:background="#E8DEDE"
         android:visibility="gone"
-        app:constraint_referenced_ids="f1p16l,f1p26l,f1p36l,f1p46l,f1p56l,f1p66l"
-        tools:visibility="visible" />
+        app:constraint_referenced_ids="f1p16l,f1p26l,f1p36l,f1p46l,f1p56l,f1p66l" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group6pf2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f2p26l,f2p16l,f2p36l,f2p46l,f2p56l,f2p66l"
-        tools:visibility="visible" />
+        app:constraint_referenced_ids="f2p26l,f2p16l,f2p36l,f2p46l,f2p56l,f2p66l" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group6pf4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f4p26l,f4p36l,f4p16l,f4p46l,f4p56l,f4p66l"
-        tools:visibility="visible" />
+        app:constraint_referenced_ids="f4p26l,f4p36l,f4p16l,f4p46l,f4p56l,f4p66l" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group6pf3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f3p16l,f3p26l,f3p36l,f3p46l,f3p56l,f3p66l"
-        tools:visibility="visible" />
+        app:constraint_referenced_ids="f3p16l,f3p26l,f3p36l,f3p46l,f3p56l,f3p66l" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group6pf5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="f5p16l,f5p26l,f5p36l,f5p46l,f5p56l,f5p66l"
-        tools:visibility="visible" />
+        app:constraint_referenced_ids="f5p16l,f5p26l,f5p36l,f5p46l,f5p56l,f5p66l" />
 
     <Button
         android:id="@+id/bt_terminar"

@@ -5,13 +5,13 @@
     android:id="@+id/type"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/app_gradient_game"
     tools:context=".WhoActivity">
 
     <TextView
         android:id="@+id/tvRoundWho"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/app_gradient_1"
         android:gravity="center"
         android:textAlignment="center"
         android:textColor="@color/white"

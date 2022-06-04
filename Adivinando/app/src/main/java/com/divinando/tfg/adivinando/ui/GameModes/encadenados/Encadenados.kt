@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
 import androidx.navigation.fragment.findNavController
 import com.chaquo.python.PyObject
 import com.chaquo.python.Python
@@ -52,9 +53,17 @@ class Encadenados : Fragment() {
 
         init()
 
-        binding.btNextChain.setOnClickListener {
-            isEnd(view)
+        binding.tvChainC5.setOnEditorActionListener { v, actionId, event ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                isEnd(view)
+                true
+            }
+            false
         }
+
+        /*binding.btNextChain.setOnClickListener {
+            isEnd(view)
+        }*/
 
     }
 
@@ -65,8 +74,8 @@ class Encadenados : Fragment() {
             binding.tvChainA3.text = "_"
             binding.tvChainA4.text = "_"
             binding.tvChainA5.text = "_"
-            binding.tvChainA1.setBackgroundColor(Color.GREEN)
-            binding.tvChainA2.setBackgroundColor(Color.GREEN)
+            binding.tvChainA1.setBackgroundResource(R.color.correctchain)
+            binding.tvChainA2.setBackgroundResource(R.color.correctchain)
         }
         else if(i == 1){
             binding.tvChainB1.text = DBword[0].toString()
@@ -74,11 +83,11 @@ class Encadenados : Fragment() {
             binding.tvChainB3.text = DBword[2].toString()
             binding.tvChainB4.text = DBword[3].toString()
             binding.tvChainB5.text = DBword[4].toString()
-            binding.tvChainB1.setBackgroundColor(Color.GREEN)
-            binding.tvChainB2.setBackgroundColor(Color.GREEN)
-            binding.tvChainB3.setBackgroundColor(Color.GREEN)
-            binding.tvChainB4.setBackgroundColor(Color.GREEN)
-            binding.tvChainB5.setBackgroundColor(Color.GREEN)
+            binding.tvChainB1.setBackgroundResource(R.color.correctchain)
+            binding.tvChainB2.setBackgroundResource(R.color.correctchain)
+            binding.tvChainB3.setBackgroundResource(R.color.correctchain)
+            binding.tvChainB4.setBackgroundResource(R.color.correctchain)
+            binding.tvChainB5.setBackgroundResource(R.color.correctchain)
             binding.tvChainA1.text = DBword[3].toString()
             binding.tvChainA2.text = DBword[4].toString()
         }
@@ -88,11 +97,11 @@ class Encadenados : Fragment() {
             binding.tvChainB3.text = binding.tvChainC3.text
             binding.tvChainB4.text = binding.tvChainC4.text
             binding.tvChainB5.text = binding.tvChainC5.text
-            binding.tvChainB1.setBackgroundColor(Color.MAGENTA)
-            binding.tvChainB2.setBackgroundColor(Color.MAGENTA)
-            binding.tvChainB3.setBackgroundColor(Color.RED)
-            binding.tvChainB4.setBackgroundColor(Color.RED)
-            binding.tvChainB5.setBackgroundColor(Color.RED)
+            binding.tvChainB1.setBackgroundResource(R.color.prechain)
+            binding.tvChainB2.setBackgroundResource(R.color.prechain)
+            binding.tvChainB3.setBackgroundResource(R.color.incorrectchain)
+            binding.tvChainB4.setBackgroundResource(R.color.incorrectchain)
+            binding.tvChainB5.setBackgroundResource(R.color.incorrectchain)
         }
         binding.tvChainC1.setText("")
         binding.tvChainC2.setText("")

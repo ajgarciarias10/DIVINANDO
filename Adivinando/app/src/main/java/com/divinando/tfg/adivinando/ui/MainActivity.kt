@@ -152,6 +152,18 @@ class MainActivity : AppCompatActivity() {
         //endregion
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
+        navView.menu.findItem(R.id.dark_mode).setOnMenuItemClickListener {
+            val mode =
+                if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) AppCompatDelegate.MODE_NIGHT_NO else AppCompatDelegate.MODE_NIGHT_YES
+
+            if (mode == AppCompatDelegate.MODE_NIGHT_NO) {
+                AppCompatDelegate.setDefaultNightMode(mode)
+            } else if (mode == AppCompatDelegate.MODE_NIGHT_YES) {
+                AppCompatDelegate.setDefaultNightMode(mode)
+            }
+            true
+        }
+
     }
 
 
@@ -315,28 +327,6 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.bright_menu, menu);
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val mode =
-            if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) AppCompatDelegate.MODE_NIGHT_NO else AppCompatDelegate.MODE_NIGHT_YES
-
-        when (item.itemId) {
-            R.id.app_bar_switch -> {
-                if (mode == AppCompatDelegate.MODE_NIGHT_NO) {
-                    AppCompatDelegate.setDefaultNightMode(mode)
-                } else if (mode == AppCompatDelegate.MODE_NIGHT_YES) {
-                    AppCompatDelegate.setDefaultNightMode(mode)
-                }
-                return true
-            }
-        }
-        return super.onOptionsItemSelected(item)
     }
 
 }
