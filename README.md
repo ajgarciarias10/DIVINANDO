@@ -1,12 +1,9 @@
-# 
-<img src="icon.png" align="right" />
 
 # PROYECTOWORDLE
 [Para mas interés visite nuestra documentación](https://docs.google.com/document/d/16iKa8JJFxASrXhvEnwFfqmz_D24so9Dx_9hCNRYiG9U/edit?usp=sharing)
 
 
-## Articles
-
+## Articulos de interés
 - ["Estudio KT y python "](https://openwebinars.net/academia/portada/kotlin-para-android/)- *Estudio KT y python*
 - ["Login Firebase Normal AND REGISTER ( KT): "](https://openwebinars.net/academia/aprende/kotlin-firebase-login/) - *Login Firebase Normal AND REGISTER*
 - ["Firestore (BD NOSQL)"](https://firebase.google.com/docs/firestore) - *Firestore (BD NOSQL)*
@@ -14,8 +11,6 @@
 -  ["Login Firebase Facebook y Google"](https://www.youtube.com/watch?v=p0cClI0CKXM&t=611s)
 -  ["Login Firebase Facebook y Google"](https://www.youtube.com/watch?v=ImbuK35vmzs&t=932s)- *Login Firebase Facebook y Google*
 - ["Chaquopy"](https://chaquo.com/chaquopy/) - *Malcom Smith*
-- 
-
 
 
 
@@ -24,8 +19,7 @@
 - [Proyecto integrado WEB](https://informatica.ieszaidinvergeles.org:10006/WProyectoIntegrado/) -Visita nuestra Web para hacer feedback
 
 
-## ContribuCIONES
-
+## Contribuciones 
 Contributors JUAN MANUEL OSORIO , ALVARO URBANO
 
 ## Licencia
