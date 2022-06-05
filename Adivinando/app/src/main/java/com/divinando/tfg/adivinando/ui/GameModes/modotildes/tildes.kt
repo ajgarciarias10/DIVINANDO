@@ -278,10 +278,14 @@ class tildes : Fragment() {
                 letra4.isEnabled = false
                 letra5.isEnabled = false
 
-                points += 5
+                //binding.btSiguiente.visibility = View.VISIBLE
+                //binding.btTerminar.visibility = View.VISIBLE
 
-                binding.btSiguiente.visibility = View.VISIBLE
-                binding.btTerminar.visibility = View.VISIBLE
+                binding.buttonsLayoutTildes.visibility = View.VISIBLE
+                binding.tvLoseTildes.visibility = View.GONE
+                binding.tvWinTildes.visibility = View.VISIBLE
+
+                points += 5
 
                 binding.btSiguiente.setOnClickListener {
                     siguiente(true)
@@ -424,8 +428,12 @@ class tildes : Fragment() {
                     }
                 }
                 if(group == null){
-                    binding.btSiguiente.visibility = View.VISIBLE
-                    binding.btTerminar.visibility = View.VISIBLE
+                    //binding.btSiguiente.visibility = View.VISIBLE
+                    //binding.btTerminar.visibility = View.VISIBLE
+
+                    binding.buttonsLayoutTildes.visibility = View.VISIBLE
+                    binding.tvWinTildes.visibility = View.GONE
+                    binding.tvLoseTildes.visibility = View.VISIBLE
 
                     binding.btSiguiente.setOnClickListener {
                         siguiente(true)
@@ -442,9 +450,6 @@ class tildes : Fragment() {
                     letra5.isEnabled = false
                     group!!.visibility = View.VISIBLE
                 }
-
-
-
 
 
             }
@@ -473,10 +478,14 @@ class tildes : Fragment() {
                 letra5.isEnabled = false
                 letra6.isEnabled = false
 
-                points += 5
+                //binding.btSiguiente.visibility = View.VISIBLE
+                //binding.btTerminar.visibility = View.VISIBLE
 
-                binding.btSiguiente.visibility = View.VISIBLE
-                binding.btTerminar.visibility = View.VISIBLE
+                binding.buttonsLayoutTildes.visibility = View.VISIBLE
+                binding.tvLoseTildes.visibility = View.GONE
+                binding.tvWinTildes.visibility = View.VISIBLE
+
+                points += 5
 
                 binding.btSiguiente.setOnClickListener {
                     siguiente(false)
@@ -563,8 +572,12 @@ class tildes : Fragment() {
                     }
                 }
                 if(group == null){
-                    binding.btSiguiente.visibility = View.VISIBLE
-                    binding.btTerminar.visibility = View.VISIBLE
+                    //binding.btSiguiente.visibility = View.VISIBLE
+                    //binding.btTerminar.visibility = View.VISIBLE
+
+                    binding.buttonsLayoutTildes.visibility = View.VISIBLE
+                    binding.tvWinTildes.visibility = View.GONE
+                    binding.tvLoseTildes.visibility = View.VISIBLE
 
                     binding.btSiguiente.setOnClickListener {
                         siguiente(true)
@@ -642,8 +655,10 @@ class tildes : Fragment() {
             limpiatexto(binding.f5p1,binding.f5p2,binding.f5p3,binding.f5p4,binding.f5p5,null)
 
 
-            binding.btSiguiente.visibility = View.GONE
-            binding.btTerminar.visibility = View.GONE
+            //binding.btSiguiente.visibility = View.GONE
+            //binding.btTerminar.visibility = View.GONE
+
+            binding.buttonsLayoutTildes.visibility = View.GONE
 
             initialize()
 
@@ -661,8 +676,10 @@ class tildes : Fragment() {
             limpiatexto(binding.f5p16l,binding.f5p26l,binding.f5p36l,binding.f5p46l,binding.f5p56l,binding.f5p66l)
 
 
-            binding.btSiguiente.visibility = View.GONE
-            binding.btTerminar.visibility = View.GONE
+            //binding.btSiguiente.visibility = View.GONE
+            //binding.btTerminar.visibility = View.GONE
+
+            binding.buttonsLayoutTildes.visibility = View.GONE
 
 
             initialize()
@@ -685,27 +702,27 @@ class tildes : Fragment() {
     fun limpiatexto(fila1: EditText, fila2: EditText, fila3: EditText, fila4 : EditText, fila5 : EditText, fila6 : EditText?){
 
         fila1.setText("")
-        fila1.setBackgroundResource(R.drawable.letter_border)
+        fila1.setBackgroundColor(Color.WHITE)
         fila1.isEnabled = true
 
         fila2.setText("")
-        fila2.setBackgroundResource(R.drawable.letter_border)
+        fila2.setBackgroundColor(Color.WHITE)
         fila2.isEnabled = true
 
         fila3.setText("")
-        fila3.setBackgroundResource(R.drawable.letter_border)
+        fila3.setBackgroundColor(Color.WHITE)
         fila3.isEnabled = true
 
         fila4.setText("")
-        fila4.setBackgroundResource(R.drawable.letter_border)
+        fila4.setBackgroundColor(Color.WHITE)
         fila4.isEnabled = true
 
         fila5.setText("")
-        fila5.setBackgroundResource(R.drawable.letter_border)
+        fila5.setBackgroundColor(Color.WHITE)
         fila5.isEnabled = true
 
         fila6?.setText("")
-        fila6?.setBackgroundResource(R.drawable.letter_border)
+        fila6?.setBackgroundColor(Color.WHITE)
         fila6?.isEnabled = true
 
 

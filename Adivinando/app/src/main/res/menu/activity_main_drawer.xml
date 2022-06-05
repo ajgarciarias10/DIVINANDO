@@ -37,12 +37,6 @@
                     android:icon="@drawable/ic_menu_brightness"
                     android:title="Dark Mode"
                     app:showAsAction="always" />
-                <item
-                    android:id="@+id/bright_dark"
-                    android:icon="@drawable/ic_menu_darkmode"
-                    android:title="Dark Mode"
-                    app:actionLayout="@layout/switch_item"
-                    app:showAsAction="always" />
             </menu>
         </item>
     </group>

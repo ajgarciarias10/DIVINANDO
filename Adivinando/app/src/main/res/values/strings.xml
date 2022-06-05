@@ -55,4 +55,5 @@
     <string name="wintext">¡Has ganado!</string>
     <string name="losetext">Has perdido...</string>
     <string name="continuetext">¿Deseas continuar jugando?</string>
+    <string name="tvObtain">Has obtenido</string>
 </resources>

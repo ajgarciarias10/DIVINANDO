@@ -139,17 +139,29 @@ class MainActivity : AppCompatActivity() {
         loadGamesFromFirebase()
         //region Cargando el ArrayList
             val game1 = GameObjeto("Divinando","Normal","Español","https://www.astucesmobiles.com/wp-content/uploads/2022/02/Install-and-Play-Wordle-on-iPhone-.png",null,listaDiccionarioEspañol,null,"Pon a prueba al diccionario de la RAE",5,null)
-            games.add(game1)
             val game2= GameObjeto("Divinando","Con Tildes","Español","https://tamtampress.files.wordpress.com/2012/10/tilde.jpg",null,listaTildes,null,"Pon a prueba al diccionario de la RAE con tildes",5,null)
-            games.add(game2)
             val game3= GameObjeto("Divinando","Encadenados","Español","https://m.media-amazon.com/images/I/71bt3CtdEkL._SX342_.jpg",null,listaDiccionarioEspañol,null,"Pon a prueba a tu mapa mental",5,null)
-            games.add(game3)
             val game4= GameObjeto("Guesser","CountryGuesser","Español","https://cdn.icon-icons.com/icons2/1531/PNG/512/3253482-flag-spain-icon_106784.png",urls,listaDePaisesEnEspañol,null,"Pon a prueba a tu mapa geográfico",5,null)
-            games.add(game4)
             val game6 = GameObjeto("Chooser","4Chooser","Español","https://www.crushpixel.com/big-static11/preview4/pencil-4-options-infographic-piad-710269.jpg",null,null, lista4chooser,"Modo de 4 elecciones ",5,null)
-            games.add(game6)
             val game7 = GameObjeto("TOF","GUESS IT","Español","https://icon-library.com/images/true-false-icon/true-false-icon-14.jpg",null,null,listaToF,"Adivina si es verdadera o falsa ",5,null)
-            games.add(game7)
+
+            if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
+                games.clear()
+                games.add(game1)
+                games.add(game2)
+                games.add(game3)
+                games.add(game4)
+                games.add(game6)
+                games.add(game7)
+            }else{
+                games.clear()
+                games.add(game1)
+                games.add(game2)
+                games.add(game3)
+                games.add(game4)
+                games.add(game6)
+                games.add(game7)
+            }
 
         //endregion
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -157,12 +169,14 @@ class MainActivity : AppCompatActivity() {
         navView.menu.findItem(R.id.dark_mode).setOnMenuItemClickListener {
             val mode =
                 if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) AppCompatDelegate.MODE_NIGHT_NO else AppCompatDelegate.MODE_NIGHT_YES
-
             if (mode == AppCompatDelegate.MODE_NIGHT_NO) {
                 AppCompatDelegate.setDefaultNightMode(mode)
+
             } else if (mode == AppCompatDelegate.MODE_NIGHT_YES) {
                 AppCompatDelegate.setDefaultNightMode(mode)
+
             }
+
             true
         }
 
@@ -207,11 +221,12 @@ class MainActivity : AppCompatActivity() {
            var image =  headerView.findViewById<ImageView>(R.id.ivProfileIcon)
            var user =  headerView.findViewById<TextView>(R.id.tvProfileName)
            var correo =  headerView.findViewById<TextView>(R.id.tvProfileEmail)
+            navView.menu.findItem(R.id.dark_mode).isVisible = true
 
             user.text = currentUser.displayName
             correo.text = currentUser.email
 
-            Glide.with(this).load(currentUser.photoUrl).override(80,80).error(R.mipmap.ic_launcher).into(image)
+            Glide.with(this).load(currentUser.photoUrl).override(80,80).error(R.drawable.ic_baseline_person_24).into(image)
         }
     //endregion
     /**
@@ -224,10 +239,11 @@ class MainActivity : AppCompatActivity() {
            var image =  headerView.findViewById<ImageView>(R.id.ivProfileIcon)
            var user =  headerView.findViewById<TextView>(R.id.tvProfileName)
            var correo =  headerView.findViewById<TextView>(R.id.tvProfileEmail)
+            navView.menu.findItem(R.id.dark_mode).isVisible = false
 
-            user.text = "PACO"
+            user.text = "Invitado"
             correo.text = "usuario@example.com"
-            Glide.with(this).load("https://upload.wikimedia.org/wikipedia/commons/c/c1/Lionel_Messi_20180626.jpg").into(image)
+            Glide.with(this).load(R.drawable.ic_baseline_person_24).into(image)
 
 
 

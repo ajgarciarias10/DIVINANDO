@@ -209,10 +209,14 @@ class CountryFlags : Fragment() {
                 letra4.isEnabled = false
                 letra5.isEnabled = false
 
-                points += 5
+                //binding.btSiguiente2.visibility = View.VISIBLE
+                //binding.btTerminar2.visibility = View.VISIBLE
 
-                binding.btSiguiente2.visibility = View.VISIBLE
-                binding.btTerminar2.visibility = View.VISIBLE
+                binding.buttonsLayoutFlag.visibility = View.VISIBLE
+                binding.tvLoseFlag.visibility = View.GONE
+                binding.tvWinFlag.visibility = View.VISIBLE
+
+                points += 5
 
                 binding.btSiguiente2.setOnClickListener {
                     siguiente(true)
@@ -355,8 +359,12 @@ class CountryFlags : Fragment() {
                     }
                 }
                 if(group == null){
-                    binding.btSiguiente2.visibility = View.VISIBLE
-                    binding.btTerminar2.visibility = View.VISIBLE
+                    //binding.btSiguiente2.visibility = View.VISIBLE
+                    //binding.btTerminar2.visibility = View.VISIBLE
+
+                    binding.buttonsLayoutFlag.visibility = View.VISIBLE
+                    binding.tvWinFlag.visibility = View.GONE
+                    binding.tvLoseFlag.visibility = View.VISIBLE
 
                     binding.btSiguiente2.setOnClickListener {
                         siguiente(true)
@@ -404,10 +412,14 @@ class CountryFlags : Fragment() {
                 letra5.isEnabled = false
                 letra6.isEnabled = false
 
-                points += 5
+                //binding.btSiguiente2.visibility = View.VISIBLE
+                //binding.btTerminar2.visibility = View.VISIBLE
 
-                binding.btSiguiente2.visibility = View.VISIBLE
-                binding.btTerminar2.visibility = View.VISIBLE
+                binding.buttonsLayoutFlag.visibility = View.VISIBLE
+                binding.tvLoseFlag.visibility = View.GONE
+                binding.tvWinFlag.visibility = View.VISIBLE
+
+                points += 5
 
                 binding.btSiguiente2.setOnClickListener {
                     siguiente(false)
@@ -494,11 +506,15 @@ class CountryFlags : Fragment() {
                     }
                 }
                 if(group == null){
-                    binding.btSiguiente2.visibility = View.VISIBLE
-                    binding.btTerminar2.visibility = View.VISIBLE
+                    //binding.btSiguiente2.visibility = View.VISIBLE
+                    //binding.btTerminar2.visibility = View.VISIBLE
+
+                    binding.buttonsLayoutFlag.visibility = View.VISIBLE
+                    binding.tvWinFlag.visibility = View.GONE
+                    binding.tvLoseFlag.visibility = View.VISIBLE
 
                     binding.btSiguiente2.setOnClickListener {
-                        siguiente(true)
+                        siguiente(false)
                     }
                     binding.btTerminar2.setOnClickListener {
                         terminar()
@@ -545,11 +561,10 @@ class CountryFlags : Fragment() {
             limpiatexto(binding.f5p10,binding.f5p11,binding.f5p12,binding.f5p13,binding.f5p14,null)
             limpiatexto(binding.f5p15,binding.f5p16,binding.f5p17,binding.f5p18,binding.f5p19,null)
 
+            //binding.btSiguiente2.visibility = View.GONE
+            //binding.btTerminar2.visibility = View.GONE
 
-
-
-            binding.btSiguiente2.visibility = View.GONE
-            binding.btTerminar2.visibility = View.GONE
+            binding.buttonsLayoutFlag.visibility = View.GONE
 
             initialize()
 
@@ -558,16 +573,14 @@ class CountryFlags : Fragment() {
             binding.group6pl2.visibility = View.GONE
             binding.group6pl3.visibility = View.GONE
 
-
             limpiatexto(binding.f5p20,binding.f5p21,binding.f5p22,binding.f5p23,binding.f5p24,binding.f5p25)
             limpiatexto(binding.f5p31,binding.f5p32,binding.f5p33,binding.f5p34,binding.f5p35,binding.f5p36)
             limpiatexto(binding.f5p37,binding.f5p38,binding.f5p39,binding.f5p40,binding.f5p41,binding.f5p42)
 
+            //binding.btSiguiente2.visibility = View.GONE
+            //binding.btTerminar2.visibility = View.GONE
 
-
-            binding.btSiguiente2.visibility = View.GONE
-            binding.btTerminar2.visibility = View.GONE
-
+            binding.buttonsLayoutFlag.visibility = View.GONE
 
             initialize()
 

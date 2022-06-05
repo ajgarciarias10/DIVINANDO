@@ -68,7 +68,7 @@ class EndFragment : Fragment() {
                         userEscudos = it.get("escudos").toString()
                         userFamosos = it.get("famosos").toString()
                         binding.tvPlayerRecord.text = game + " " + it.get(game).toString()
-                        binding.tvPlayerPoint.text = game + " " + points
+                        binding.tvPlayerPoint.text = points + " ptos."
                         save(game)
 
                     db.collection("Ranking").document(mFirebaseAuth.currentUser!!.email.toString()).set(

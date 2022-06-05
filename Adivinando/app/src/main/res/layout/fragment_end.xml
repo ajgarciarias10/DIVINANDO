@@ -4,62 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/app_gradient_game"
     tools:context=".EndActivity">
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardUserEnd"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        app:cardCornerRadius="64dp"
-        app:cardElevation="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/tvPlayerRecord"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/iUserEnd"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/usuario"
-            tools:ignore="ImageContrastCheck"
-            tools:srcCompat="@tools:sample/avatars" />
-
-    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/tvPlayerRecord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textSize="34sp"
         android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="gjñkghg´lñkghj´hñlkgjfh´ñfgolkj" />
+
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_baseline_arrow_downward_24"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/tvPlayerPoint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardUserEnd"
-        tools:text="gjñkghg´lñkghj´hñlkgjfh´ñfgolkj" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPlayerRecord" />
+
+    <TextView
+        android:id="@+id/tvObtain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/tvObtain"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlayerPoint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvPlayerPoint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:shadowColor="@color/white"
+        android:shadowRadius="12"
         android:textAlignment="center"
-        android:textColor="@color/appcolor1"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btNextEnd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPlayerRecord"
-        tools:text="ghglkjghlfkh" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="10 ptos." />
 
     <Button
         android:id="@+id/btNextEnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/white"
         android:text="@string/next"
+        android:textColor="@color/appcolor1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
