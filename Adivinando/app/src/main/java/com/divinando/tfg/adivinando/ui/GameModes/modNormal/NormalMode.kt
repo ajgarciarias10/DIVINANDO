@@ -15,6 +15,8 @@ import androidx.constraintlayout.widget.Group
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
 import com.divinando.tfg.adivinando.R
 import com.divinando.tfg.adivinando.databinding.FragmentNormalModeBinding
 import com.divinando.tfg.adivinando.model.entity.GameObjeto
@@ -290,6 +292,8 @@ class NormalMode : Fragment() {
                   //binding.btTerminar.visibility = View.VISIBLE
 
                   binding.buttonsLayout.visibility = View.VISIBLE
+                  binding.tvLoseNormal.visibility = View.GONE
+                  binding.tvWinNormal.visibility = View.VISIBLE
 
                   points += 5
 
@@ -438,6 +442,8 @@ class NormalMode : Fragment() {
                       //binding.btTerminar.visibility = View.VISIBLE
 
                       binding.buttonsLayout.visibility = View.VISIBLE
+                      binding.tvWinNormal.visibility = View.GONE
+                      binding.tvLoseNormal.visibility = View.VISIBLE
 
                       binding.btSiguiente.setOnClickListener {
                           siguiente(true)
@@ -490,6 +496,8 @@ class NormalMode : Fragment() {
                       //binding.btTerminar.visibility = View.VISIBLE
 
                       binding.buttonsLayout.visibility = View.VISIBLE
+                      binding.tvLoseNormal.visibility = View.GONE
+                      binding.tvWinNormal.visibility = View.VISIBLE
 
                       points += 5
 
@@ -582,7 +590,11 @@ class NormalMode : Fragment() {
                           //binding.btTerminar.visibility = View.VISIBLE
 
                           binding.buttonsLayout.visibility = View.VISIBLE
+                          binding.tvWinNormal.visibility = View.GONE
+                          binding.tvLoseNormal.visibility = View.VISIBLE
+
                             // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! AQUI TIENES QUE METER EL ALERTBUILD DIALOGG!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
                           binding.btSiguiente.setOnClickListener {
                               siguiente(true)
                           }

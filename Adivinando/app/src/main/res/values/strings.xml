@@ -50,4 +50,9 @@
     <string name="gamecountry">CountryGuesser</string>
     <string name="gamechooser">4Chooser</string>
     <string name="gameguessit">GuessIt</string>
+
+    <!--GAME OVER TEXTS-->
+    <string name="wintext">¡Has ganado!</string>
+    <string name="losetext">Has perdido...</string>
+    <string name="continuetext">¿Deseas continuar jugando?</string>
 </resources>

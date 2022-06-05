@@ -123,12 +123,14 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             })
+
         //endregion
         //region Logout dandole al item del menu
             navView.menu.findItem(R.id.nav_logout).setOnMenuItemClickListener {
                 logoutDialog()
                 true
             }
+
         //endregion
         //region
             setupActionBarWithNavController(navController, appBarConfiguration)
