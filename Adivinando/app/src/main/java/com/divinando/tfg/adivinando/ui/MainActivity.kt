@@ -137,7 +137,7 @@ class MainActivity : AppCompatActivity() {
             navView.setupWithNavController(navController)
         //endregion
         loadGamesFromFirebase()
-        //region Cargando el ArrayList
+        //region Cargando el ArrayList SI ES MODO NOCHE O NO
             val game1 = GameObjeto("Divinando","Normal","Español","https://www.astucesmobiles.com/wp-content/uploads/2022/02/Install-and-Play-Wordle-on-iPhone-.png",null,listaDiccionarioEspañol,null,"Pon a prueba al diccionario de la RAE",5,null)
             val game2= GameObjeto("Divinando","Con Tildes","Español","https://tamtampress.files.wordpress.com/2012/10/tilde.jpg",null,listaTildes,null,"Pon a prueba al diccionario de la RAE con tildes",5,null)
             val game3= GameObjeto("Divinando","Encadenados","Español","https://m.media-amazon.com/images/I/71bt3CtdEkL._SX342_.jpg",null,listaDiccionarioEspañol,null,"Pon a prueba a tu mapa mental",5,null)
