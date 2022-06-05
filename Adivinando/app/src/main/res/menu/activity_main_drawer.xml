@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Divinando" />
+        <item
+            android:id="@+id/login"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:title="Login" />
+        <item
+            android:id="@+id/game"
+            android:icon="@drawable/ic_baseline_videogame_asset_24"
+            android:title="Juegos" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Ranking" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_logout"
+            android:title="@string/menu_logout"
+        />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/subtitle"
+            android:title="Settings">
+            <menu>
+                <item
+                    android:id="@+id/dark_mode"
+                    android:icon="@drawable/ic_menu_brightness"
+                    android:title="Tema"
+                    app:showAsAction="always" />
+            </menu>
+        </item>
+    </group>
+
+</menu>
