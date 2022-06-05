@@ -11,8 +11,10 @@
 -  ["Login Firebase Facebook y Google"](https://www.youtube.com/watch?v=p0cClI0CKXM&t=611s)
 -  ["Login Firebase Facebook y Google"](https://www.youtube.com/watch?v=ImbuK35vmzs&t=932s)- *Login Firebase Facebook y Google*
 - ["Chaquopy"](https://chaquo.com/chaquopy/) - *Malcom Smith*
-
-
+## PARTES DE INTERES DEL PROYECTO
+-[Parte BackEndToni](https://github.com/ajgarciarias10/DIVINANDO/tree/BackENDTONI)
+-[Parte BackOsorio](https://github.com/ajgarciarias10/DIVINANDO/tree/BackENDOSORIO)
+-[Parte FrontUrbano](https://github.com/ajgarciarias10/DIVINANDO/tree/FrontUrbano)
 
 ## Nuestra WEB
 
