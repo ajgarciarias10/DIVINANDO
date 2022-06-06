@@ -684,7 +684,7 @@
         android:id="@+id/group5pl1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:constraint_referenced_ids="f5p9,f5p8,f5p7,f5p6,f5p" />
 
     <androidx.constraintlayout.widget.Group

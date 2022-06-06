@@ -31,13 +31,13 @@ class fourChooser : Fragment() {
     lateinit var py: Python
     lateinit var pyObj: PyObject
     //data
-    private val db = FirebaseFirestore.getInstance()
     lateinit var listado:  MutableList<DocumentSnapshot>
     lateinit var usados:  MutableList<Int>
     lateinit var answerList:  MutableList<Int>
     var bundle = Bundle()
+    //Objeto del juego
     lateinit var objeto: GameObjeto
-    //Game var
+    //variables del juego
     var userID = -1
     var round = 1
     var load = 0
@@ -57,20 +57,19 @@ class fourChooser : Fragment() {
 
         init()
 
-        //set answer if the game is started and isn't verified
+        //Asignar respuesta si el juego se cargo y la respuesta no esta verificada
         binding.btAnswerA.setOnClickListener { if(!isVerified && load >= 8){answerPlayer = "A"; chooseAnswer("A")} }
         binding.btAnswerB.setOnClickListener { if(!isVerified && load >= 8){answerPlayer = "B"; chooseAnswer("B")} }
         binding.btAnswerC.setOnClickListener { if(!isVerified && load >= 8){answerPlayer = "C"; chooseAnswer("C")} }
         binding.btAnswerD.setOnClickListener { if(!isVerified && load >= 8){answerPlayer = "D"; chooseAnswer("D")} }
-        //to advance game
+        //Avanzar en el juego
         binding.cardPeppo.setOnClickListener {
             startGame()
         }
 
     }
-
+    //Carga cada respuesta y asigna al azar el lugar de la respuesta correcta
     private fun answerLoad(id: Int){
-        //set who button is true answer
         realAnswer = Random.nextInt(1, 4)
         generateAnswerOptions(id, binding.btAnswerA)
         generateAnswerOptions(id, binding.btAnswerB)
@@ -78,7 +77,7 @@ class fourChooser : Fragment() {
         generateAnswerOptions(id, binding.btAnswerD)
         setTrueAnswer(realAnswer, id)
     }
-
+    //Visibiliza al inicio del juego  las respuestas 1 a 1
     private fun answerVisibility(i: Int){
         if(i == 1){
             Picasso.get().load(R.drawable.peppo).into(binding.iPeppo)
@@ -119,13 +118,14 @@ class fourChooser : Fragment() {
         }
 
     }
-
+    //Selecciona el texto del ayudante (Peppo)
     private fun chooseAnswer(a: String){
         binding.btAnswerA.setBackgroundColor(Color.parseColor("#667EEA"))
         binding.btAnswerB.setBackgroundColor(Color.parseColor("#667EEA"))
         binding.btAnswerC.setBackgroundColor(Color.parseColor("#667EEA"))
         binding.btAnswerD.setBackgroundColor(Color.parseColor("#667EEA"))
         Picasso.get().load(R.drawable.nerviouspeppo).into(binding.iPeppo)
+        //Llama al archivo python que devuelve el texto para el ayudante
         pyObj = getPythonFile("setTextWho")
         if(a == "A"){
             binding.btAnswerA.setBackgroundColor(Color.MAGENTA)
@@ -150,29 +150,29 @@ class fourChooser : Fragment() {
 
 
     }
-
+    //Elimina llos textos de las respuestas
     private fun deleteAnswerList(){
         var i = 0
         while(i < answerList.size){
             answerList.removeAt(i)
         }
     }
-
+    //Verifica que las 4 respuestas no coincida con la respuesta correcta, ni entre ellas
     private fun generateAnswerOptions(num: Int, bt: Button){
         var id = Random.nextInt(0, listado.size - 1)
         var i = 0
         var verifiedDB = false
         var verifiedAnswer = false
-        //verified number from database and answers options
+        //Mientras que se repita una respuesta
         while(!verifiedDB || !verifiedAnswer) {
-            //verified number from database
+            //Comprueba si la respuesta coincide con la respuesta correcta
             while (num == id) {
                 id = Random.nextInt(0, listado.size - 1)
                 verifiedAnswer = false
             }
             verifiedDB = true
             if (answerList.size > 0) {
-                //verified number from answers options
+                //Comprueba si la respuesta ya fue asignada anteriormente
                 while (i < answerList.size) {
                     if (id == answerList[i]) {
                         id = Random.nextInt(0, listado.size - 1)
@@ -184,14 +184,14 @@ class fourChooser : Fragment() {
             }
             verifiedAnswer = true
         }
-        //set answer for button and add id to answerList
+        //Asigna respuesta y la añade a la lista de respuestas para que no se repitan
         bt.text = listado[id].getString("nombre")
         answerList.add(id)
     }
-
+    //Devuelve una id (respuesta) que no este en uso
     private fun generateNumValidate(): Int{
-
         var id = Random.nextInt(0, objeto.listaUrl!!.size - 1)
+        //si hay lista de respuestas usadas
         if(usados.size > 0){
             var i = 0
             while(i < usados.size){
@@ -205,14 +205,14 @@ class fourChooser : Fragment() {
         }
         return id
     }
-
+    //Obtiene un famoso de la lista (id, respuesta, imagen, lista de usados)
     private fun getPerson(){
         userID = generateNumValidate()
         answerLoad(userID)
         Picasso.get().load(listado[userID].get("url").toString()).into(binding.iWho)
         usados.add(userID)
     }
-
+    //Metodo que carga archivos python en un objeto python que devuelve
     private fun getPythonFile(name: String): PyObject {
         if (! Python.isStarted()) {
             Python.start( AndroidPlatform(requireContext()));
@@ -221,9 +221,9 @@ class fourChooser : Fragment() {
         var pytobj = py.getModule(name) //give python script name
         return pytobj
     }
-
+    //Obtiene resultado de la respuesta elegida
     private fun getTrueAnswer(){
-        //player true answer
+        //Respuesta acertada
         if(validateAnswer() == 1){
             if (realAnswer == 1){
                 binding.btAnswerA.setBackgroundColor(Color.GREEN)
@@ -238,8 +238,9 @@ class fourChooser : Fragment() {
                 binding.btAnswerD.setBackgroundColor(Color.GREEN)
             }
         }
+        //Respuesta erronea
         else{
-            //True answer
+            //Respuesta correcta en verde
             if (realAnswer == 1){
                 binding.btAnswerA.setBackgroundColor(Color.GREEN)
             }
@@ -252,7 +253,7 @@ class fourChooser : Fragment() {
             else if(realAnswer == 4){
                 binding.btAnswerD.setBackgroundColor(Color.GREEN)
             }
-            //Player answer
+            //Respuesta elegida en rojo
             if(answerPlayer == "A"){
                 binding.btAnswerA.setBackgroundColor(Color.RED)
             }
@@ -278,28 +279,32 @@ class fourChooser : Fragment() {
         //Sacamos el objeto que nos pasa en este caso es del modo de juego  normal
         objeto = bundle.getSerializable("juegos") as GameObjeto
         listado = objeto.listaUrl!!
-
-            getPerson()
-            answerVisibility(load)
-
-
+        //obtiene famoso
+        getPerson()
+        //Carga respuestas 1 a 1
+        answerVisibility(load)
+        //Obtiene texto del ayudante y asigna texto del juego
         pyObj = getPythonFile("setTextWho")
         binding.tvMsg.text = pyObj.callAttr("main",load).toString()
         binding.tvRoundWho.text = "Round $round   $points Points"
 
     }
-
+    //Avanzar de ronda
     private fun isEnd(){
+        //Comprueba respuesta vacia
         if(answerPlayer == "" && round < 5){
             setCardPeppo("Select your answer before to next", R.drawable.peppo)
         }
         else {
+            //No esta comprobada la respuesta, la comprueba
             if (!isVerified) {
                 getTrueAnswer()
                 isVerified = true
             }
+            //si esta comprobada la respuesta
             else {
                 if(round < 5){
+                    //Obtiene famoso, borra y reasigna respuestas, pasa de ronda y asigna texto del juego
                     getPerson();
                     deleteAnswerList()
                     answerPlayer = ""
@@ -310,6 +315,7 @@ class fourChooser : Fragment() {
                     binding.tvRoundWho.text = "ROUND $round  $points Points"
                 }
                 else if(round == 5){
+                    //resultado final del juego
                     binding.btAnswerA.visibility = View.INVISIBLE
                     binding.btAnswerB.visibility = View.INVISIBLE
                     binding.btAnswerC.visibility = View.INVISIBLE
@@ -318,6 +324,7 @@ class fourChooser : Fragment() {
                     round++
                 }
                 else{
+                    //asigna juego y puntuacion al objeto del juego y viaja al siguiente fragment
                     MainActivity.ObjUser.game = "famosos"
                     MainActivity.ObjUser.point = points.toString()
                     findNavController().navigate(R.id.chooser_toend)
@@ -325,12 +332,12 @@ class fourChooser : Fragment() {
             }
         }
     }
-
+    //Asigna texto e imagen al ayudante
     private fun setCardPeppo(a: String, img: Int){
         binding.tvMsg.text = a
         Picasso.get().load(img).into(binding.iPeppo)
     }
-
+    //Asigna el lugar de la respuesta correcta
     private fun setTrueAnswer(num: Int, id: Int){
         if(num == 1){
             binding.btAnswerA.text = listado[id].getString("nombre")
@@ -345,7 +352,7 @@ class fourChooser : Fragment() {
             binding.btAnswerD.text = listado[id].getString("nombre")
         }
     }
-
+    //Carga al inicio las respuestas 1 a 1
     private fun startGame(){
         if(load < 8) {
             load++
@@ -356,7 +363,7 @@ class fourChooser : Fragment() {
             isEnd()
         }
     }
-
+    //Comprueba si se acerto en la respuesta
     private fun validateAnswer(): Int{
         var i = 0
         if(     answerPlayer == "A" && realAnswer == 1){ i = 1 }

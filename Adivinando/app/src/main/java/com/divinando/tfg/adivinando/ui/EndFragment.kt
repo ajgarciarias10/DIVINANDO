@@ -18,11 +18,12 @@ class EndFragment : Fragment() {
 
     private var _binding: FragmentEndBinding? = null
     private val binding get() = _binding!!
+    //Firebase
     private val db = FirebaseFirestore.getInstance()
     private  lateinit var  mFirebaseAuth: FirebaseAuth
 
 
-    //User data
+    //datos del usuario
     var userName = ""
     var userMail = ""
     var userDivinando = ""
@@ -32,7 +33,7 @@ class EndFragment : Fragment() {
     var userEscudos = ""
     var userFamosos = ""
     var userPoints = ""
-    //game data
+    //datos del juego
     lateinit var name: String
     lateinit var game: String
     lateinit var points:String
@@ -53,7 +54,7 @@ class EndFragment : Fragment() {
         }
 
     }
-
+    //obtiene los datos del juego y guarda los datos del usuario en la base de datos
     private fun init(){
         mFirebaseAuth = Firebase.auth
         game = MainActivity.ObjUser.game
@@ -87,7 +88,7 @@ class EndFragment : Fragment() {
 
 
     }
-
+    //Establece el nombre del juego y su puntuacion
     private fun save(s: String){
         if(s == "divinando"){
             userDivinando = (userDivinando.toInt() + points.toInt()).toString()

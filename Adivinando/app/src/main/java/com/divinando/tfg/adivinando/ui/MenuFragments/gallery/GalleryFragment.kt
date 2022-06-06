@@ -20,9 +20,10 @@ class GalleryFragment : Fragment() {
 
     private var _binding: FragmentGalleryBinding? = null
     private val binding get() = _binding!!
+    //Firebase
     private val db = FirebaseFirestore.getInstance()
     private  lateinit var  mFirebaseAuth: FirebaseAuth
-
+    //datos de los juegos
     var size = 0
     var divinando = "0"
     var divUser = ""
@@ -63,7 +64,7 @@ class GalleryFragment : Fragment() {
         }
 
     }
-
+        //Establece la puntuacion mas alta de cada juego y el mail del usuario que la hizo
     private fun getData(nombre:String) {
 
         db.collection("Ranking").document(nombre).get().addOnSuccessListener {
@@ -95,7 +96,7 @@ class GalleryFragment : Fragment() {
         }
     }
 
-
+    //Asigna el nombre del juego, puntuacion y mail del usuario
     private fun setText(){
         binding.tvDivRanking.setText ("$divinando ptos  $divUser")
         binding.tvGame.text = "Divinando"

@@ -25,8 +25,9 @@ class Encadenados : Fragment() {
 
     private var _binding: FragmentEncadenadosBinding? = null
     private val binding get() = _binding!!
+    //Objeto del juego
     lateinit var objeto: GameObjeto
-    //word
+    //palabra
     lateinit var word: String
     lateinit var DBword: String
     lateinit var answerText: String
@@ -34,11 +35,10 @@ class Encadenados : Fragment() {
     //Python
     lateinit var py: Python
     lateinit var pyObj: PyObject
-    //data
+    //datos
     lateinit var listado:  ArrayList<String>
     lateinit var  bundle : Bundle
-    var idWord = -1
-    //Game var
+    //variables del juego
     var round = 1
     var points = 0
 
@@ -52,7 +52,7 @@ class Encadenados : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         init()
-
+        //Comprueba ronda y gestiona puntuación
         binding.tvChainC5.setOnEditorActionListener { v, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 isEnd(view)
@@ -66,7 +66,7 @@ class Encadenados : Fragment() {
         }*/
 
     }
-
+    //Asigna valor y estilo acada recuadro de texto del layout
     private fun answer(i: Int){
         if(i == 0){
             binding.tvChainA1.text = word[0].toString()
@@ -109,11 +109,13 @@ class Encadenados : Fragment() {
         binding.tvChainC4.setText("")
         binding.tvChainC5.setText("")
     }
+    //Construye la palabra a partir de los recuadros
     private fun buildWord(){
         answerText = ""+binding.tvChainC1.text+binding.tvChainC2.text+
                         binding.tvChainC3.text+binding.tvChainC4.text+binding.tvChainC5.text
         answerText = answerText
     }
+    //Comprueba los recuadros de texto para pasar de ronda
     private fun comprobation(view: View){
         if(isEmptyChar()) {
             Snackbar.make(view, "Error  5 length word please.", Snackbar.LENGTH_LONG).setAction("hidden") {}.show()
@@ -122,6 +124,7 @@ class Encadenados : Fragment() {
             nextRound()
         }
     }
+    //Comprueba la palabra y gestiona los puntos segun el resultado
     private fun foundWord(){
         DBword = ""
         var i = 0
@@ -141,12 +144,13 @@ class Encadenados : Fragment() {
             points--
         }
     }
+    //Devuelve un objeto que contiene funciones en un archivo python
     private fun getPythonFile(name: String): PyObject {
         if (! Python.isStarted()) {
             Python.start( AndroidPlatform(requireContext()));
         }
         py = Python.getInstance()
-        var pytobj = py.getModule(name) //give python script name
+        var pytobj = py.getModule(name) //obtiene el nombre del archivo python
         return pytobj
     }
     private fun init(){
@@ -154,13 +158,16 @@ class Encadenados : Fragment() {
         //Sacamos el objeto que nos pasa en este caso es del modo de juego  normal
         objeto = bundle.getSerializable("juegos") as GameObjeto
         word = ""
-        //Load data
+        //carga datos
         listado = objeto.listaPalabras!!
+        //obtiene una palabra de la lista al azar
         val index = (Math.random() * objeto.listaPalabras!!.size).toInt()
         word = objeto.listaPalabras!![index].trim()
+        //Asigna valor y estilo a los recuadros de las palabras
         answer(0)
         loadScreen()
     }
+    //Comprueba si la lomgitud de cada recuadro es 1 (True) o distinto (FALSE)
     private fun isEmptyChar(): Boolean{
         if(binding.tvChainC1.length() != 1 || binding.tvChainC2.length() != 1 || binding.tvChainC3.length() != 1 ||
             binding.tvChainC4.length() != 1 || binding.tvChainC5.length() != 1) {
@@ -168,10 +175,13 @@ class Encadenados : Fragment() {
         }
         return false
     }
+
     private fun isEnd(view: View){
+        //Comprueba si se puede pasar de ronda y en ese caso lo hace
         if(round < 5){
             comprobation(view)
         }
+        //Comprueba palabra y asigna texto de juego
         else if(round == 5) {
             foundWord()
             pyObj = getPythonFile("setText")
@@ -179,25 +189,28 @@ class Encadenados : Fragment() {
             round++
         }
         else{
+            //asigna nombre de juego y puntuación al objeto y viaja al siguiente fragment
             MainActivity.ObjUser.game = "encadenados"
             MainActivity.ObjUser.point = points.toString()
             findNavController().navigate(R.id.enc_toend)
         }
     }
+
     private fun loadScreen(){
-        //before load data
+        //antes de cargar datos
         binding.GroupA.visibility = View.INVISIBLE
         binding.GroupB.visibility = View.INVISIBLE
         binding.GroupC.visibility = View.INVISIBLE
         binding.tvScore.text = "Looking for characters"
 
-        //after load data
+        //despues de cargar datos
         pyObj = getPythonFile("setText")
         binding.tvScore.text = pyObj.callAttr("main",points, round).toString()
         binding.GroupA.visibility = View.VISIBLE
         binding.GroupB.visibility = View.VISIBLE
         binding.GroupC.visibility = View.VISIBLE
     }
+    //Comprueba la palabra escrita, suma una ronda y asigna texto de juego
     private fun nextRound(){
         buildWord()
         foundWord()

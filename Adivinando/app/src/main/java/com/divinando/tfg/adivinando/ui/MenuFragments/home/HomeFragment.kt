@@ -19,9 +19,9 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    //Firebase
     private val db = FirebaseFirestore.getInstance()
     private  lateinit var  mFirebaseAuth: FirebaseAuth
-
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
@@ -31,21 +31,16 @@ class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mFirebaseAuth = Firebase.auth
         getUser()
 
-
     }
 
-
-
+    //Obtiene la puntuacion en cada juego del usuario
     private fun getUser(){
-       
 
         binding.tvDivHome.visibility = View.GONE
         binding.tvDivTilHome.visibility = View.GONE
@@ -54,7 +49,7 @@ class HomeFragment : Fragment() {
         binding.tvEscudoHome.visibility = View.GONE
         binding.tvFamhome.visibility = View.GONE
 
-
+        //Si el usuario no se logeo solo se ve un texto
         if (mFirebaseAuth.currentUser == null) {
             binding.noestalogueado.visibility = View.VISIBLE
             binding.noestalogueado.text = "Loguese si desea jugar"
@@ -72,7 +67,7 @@ class HomeFragment : Fragment() {
             binding.cardEscudoHome.visibility = View.GONE
             binding.cardFamHome.visibility = View.GONE
 
-
+        //Si el usuario se logeo muestra la informacion cargada
         }else{
             binding.tvDivHome.visibility = View.VISIBLE
             binding.tvDivTilHome.visibility = View.VISIBLE
@@ -91,7 +86,7 @@ class HomeFragment : Fragment() {
             binding.cardFamHome.visibility = View.VISIBLE
 
 
-
+            //Carga los puntos de cada juego del usuario
             db.collection("Ranking").document(mFirebaseAuth.currentUser!!.email.toString()).get().addOnSuccessListener { document ->
                 binding.tvDivHome.text = document.getString("divinando").toString() + " ptos."
                 binding.tvDivTilHome.text = document.getString("divtildes").toString() + " ptos."
