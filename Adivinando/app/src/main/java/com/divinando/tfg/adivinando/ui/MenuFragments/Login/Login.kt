@@ -263,6 +263,7 @@ class Login : Fragment() {
                     updateUI(user)
                 } else {
                     //MENSAJE DE ERROR
+                    Log.w(TAG, "signInWithCredential:failure", task.getException());
                     Toast.makeText(
                         requireContext(), "Authentication failed.",
                         Toast.LENGTH_SHORT
